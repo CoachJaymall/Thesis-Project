@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_parameter_tuning/R2021b">
+  <slsa.mm.parametertuning.VariableRegistry type="slsa.mm.parametertuning.VariableRegistry" uuid="a004ceab-5ff9-470b-a6c7-eabc2d804de4">
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="72d51a1b-c178-4a15-aa26-442bdcaf799d">
+      <blockPath>ParallelTestBench/Three-Phase Sine Generator/Model/Constant</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d2e512d5-c5f8-413d-bb6e-0b7ada10cc0c"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="fa2cd88d-c375-4a94-970f-d60c80164427">
+      <blockPath>ParallelTestBench/Mapped CI Engine/Engine Crank Angle Calculation/Integrator</blockPath>
+      <parameterName>WrappedStateUpperValue</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="fa172a43-1fc5-4d2b-afc5-09b989c41a6e"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="51f9328b-5937-46e5-9981-7113fe6cdf36">
+      <blockPath>ParallelTestBench/Three-Phase Sine Generator/Mag</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d2e512d5-c5f8-413d-bb6e-0b7ada10cc0c"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="688fee41-e2a6-4b48-8cc7-6d3e875fb8b8">
+      <blockPath>ParallelTestBench/Three-Phase Sine Generator/Freq</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d2e512d5-c5f8-413d-bb6e-0b7ada10cc0c"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="903cf1da-b193-4fa8-bbe9-87850eeb0dfa">
+      <blockPath>ParallelTestBench/Three-Phase Sine Generator/Pha</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d2e512d5-c5f8-413d-bb6e-0b7ada10cc0c"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="05e63002-892d-4bda-91ee-2efe3f384da0">
+      <blockPath>ParallelTestBench/Three-Phase Sine Generator/wt</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d2e512d5-c5f8-413d-bb6e-0b7ada10cc0c"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="2563d62a-23ec-4db4-83b8-7a1e9d4c8386">
+      <blockPath>ParallelTestBench/Three-Phase Sine Generator/Uabc</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d2e512d5-c5f8-413d-bb6e-0b7ada10cc0c"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <defaultValueCachePath>C:\Users\jwilson\Documents\Thesis\Matlab\Simulink\slprj\raccel\ParallelTestBench\ParallelTestBench_default_variable_values.mat</defaultValueCachePath>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="deecd265-7813-4c09-8a86-c20c71a00aa2">
+      <expression>2</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="60944fb7-4fb8-4a35-9884-10434c99f98c"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="d2e512d5-c5f8-413d-bb6e-0b7ada10cc0c">
+      <expression>Ts</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="51f9328b-5937-46e5-9981-7113fe6cdf36"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="688fee41-e2a6-4b48-8cc7-6d3e875fb8b8"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="903cf1da-b193-4fa8-bbe9-87850eeb0dfa"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="72d51a1b-c178-4a15-aa26-442bdcaf799d"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="05e63002-892d-4bda-91ee-2efe3f384da0"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="2563d62a-23ec-4db4-83b8-7a1e9d4c8386"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="be2165af-801b-496b-bac6-fca32d45c3bf"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="fa172a43-1fc5-4d2b-afc5-09b989c41a6e">
+      <expression>360*Cps</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="fa2cd88d-c375-4a94-970f-d60c80164427"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="fcb94f20-86e0-4949-9b1c-f9cc8d46c243"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="c038e1dd-cae9-456d-9933-95780c1784f7">
+      <expression>0</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="6c77a6dc-34f3-41c5-bfe3-535e2b998bbe"/>
+    </expressions>
+    <name>ParallelTestBench</name>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="60944fb7-4fb8-4a35-9884-10434c99f98c">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="fcb94f20-86e0-4949-9b1c-f9cc8d46c243"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="deecd265-7813-4c09-8a86-c20c71a00aa2"/>
+      <isTunable>false</isTunable>
+    </variableDefinitions>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="6c77a6dc-34f3-41c5-bfe3-535e2b998bbe">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="be2165af-801b-496b-bac6-fca32d45c3bf"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="c038e1dd-cae9-456d-9933-95780c1784f7"/>
+    </variableDefinitions>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="fcb94f20-86e0-4949-9b1c-f9cc8d46c243">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="60944fb7-4fb8-4a35-9884-10434c99f98c"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="fa172a43-1fc5-4d2b-afc5-09b989c41a6e"/>
+      <name>Cps</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="a3620cc8-ea1f-4797-9220-8f35e6135e57"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="be2165af-801b-496b-bac6-fca32d45c3bf">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="6c77a6dc-34f3-41c5-bfe3-535e2b998bbe"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="d2e512d5-c5f8-413d-bb6e-0b7ada10cc0c"/>
+      <name>Ts</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="6f6755d4-1a41-43b7-b689-8001e916cc4a"/>
+    </variables>
+    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="a3620cc8-ea1f-4797-9220-8f35e6135e57">
+      <name>ParallelTestBench:5</name>
+      <type>MASK</type>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="fcb94f20-86e0-4949-9b1c-f9cc8d46c243"/>
+    </workspaces>
+    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="6f6755d4-1a41-43b7-b689-8001e916cc4a">
+      <name>ParallelTestBench:465</name>
+      <type>MASK</type>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="be2165af-801b-496b-bac6-fca32d45c3bf"/>
+    </workspaces>
+  </slsa.mm.parametertuning.VariableRegistry>
+</MF0>
