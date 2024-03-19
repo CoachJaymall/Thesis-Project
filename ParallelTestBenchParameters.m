@@ -4,25 +4,25 @@ Simulink.sdi.setMarkersOn(false)
 
 %% Side A motor parameters, the motor used for generation, augmentation, and starting
 
-SideA_Rs = 0.13; % Motor stator resistance [ohms]
-SideA_Ldq = 3.44e-04; % Motor dq-axis inductance [H]
-SideA_lambda = 0.000312; % Motor permanent magnetic flux [Wb]
-SideA_N = 8; % Motor number of poles
-SideA_MaxTrq = 4.04; % Motor max torque [Nm]
+SideA_Rs = 0.0102; % Motor stator resistance [ohms]
+SideA_Ldq = 4.31e-06; % Motor dq-axis inductance [H]
+SideA_lambda = 0.00388; % Motor permanent magnetic flux [Wb]
+SideA_N = 7; % Motor number of pole pairs
+SideA_MaxTrq = 5.53; % Motor max torque [Nm]
 SideA_Physical_Param = [0.0100 1e-8 0]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
-SideA_Ke = 23.838; % Motor back-emf constant [Vpk/kRPM]
-SideA_Kt = 0.0411; % Motor torque constant [Nm/A]
+SideA_Ke = 9.75609; % Motor back-emf constant [Vpk-LL/kRPM]
+SideA_Kt = 0.04189; % Motor torque constant [Nm/A]
 
 %% Dynamometer motor parameters, the motor used for loading
 
-Dyno_Rs = 0.017; % Motor stator resistance [ohms]
-Dyno_Ldq = 0.000344; % Motor dq-axis inductance [H]
-Dyno_lambda = 9.973e-05; % Motor permanent magnetic flux [Wb]
-Dyno_N = 21; % Motor number of poles
+Dyno_Rs = 0.00780; % Motor stator resistance [ohms]
+Dyno_Ldq = 0.000254; % Motor dq-axis inductance [H]
+Dyno_lambda = 2.690e-05; % Motor permanent magnetic flux [Wb]
+Dyno_N = 21; % Motor number of pole pairs
 Dyno_MaxTrq = 17.8; % Motor max torque [Nm]
 Dyno_Physical_Param = [0.0100 0 0]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
-Dyno_Ke = 20; % Motor back-emf constant [Vpk/kRPM]
-Dyno_Kt = 0.04149; % Motor torque constant [Nm/A]
+Dyno_Ke = 28.7935; % Motor back-emf constant [Vpk/kRPM]
+Dyno_Kt = 0.10409; % Motor torque constant [Nm/A]
 
 %% Battery parameters
 
