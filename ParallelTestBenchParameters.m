@@ -23,6 +23,7 @@ Dyno_MaxTrq = 17.8; % Motor max torque [Nm]
 Dyno_Physical_Param = [0.0100 0 0]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 Dyno_Ke = 28.7935; % Motor back-emf constant [Vpk/kRPM]
 Dyno_Kt = 0.10409; % Motor torque constant [Nm/A]
+Dyno_Ratio = 0.44; % Pully ratio Side A divided by Dyno
 
 %% Battery parameters
 
