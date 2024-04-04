@@ -34,15 +34,18 @@ Batt_Parr = 6; % Number of cells in parallel
 
 %% Clutch parameters
 
-KinFricTrq = 40; % Nominal torque [Nm]
-StatFricTrq = 50; % Static torque [Nm]
+KinFricTrq = 40; % Nominal torque [N 
 
 D_o = 0.099; % Outter diameter of clutch surface [m]
 d_o = 0.076; % Inner diameter of clutch surface [m]
 A_eff = (pi/4)*(D_o^2-d_o^2); % Effective area [m^2]
 R_eff = (2/6)*((D_o^3-d_o^3)/((D_o^2-d_o^2))); % Effective radius [m]
-mew_s = 0.15; % Slip friction coefficient
+mew_s = 0.25; % Static friction coefficient
 mew_k = 0.2; % Dynamic friction coefficient
 
-F_clamp = KinFricTrq/(mew_k*R_eff); % Clutch clamp force [N]
-P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
+F_clamp = ; % Clutch clamp force [N]
+P_eng = 2615336.33; % Clutch clamp pressure [Pa]
+
+
+
+%sim('ParallelTestBench');
