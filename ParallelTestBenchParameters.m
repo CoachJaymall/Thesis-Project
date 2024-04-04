@@ -46,7 +46,3 @@ mew_k = 0.2; % Dynamic friction coefficient
 
 F_clamp = KinFricTrq/(mew_k*R_eff); % Clutch clamp force [N]
 P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
-
-
-
-%sim('ParallelTestBench');
