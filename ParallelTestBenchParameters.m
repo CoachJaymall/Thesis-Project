@@ -34,33 +34,19 @@ Batt_Parr = 6; % Number of cells in parallel
 
 %% Clutch parameters
 
-N_disc = 1; % Number of discs
-P_c = 2615336.33; % Applied clutch pressure [Pa]?
-P_eng = 2615336.33; % Clutch engagement pressure [Pa]
-A_eff = 0.000790307; % Effective area [m^2]
-R_eff = 0.044001905; % Effective radius [m]
-mew_s = 0.55; % Static friction coefficient
-mew_k = 0.5; % Dynamic friction coefficient
-omega_i = 733; % Input speed [rad/s]
-omega_o = 500; % Output speed [rad/s]
-alpha_i = 0.5;
-T_i = 2.5; % Input torque [Nm]
-J_i = 0.000398; % Input shaft inertia [kgm^2]
-J_o = 0.000556; % Output shaft inertia [kgm^2]
-b_i = 0.001; % Input shaft damping [Nms/rad]
-b_o = 0.001; % Output shaft damping [Nms/rad]
+KinFricTrq = 40; % Nominal torque [Nm]
+StatFricTrq = 50; % Static torque [Nm]
 
-KinFricTrq = 40; % Clutch torque capacity in motion [Nm]
-KinFricTrq = 50; % Clutch torque capacity stationary [Nm]
+D_o = 0.099; % Outter diameter of clutch surface [m]
+d_o = 0.076; % Inner diameter of clutch surface [m]
+A_eff = (pi/4)*(D_o^2-d_o^2); % Effective area [m^2]
+R_eff = (2/6)*((D_o^3-d_o^3)/((D_o^2-d_o^2))); % Effective radius [m]
+mew_s = 0.15; % Slip friction coefficient
+mew_k = 0.2; % Dynamic friction coefficient
 
-%UNLOCKED
-P_c = max(P_c-P_eng,0); % Clutch pressure determination
-T_k = N_disc*P_c*A_eff*mew_k*tanh(4*(omega_i-omega_o)); % Kinetic frictional torque [Nm]
+F_clamp = KinFricTrq/(mew_k*R_eff); % Clutch clamp force [N]
+P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
 
-%LOCKED
-omega_o = omega_i; 
-T_s = N_disc*P_c*A_eff*R_eff*mew_s; % Static frictional torque [Nm]
-T_o = alpha_i*(J_o+J_i)+omega_i*(b_i+b_o) + T_i; % Net output torque [Nm]
 
 
 %sim('ParallelTestBench');
