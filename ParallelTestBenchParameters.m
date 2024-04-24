@@ -9,9 +9,11 @@ SideA_Ldq = 4.31e-06; % Motor dq-axis inductance [H]
 SideA_lambda = 0.00388; % Motor permanent magnetic flux [Wb]
 SideA_N = 7; % Motor number of pole pairs
 SideA_MaxTrq = 5.53; % Motor max torque [Nm]
-SideA_Physical_Param = [0.0026 1e-8 0.15]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
+SideA_RatedTrq = 0.77*SideA_MaxTrq; % Usabel torque [Nm]
+SideA_Physical_Param = [0.0022 1e-8 0.15]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 SideA_Ke = 9.75609; % Motor back-emf constant [Vpp/kRPM]
 SideA_Kt = 0.04189; % Motor torque constant, Max Torque/Max Current [Nm/A]
+SideA_UnLdTrq = 0.3; % Torque when unloaded and spinning
 
 %% Dynamometer motor parameters, the motor used for loading
 
