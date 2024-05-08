@@ -13,8 +13,8 @@ SideA_RatedTrq = 0.77*SideA_MaxTrq; % Usabel torque [Nm]
 SideA_Physical_Param = [0.0022 1e-8 0.15]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 SideA_Ke = 9.75609; % Motor back-emf constant [Vpp/kRPM]
 SideA_Kt = 0.04189; % Motor torque constant, Max Torque/Max Current [Nm/A]
-SideA_UnLdTrq = 0.3; % Torque when unloaded and spinning
-ICE_Starter_Load = 2; % Torque to turn over engine
+SideA_UnLdTrq = 0; % Torque when unloaded and spinning [Nm]
+ICE_Starter_Load = 2; % Torque to turn over engine [Nm]
 
 %% Dynamometer motor parameters, the motor used for loading
 
