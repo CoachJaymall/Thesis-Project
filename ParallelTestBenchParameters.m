@@ -10,9 +10,10 @@ SideA_lambda = 0.00388; % Motor permanent magnetic flux [Wb]
 SideA_N = 7; % Motor number of pole pairs
 SideA_MaxTrq = 5.53; % Motor max torque [Nm]
 SideA_RatedTrq = 0.77*SideA_MaxTrq; % Usabel torque [Nm]
-SideA_Physical_Param = [0.0022 1e-8 0.15]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
+SideA_Physical_Param = [0.000398 0.000139 0.15]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 SideA_Ke = 9.75609; % Motor back-emf constant [Vpp/kRPM]
 SideA_Kt = 0.04189; % Motor torque constant, Max Torque/Max Current [Nm/A]
+BLDC_Driveline_Param = [0.000838 0.00018]; % Inertia and damping of the A side driveline [kgm^2,Nm/rad/s]
 
 %% Dynamometer motor parameters, the motor used for loading
 
@@ -21,7 +22,7 @@ Dyno_Ldq = 0.000254; % Motor dq-axis inductance [H]
 Dyno_lambda = 2.690e-05; % Motor permanent magnetic flux [Wb]
 Dyno_N = 21; % Motor number of pole pairs
 Dyno_MaxTrq = 17.8; % Motor max torque [Nm]
-Dyno_Physical_Param = [0.0100 1e-8 0.3]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
+Dyno_Physical_Param = [0.002611 0.000233 0.3]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 Dyno_Ke = 28.7935; % Motor back-emf constant [Vpp/kRPM]
 Dyno_Kt = 0.10409; % Motor torque constant, Max Torque/Max Current [Nm/A]
 Dyno_Ratio = 0.44; % Pully ratio Side A divided by Dyno
@@ -44,6 +45,7 @@ A_eff = (pi/4)*(D_o^2-d_o^2); % Effective area [m^2]
 R_eff = (2/6)*((D_o^3-d_o^3)/((D_o^2-d_o^2))); % Effective radius [m]
 mew_s = 0.15; % Slip friction coefficient
 mew_k = 0.2; % Dynamic friction coefficient
+Clutch_Param = [0.00336 0.0018]; % Clutch rotor inertia and damping [kgm^2,Nm/rad/s]
 
 F_clamp = KinFricTrq/(mew_k*R_eff); % Clutch clamp force [N]
 P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
@@ -52,6 +54,7 @@ P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
 
 Trq_BP = [0 0.4059 0.6089 0.8118 1.0148 1.2177 1.4207 1.6236 2.0295 2.4355 3.2473 4.0591];
 Spd_BP = [0 2000 3000 4000 5000 6000 7500];
+ICE_Param = [0.070054 0.001748]; % ICE inertia and damping (includes output shaft&rotor) [kgm^2,Nm/rad/s]
 
 Power_Map = [0 0 0 0 0 0 0;
              0 0.13369 0.028648 0 0 0 0;
