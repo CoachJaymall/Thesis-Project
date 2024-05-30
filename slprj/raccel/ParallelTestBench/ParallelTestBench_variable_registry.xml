@@ -1,458 +1,444 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_parameter_tuning/R2021b">
-  <slsa.mm.parametertuning.VariableRegistry type="slsa.mm.parametertuning.VariableRegistry" uuid="dbf49967-1d83-4496-b7b8-a729088d5074">
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="4e32f56d-e9cd-4a0f-8503-526e71766353">
-      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/No Dyno Load/1-D Lookup Table2</blockPath>
-      <parameterName>Table</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="46618576-46d7-4f0c-86e5-b293d5bf55d3"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="d4f3aba1-5a58-40ab-be24-999bf3c90adb">
-        <className>double</className>
-        <dimensions>10</dimensions>
-        <dimensions>6</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="ee9b1e5d-f0a6-4daf-b33e-c3de55e73044">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PhaseCurrA</blockPath>
-      <parameterName>SampleTime</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
-      <isTunable>false</isTunable>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="2e370d75-04da-4e19-93a7-7783408782f9">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/Current_Generation/Base Speed/Gain1</blockPath>
-      <parameterName>Gain</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="e01a9ee4-2e4b-4f44-9ae4-a1755adf3f5f"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="bfb69ae6-cfec-4fa0-b2d3-5c5456fec0a6">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="c6c296eb-3495-423d-9890-45809824e63a">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/Current_Generation/If Action Subsystem1/Salient Machine/Constant5</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="e01a9ee4-2e4b-4f44-9ae4-a1755adf3f5f"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="e2c83ddb-79f7-4c41-b022-6e5df84f5878">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="90a12566-9e82-4031-8499-3f612cc9985a">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Proportional_Gain3</blockPath>
-      <parameterName>Gain</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="212cf5c5-a6e5-47c9-b64f-2c9904d757de"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="084cbc1a-37fd-4ee9-af85-044ede73caf5">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="dfa392ff-e971-4f2b-8d28-e2f317c5cc9b">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Integrator/Gain1</blockPath>
-      <parameterName>Gain</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="4edc7010-abc0-4fc3-8a76-2a9cd4c682aa">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="21d7ba85-8770-405c-85d0-4102e79fd73f">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PhaseVolt</blockPath>
-      <parameterName>SampleTime</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
-      <isTunable>false</isTunable>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="21a935e9-ee4f-4c8d-8f1e-1cb1d6b98620">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Integrator1/Gain1</blockPath>
-      <parameterName>Gain</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="71f8ce58-706f-45d7-9901-feaf32a6d2c5">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="9301bbba-9dd3-4e04-80d7-5c9cca19918c">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Proportional_Gain2</blockPath>
-      <parameterName>Gain</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="e01a9ee4-2e4b-4f44-9ae4-a1755adf3f5f"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="f10ded6c-5f52-4485-857d-3c8a1169e288">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="5d1734b1-60eb-49c4-9fe6-84544e70cfab">
-      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/No Dyno Load/1-D Lookup Table2</blockPath>
-      <parameterName>BreakpointsForDimension1</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="c963798b-2477-41cd-906a-f6b69eb48b84"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="59537956-59f9-42ef-a986-f32d96697bcf">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>10</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="f15a178b-a390-4b7b-baac-72ab291c77d3">
-      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/No Dyno Load/1-D Lookup Table2</blockPath>
-      <parameterName>BreakpointsForDimension2</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3b570232-885a-4b8d-86ce-1d89144d0f9c"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="14327700-451a-4959-9e35-45d78f320436">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>6</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="8b120f5c-6fe2-48a7-9f9b-81e840fa78ce">
-      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/Dyno Loaded/Fuel Efficient/Switch2</blockPath>
-      <parameterName>Threshold</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="c19c66da-589d-486a-b92e-b54157dbe573"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="f1821a2e-6c60-4380-b9d7-9e521d89343f">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="43e93de7-e197-47d1-9d52-0f86565e4238">
-      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/Dyno Loaded/Fuel Efficient/Switch1</blockPath>
-      <parameterName>Threshold</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="c19c66da-589d-486a-b92e-b54157dbe573"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="479693a7-fa88-4f76-9d21-4a75ba79afb8">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="d68520af-71ed-4ef4-927c-e2802476b91d">
-      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/Dyno Loaded/Fuel Efficient/Constant3</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="7508bf0f-c035-4e4f-a7f0-c8891f34dd8a"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="f78477a3-c3c9-40fe-b1e8-4883db29f1ac">
-        <className>double</className>
-        <dimensions>12</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="e990969d-098c-464f-acca-aa51733eea9f">
-      <blockPath>ParallelTestBench/Torque Split Logic/Either Spinning/Only ICE/Fuel Efficient/Switch2</blockPath>
-      <parameterName>Threshold</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="c19c66da-589d-486a-b92e-b54157dbe573"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="4c9f6722-1c60-4ef9-8542-2ca0466cbbac">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="806beb0e-95e0-4926-95cd-63be27f30af5">
-      <blockPath>ParallelTestBench/Torque Split Logic/Either Spinning/Only ICE/Fuel Efficient/Switch1</blockPath>
-      <parameterName>Threshold</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="c19c66da-589d-486a-b92e-b54157dbe573"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="5d1364bd-432e-40c3-8840-24cc3fc874d8">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="20eebd75-7b4d-479d-9119-44156aad26a5">
-      <blockPath>ParallelTestBench/Torque Split Logic/Either Spinning/Only ICE/Fuel Efficient/Constant3</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="7508bf0f-c035-4e4f-a7f0-c8891f34dd8a"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="66e07e9e-ea31-48ba-965e-f810778f1517">
-        <className>double</className>
-        <dimensions>12</dimensions>
-        <dimensions>1</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="9a8877c4-a5ad-4580-b607-6939b14b267b">
-      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/Machine Torque/Subsystem/Constant</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="0eebd5ed-2d75-4c6f-9172-522a28bd9966">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>2</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="887b0d9a-9324-4903-b3fc-4abf10ecf74a">
+  <slsa.mm.parametertuning.VariableRegistry type="slsa.mm.parametertuning.VariableRegistry" uuid="06e0f889-6b3f-44b5-a248-60e0e522e202">
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="2e8bf60d-a40c-4f5d-b371-7656261a85c8">
       <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/SpdFdbk</blockPath>
       <parameterName>SampleTime</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
       <isTunable>false</isTunable>
     </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="48d39e96-809d-4a98-80e6-462b3ea19f67">
-      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Subsystem/Constant</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="1205f9f8-586a-4039-a7cc-c475fecad0af">
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="2ef40a54-88a5-4c2b-b55d-31d002ae3e27">
+      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/No Dyno Load/1-D Lookup Table2</blockPath>
+      <parameterName>Table</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="f237d1f0-4651-46b6-8433-95d98043db12"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="01095222-6d90-4357-bd9c-0eeca5ffcd3d">
         <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>2</dimensions>
+        <dimensions>10</dimensions>
+        <dimensions>6</dimensions>
       </valueAttributes>
     </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="9bcaa771-3582-414f-8677-05256db26301">
-      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem1/Constant</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="3fe1ae2d-e35d-4b26-b6ed-c2d67be8a50d">
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="defbb004-3869-49b6-9413-1d3fe3605c67">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Proportional_Gain3</blockPath>
+      <parameterName>Gain</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="5758f615-dea4-43c5-9365-2514fe20f9e8"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="daf2c928-4c5f-4d45-b1c1-a6c8f212da93">
         <className>double</className>
         <dimensions>1</dimensions>
-        <dimensions>2</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="5bf7e1d5-1c24-484b-9e94-76097dc5568f">
-      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Subsystem1/Constant</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="73f0ed14-e78d-41c0-8cb8-028a65163735">
-        <className>double</className>
         <dimensions>1</dimensions>
-        <dimensions>2</dimensions>
       </valueAttributes>
     </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="e7fbe13d-3bd2-492a-a128-369d6f0ba4c9">
-      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Subsystem2/Constant1</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="86a878ed-79ce-433e-9e4e-71ce80f4a4b2">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>2</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="57bdfaf6-28ae-4524-b187-fc34e833558b">
-      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem/Constant</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="38d24127-755e-45af-8dfd-d7b50ae62b71">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>2</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="ebafa1b7-7da8-4a82-ac60-5ce12569765f">
-      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem2/Constant1</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="f7de3f7b-3169-47a1-bac0-51494f45d7e4">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>2</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="fd3e0f50-759b-4192-ad78-8837e7cf17e9">
-      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem3/Constant1</blockPath>
-      <parameterName>Value</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114"/>
-      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="d1c31b77-e2cc-481e-90c8-77eb493212ea">
-        <className>double</className>
-        <dimensions>1</dimensions>
-        <dimensions>2</dimensions>
-      </valueAttributes>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="5c285a1f-57cd-4b90-a754-842097f5abec">
-      <blockPath>ParallelTestBench/Corvid-50/Engine Crank Angle Calculation/Integrator</blockPath>
-      <parameterName>WrappedStateUpperValue</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="af701470-c02a-470e-a99d-7621655fc8ee"/>
-      <isTunable>false</isTunable>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="1e4139ca-0b28-4b6a-9d2a-2c6c831646dc">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/SpdReq</blockPath>
-      <parameterName>SampleTime</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
-      <isTunable>false</isTunable>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="cad03433-0684-453a-b419-eeb462771036">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/BusVolt</blockPath>
-      <parameterName>SampleTime</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
-      <isTunable>false</isTunable>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="d987932b-ca88-4e8f-9e84-8287989e5d6a">
-      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PhaseCurrB</blockPath>
-      <parameterName>SampleTime</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
-      <isTunable>false</isTunable>
-    </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="3ff7dd90-1c49-4101-9a80-d1abbcc4180e">
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="a6989983-40ce-4363-a418-2e366be20e26">
       <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PosFdbk</blockPath>
       <parameterName>SampleTime</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
       <isTunable>false</isTunable>
     </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="6c5c4327-884f-4ff4-aae7-1b9fe2bc1e11">
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="e6d65a5c-ee25-4d76-a36b-0c268e9b8077">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/Current_Generation/If Action Subsystem1/Salient Machine/Constant5</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="845d4978-7209-4e0c-a19c-188a664ea900"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="1ca5e37d-303d-49ed-902a-0ce3c1965fdb">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="0f68def4-2392-4395-8db3-a62854c4d1cc">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Integrator/Gain1</blockPath>
+      <parameterName>Gain</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="87de19d2-598d-474a-b292-74e8bd8d2ec3">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="5a0633be-d6ff-4ad2-98f1-a28987fd90ac">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Integrator1/Gain1</blockPath>
+      <parameterName>Gain</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="d32bbe8d-4450-4341-b0f1-87cd37c4cea6">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="33e62f2b-1987-4c0e-b797-d80e0d20e842">
+      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/No Dyno Load/1-D Lookup Table2</blockPath>
+      <parameterName>BreakpointsForDimension1</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="10962ee1-ea22-4726-bc23-76e800457090"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="71e10a6e-6273-4fea-9069-9c655bb4e7cc">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>10</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="6b7773de-96d9-42e0-973e-abda2ba50b8d">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Proportional_Gain2</blockPath>
+      <parameterName>Gain</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="845d4978-7209-4e0c-a19c-188a664ea900"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="10cce707-8cc4-4485-a433-0c8560ec7c84">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="857cd80a-8f29-40fe-bc31-a66f283ca3c6">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/Current_Generation/Base Speed/Gain1</blockPath>
+      <parameterName>Gain</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="845d4978-7209-4e0c-a19c-188a664ea900"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="b16bf5ea-171d-4faa-80d1-9728ab4bc4b0">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="ea52d3d7-43fe-45fe-a485-9f2c0b20970f">
+      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem3/Constant1</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="3487455a-ce37-48d4-a562-cd96f6c6aaee">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>2</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="eafd6310-cbcb-4cd1-a729-1b014fe251fd">
+      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/Machine Torque/Subsystem/Constant</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="8a7ff7df-cc36-4871-b9f5-c257fd8f1c6d">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>2</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="6a4dc2b3-0764-4677-8004-eac3075e763d">
+      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/No Dyno Load/1-D Lookup Table2</blockPath>
+      <parameterName>BreakpointsForDimension2</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="1bb76b26-8a49-4007-ae74-1af3c7699437"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="8cc68fb7-ae62-4c75-914f-83d8072375bf">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>6</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="17143328-bbcc-43a0-9a79-088d8bfddea0">
+      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/Dyno Loaded/Fuel Efficient/Switch2</blockPath>
+      <parameterName>Threshold</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7ba3cc14-6ea0-44a3-a4d2-ce348f8d22c5"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="5bee2e14-9c40-4cbf-8506-0d6a60093051">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="d49cd7ee-e351-4ac6-8366-256b23b28928">
+      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/Dyno Loaded/Fuel Efficient/Switch1</blockPath>
+      <parameterName>Threshold</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7ba3cc14-6ea0-44a3-a4d2-ce348f8d22c5"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="0ab05221-67c5-492c-81be-25762efeac07">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="88410b53-46ae-4683-ba63-917ce0f82d67">
+      <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/Dyno Loaded/Fuel Efficient/Constant3</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="e7e4b0b7-5a47-40d1-9cc8-6c88a07566e6"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="02b7c7af-33f5-4259-9404-6209d143388d">
+        <className>double</className>
+        <dimensions>12</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="4a07b4b0-5aa6-4176-9761-0c4b670e1c31">
+      <blockPath>ParallelTestBench/Torque Split Logic/Either Spinning/Only ICE/Fuel Efficient/Switch2</blockPath>
+      <parameterName>Threshold</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7ba3cc14-6ea0-44a3-a4d2-ce348f8d22c5"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="4417290c-f693-4a99-9ec7-f47c8e5facaa">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="8d08af3e-c548-4a86-84f5-64b606e50f62">
+      <blockPath>ParallelTestBench/Torque Split Logic/Either Spinning/Only ICE/Fuel Efficient/Switch1</blockPath>
+      <parameterName>Threshold</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7ba3cc14-6ea0-44a3-a4d2-ce348f8d22c5"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="df433ab4-3a7a-477e-b737-f94701319ba0">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="f1f07170-ed99-437b-a2cb-87983d75887c">
+      <blockPath>ParallelTestBench/Torque Split Logic/Either Spinning/Only ICE/Fuel Efficient/Constant3</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="e7e4b0b7-5a47-40d1-9cc8-6c88a07566e6"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="e9732fa2-08b7-4ff2-a423-9fd8f3ba2511">
+        <className>double</className>
+        <dimensions>12</dimensions>
+        <dimensions>1</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="81dbb415-e01e-4bcb-998c-116e1061a643">
+      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem1/Constant</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="cca90e5d-442d-48f4-8542-f49c8b0ec0fe">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>2</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="01ba895e-7688-49ee-b51d-50a9e3bde0e7">
+      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Subsystem/Constant</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="73c48510-7016-4f15-86cc-bee3a80b136d">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>2</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="4c5458f9-29e5-4a52-9c31-c98b0b5d1503">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PhaseVolt</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="cc35dc9e-6564-4d38-b0af-43a2a940167f">
+      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Subsystem1/Constant</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="7332d01b-eb5b-40c9-b75a-71e56ed2856e">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>2</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="56644ba0-180f-42ae-a7cb-f72e4999031a">
+      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Subsystem2/Constant1</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="1528626b-5489-4f38-be27-4734ef058874">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>2</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="a151c7ef-99fa-48be-8dae-876efdf48ab8">
+      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem/Constant</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="ec9af892-5ceb-4f95-905e-8bbb1d2e22b3">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>2</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="fe9e54db-ee87-448c-9d5c-e972ae3ddf94">
+      <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem2/Constant1</blockPath>
+      <parameterName>Value</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4"/>
+      <valueAttributes type="slsa.mm.parametertuning.ValueAttributes" uuid="b4a825c6-5d23-43f4-b5ff-e4a41d8918c7">
+        <className>double</className>
+        <dimensions>1</dimensions>
+        <dimensions>2</dimensions>
+      </valueAttributes>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="d0ec06ee-483f-4a17-9a80-861b2c7f7697">
+      <blockPath>ParallelTestBench/Corvid-50/Engine Crank Angle Calculation/Integrator</blockPath>
+      <parameterName>WrappedStateUpperValue</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="620b3e4f-971e-47eb-ad22-ca13f725a1f0"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="9dc3014c-a7db-4259-b3af-e1a73f305c61">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/SpdReq</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="bc5c844b-6e9f-419c-8c7e-ba199ef2de7e">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/BusVolt</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="f6081ee9-7db8-43cf-87ea-0c17ea6e7207">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PhaseCurrA</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="7829b550-2b9e-4447-908a-94575acf02b2">
+      <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PhaseCurrB</blockPath>
+      <parameterName>SampleTime</parameterName>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
+      <isTunable>false</isTunable>
+    </blockParameters>
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="bbb0af1e-adaf-4467-8986-e6f908bc4f26">
       <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/Info</blockPath>
       <parameterName>SampleTime</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
       <isTunable>false</isTunable>
     </blockParameters>
-    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="cc2407c9-885f-4000-abd0-37178c08da96">
+    <blockParameters type="slsa.mm.parametertuning.BlockParameter" uuid="285ee099-2c25-4a8b-b62c-29ce52bad7ed">
       <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/BusCurr</blockPath>
       <parameterName>SampleTime</parameterName>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
       <isTunable>false</isTunable>
     </blockParameters>
     <defaultValueCachePath>C:\Users\jwilson\Documents\Thesis\Thesis-Project\slprj\raccel\ParallelTestBench\ParallelTestBench_default_variable_values.mat</defaultValueCachePath>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="4d78ad92-01a3-47d9-9794-79b03add998c">
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="f237d1f0-4651-46b6-8433-95d98043db12">
+      <expression>Power_Map(3:end,2:end)</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="2ef40a54-88a5-4c2b-b55d-31d002ae3e27"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="04f051bf-1508-4e82-b1c1-5910f9eda3d6"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717">
+      <expression>Tst</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="0f68def4-2392-4395-8db3-a62854c4d1cc"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="5a0633be-d6ff-4ad2-98f1-a28987fd90ac"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="9dc3014c-a7db-4259-b3af-e1a73f305c61"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="bc5c844b-6e9f-419c-8c7e-ba199ef2de7e"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="a6989983-40ce-4363-a418-2e366be20e26"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="2e8bf60d-a40c-4f5d-b371-7656261a85c8"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="f6081ee9-7db8-43cf-87ea-0c17ea6e7207"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="7829b550-2b9e-4447-908a-94575acf02b2"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="bbb0af1e-adaf-4467-8986-e6f908bc4f26"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="285ee099-2c25-4a8b-b62c-29ce52bad7ed"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="4c5458f9-29e5-4a52-9c31-c98b0b5d1503"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5c50672d-514a-4e6b-bf96-f59e287b12c2"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="ca30eb8c-e371-42f9-9161-9aa65d268e75">
       <evaluationMayFail>true</evaluationMayFail>
       <expression>4.31e-06</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="299d80af-25f1-48a8-8bdc-b16917d73bc2"/>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="cb32476a-9bec-42f8-a66f-db04b54c65f0"/>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="03d96a85-8c0a-45d8-bd05-3830c0028204"/>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="85571ee4-a699-481b-9a55-0317fdd408ef"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="e01a9ee4-2e4b-4f44-9ae4-a1755adf3f5f">
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="845d4978-7209-4e0c-a19c-188a664ea900">
       <expression>Lq</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="2e370d75-04da-4e19-93a7-7783408782f9"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="c6c296eb-3495-423d-9890-45809824e63a"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="9301bbba-9dd3-4e04-80d7-5c9cca19918c"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="30179907-6e6a-41ce-8e03-2a3e25c12dbd"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="e6d65a5c-ee25-4d76-a36b-0c268e9b8077"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="6b7773de-96d9-42e0-973e-abda2ba50b8d"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="857cd80a-8f29-40fe-bc31-a66f283ca3c6"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="f2a4f9c0-de01-4fb0-95c8-48b30f377369"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="c9ba69f9-6298-47d5-ab7d-64c2154d93d2">
-      <expression>SideA_lambda</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="a1179713-d8e3-4434-8f52-ccb76a8d7227"/>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="2989f7e5-d9be-4200-a78c-5443ab58f684"/>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="5b660938-9c79-489b-91d3-ff58f1233dec"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="12fc19d7-998c-4317-b74c-3b7e0ebf4777"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="c963798b-2477-41cd-906a-f6b69eb48b84">
-      <expression>Trq_BP(3:end)</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="5d1734b1-60eb-49c4-9fe6-84544e70cfab"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="bc2dfacb-9847-4fee-a924-a72217f9581a"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="212cf5c5-a6e5-47c9-b64f-2c9904d757de">
-      <expression>Ld</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="90a12566-9e82-4031-8499-3f612cc9985a"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="50b936ec-19bb-4c6d-ad40-8087d25c8d31"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114">
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4">
       <expression>Ldq</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="9a8877c4-a5ad-4580-b607-6939b14b267b"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="48d39e96-809d-4a98-80e6-462b3ea19f67"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="ebafa1b7-7da8-4a82-ac60-5ce12569765f"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="9bcaa771-3582-414f-8677-05256db26301"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="5bf7e1d5-1c24-484b-9e94-76097dc5568f"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="57bdfaf6-28ae-4524-b187-fc34e833558b"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="e7fbe13d-3bd2-492a-a128-369d6f0ba4c9"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="fd3e0f50-759b-4192-ad78-8837e7cf17e9"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="5abf1e58-8c86-4d11-9f2c-2a97bb9a6f25"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="ea52d3d7-43fe-45fe-a485-9f2c0b20970f"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="eafd6310-cbcb-4cd1-a729-1b014fe251fd"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="81dbb415-e01e-4bcb-998c-116e1061a643"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="a151c7ef-99fa-48be-8dae-876efdf48ab8"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="01ba895e-7688-49ee-b51d-50a9e3bde0e7"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="cc35dc9e-6564-4d38-b0af-43a2a940167f"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="fe9e54db-ee87-448c-9d5c-e972ae3ddf94"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="56644ba0-180f-42ae-a7cb-f72e4999031a"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="3095df3b-a3fb-4b08-9b68-521f87c86ebf"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="46618576-46d7-4f0c-86e5-b293d5bf55d3">
-      <expression>Power_Map(3:end,2:end)</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="4e32f56d-e9cd-4a0f-8503-526e71766353"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="0dd2d4f7-ed58-4a1a-b7f8-115aa4e83afe"/>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="5758f615-dea4-43c5-9365-2514fe20f9e8">
+      <expression>Ld</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="defbb004-3869-49b6-9413-1d3fe3605c67"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="75a5d991-cd36-4760-a8f6-9d0cfaa1545f"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="7e2e19c4-ecba-4394-a806-7bcaeb26fc1e">
-      <expression>5e-5</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="d8a9cb4b-87ce-42c2-a9cf-4dfa4c276b1d"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="7cf41fca-0ce3-43ad-b48e-556f999610ad">
-      <evaluationMayFail>true</evaluationMayFail>
-      <expression>SideA_Kt</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="e7730cf4-3c31-4c7c-b509-eb37b353e8b1"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="5b942774-f1dc-4ede-b161-d9b956ddeb71"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c">
-      <expression>Tst</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="3ff7dd90-1c49-4101-9a80-d1abbcc4180e"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="dfa392ff-e971-4f2b-8d28-e2f317c5cc9b"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="d987932b-ca88-4e8f-9e84-8287989e5d6a"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="21d7ba85-8770-405c-85d0-4102e79fd73f"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="21a935e9-ee4f-4c8d-8f1e-1cb1d6b98620"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="ee9b1e5d-f0a6-4daf-b33e-c3de55e73044"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="1e4139ca-0b28-4b6a-9d2a-2c6c831646dc"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="cad03433-0684-453a-b419-eeb462771036"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="887b0d9a-9324-4903-b3fc-4abf10ecf74a"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="6c5c4327-884f-4ff4-aae7-1b9fe2bc1e11"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="cc2407c9-885f-4000-abd0-37178c08da96"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="13cdfaa7-3676-4654-87bd-1945bf2b88f5"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="7bb6d831-cc52-400e-87ee-610c5c4f79ab">
-      <evaluationMayFail>true</evaluationMayFail>
-      <expression>SideA_Ke</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="3951648c-0a19-46f4-81d5-fa430a6264ad"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="9222e693-2e18-4ad6-9f9f-32ebdd3dab72"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="3b570232-885a-4b8d-86ce-1d89144d0f9c">
-      <expression>Spd_BP(2:end)</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="f15a178b-a390-4b7b-baac-72ab291c77d3"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="cd272691-ca18-460f-afdb-6a858f799ec7"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="c19c66da-589d-486a-b92e-b54157dbe573">
-      <expression>min(Fuel_Map(2:end,2:end),[],&quot;all&quot;)</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="43e93de7-e197-47d1-9d52-0f86565e4238"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="8b120f5c-6fe2-48a7-9f9b-81e840fa78ce"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="e990969d-098c-464f-acca-aa51733eea9f"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="806beb0e-95e0-4926-95cd-63be27f30af5"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="846b0103-6398-4610-9172-d1f370f92b40"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="b58594da-b18a-4e44-afe1-2de34b9fc8d6">
-      <expression>2</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="ea6d4825-4347-4fe2-bf63-a43ae4a14268"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="75dc0ef4-8787-4b44-a38d-d5e83219959c">
-      <expression>1</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="c7168565-70a4-4719-acf6-e275a9acf6a8"/>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="7fa414e7-b169-43d5-8169-914172f26164"/>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="713f69df-c27e-40c8-a52c-fe3ffa863ad5"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="7508bf0f-c035-4e4f-a7f0-c8891f34dd8a">
-      <expression>Fuel_Map(:,2)</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="d68520af-71ed-4ef4-927c-e2802476b91d"/>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="20eebd75-7b4d-479d-9119-44156aad26a5"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="846b0103-6398-4610-9172-d1f370f92b40"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="42d2f097-b473-4ed2-bb7c-a4e7ca919000">
-      <expression>[0.0017      0.0017]</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="915417af-6a1f-467b-9f3c-7d493efbe78f"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="55b9a014-6179-4323-b090-ff9982692e5b">
-      <evaluationMayFail>true</evaluationMayFail>
-      <expression>0.001</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="b3020a20-ff4e-43c6-b051-dbaa0cdd3052"/>
-    </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="11b2e35c-a171-4406-a6c3-dd3fc7e404f4">
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="318702b1-bffa-413f-82b1-5d0c3dadfd06">
       <evaluationMayFail>true</evaluationMayFail>
       <expression>5</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="f66bda8b-616f-49ec-ab0d-bb852274e115"/>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="80754f4d-b719-40b2-b5fc-96f58fe3bde8"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="118f99c9-d507-4595-ae3e-dcc0b0018d8d">
-      <expression>SideA_N</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="70ded316-11ec-49f6-bff2-7152b89e199a"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="4519b590-8114-4c25-bf4e-735d23d2b964"/>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="f1e77fe4-9840-4f2e-b961-01b3c4af132f">
+      <expression>5e-5</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="8e797b46-9109-4a5b-b616-b2360b792eba"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="12bfa000-8606-462f-83bc-542154bb3048">
-      <expression>SideA_Rs</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="868595e6-52a5-4e2e-944c-5f4b9a111f37"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="fa7f6913-8dde-45dc-99fd-e57c3882f847"/>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="10962ee1-ea22-4726-bc23-76e800457090">
+      <expression>Trq_BP(3:end)</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="33e62f2b-1987-4c0e-b797-d80e0d20e842"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5fa18cfc-6233-49a7-ba98-c0b0fdda60eb"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="14b2f697-a3da-48fd-a86d-d0bbd596541d">
-      <expression>SideA_Ldq</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="fd0765fe-c256-4da3-9d71-d53d88aba1f9"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="0d7f64b9-5b1e-4d85-bd24-5f935753eb36"/>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="1bb76b26-8a49-4007-ae74-1af3c7699437">
+      <expression>Spd_BP(2:end)</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="6a4dc2b3-0764-4677-8004-eac3075e763d"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="78a07149-643c-4202-9929-fefdf2c781af"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="1b4485d4-54b9-46ba-a6d2-53f1e792a1f6">
-      <expression>SideA_Physical_Param</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="32ce7268-b942-4437-bc54-beeab47a904b"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="59a05e02-3946-47cf-855f-201c205fef63"/>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="7ba3cc14-6ea0-44a3-a4d2-ce348f8d22c5">
+      <expression>min(Fuel_Map(2:end,2:end),[],&quot;all&quot;)</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="17143328-bbcc-43a0-9a79-088d8bfddea0"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="d49cd7ee-e351-4ac6-8366-256b23b28928"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="4a07b4b0-5aa6-4176-9761-0c4b670e1c31"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="8d08af3e-c548-4a86-84f5-64b606e50f62"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="029d62af-2fcc-41e6-86fa-dc49a9aec849"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="af701470-c02a-470e-a99d-7621655fc8ee">
-      <expression>360*Cps</expression>
-      <users type="slsa.mm.parametertuning.BlockParameter" uuid="5c285a1f-57cd-4b90-a754-842097f5abec"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="91fc982a-ed3c-47bc-ac0e-9b36b6c2c666"/>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="e7e4b0b7-5a47-40d1-9cc8-6c88a07566e6">
+      <expression>Fuel_Map(:,2)</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="88410b53-46ae-4683-ba63-917ce0f82d67"/>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="f1f07170-ed99-437b-a2cb-87983d75887c"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="029d62af-2fcc-41e6-86fa-dc49a9aec849"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="2f9ebb63-a680-4f9c-bff0-1d36b6f86492">
-      <expression>[0 0]</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="8e0e3022-07bb-4513-a9ba-71ba959faa28"/>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="649df53b-dcfa-41f6-b024-7eec94647dff">
+      <expression>[0.0017      0.0017]</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="ae530e54-c4aa-4eff-a20e-932082f0dc74"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="8c772d6d-174b-4218-8244-0c086e30f608">
-      <expression>0</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="431e7f22-bbfb-46b5-9b9d-51af99bf22cb"/>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="7562c05d-8727-48e2-beb6-6dec35dfb056"/>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="529f0746-00be-4c34-b889-fd45da6f38d9">
+      <expression>SideA_lambda</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="f2d48882-182d-449e-aa1a-c690be85d1b5"/>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="ad2fd595-06f7-41d5-9ce2-42ba1668485a"/>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="e65a9c03-dad0-4edb-b5b5-45d424ee9e3c"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="27550940-3402-4ae2-8273-dce0266ae863"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="85d17a0e-6c2c-49ad-9658-8621db594038">
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="92231eea-8a3a-4b29-b5b6-17e394ffaa02">
+      <expression>1</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="2dc5e9b3-bc1f-4485-836a-e0a726a9f43a"/>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="b23fe427-24ef-402e-a84b-11debe50aa81"/>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="08d9989e-ae1f-41c6-b140-4b4f6892afcf"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="e5f9a86b-0f67-4693-a028-2bdfc94fae05">
       <evaluationMayFail>true</evaluationMayFail>
-      <expression>&apos;autolibpmsmexterior/Surface Mount PMSM&apos;</expression>
-      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="d7611b48-4846-4c71-ab6f-9693999a5966"/>
+      <expression>0.001</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="e73c76cb-25f9-41c3-af21-17ea4889e932"/>
     </expressions>
-    <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7">
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="2fc34e46-f84a-449b-9118-aa4f6614d5f2">
+      <expression>SideA_N</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="946705b4-830f-4e35-a58e-2dcf573e2573"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5caf3a4f-bc1a-49fb-b491-66cd2b2dd665"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="952d2cb8-fcb7-4690-b975-ebb9b79a8389">
+      <expression>SideA_Rs</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="e37eedbf-2929-4458-94ff-4c860459435f"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="075b49eb-8264-46b1-b52f-9632fb9e3ebf"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="620b3e4f-971e-47eb-ad22-ca13f725a1f0">
+      <expression>360*Cps</expression>
+      <users type="slsa.mm.parametertuning.BlockParameter" uuid="d0ec06ee-483f-4a17-9a80-861b2c7f7697"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="4dd324f6-92b9-471b-a784-6e7e8aaf04c1"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="e205ebe0-e070-4fae-9938-ec1a0a428815">
+      <expression>SideA_Ldq</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="9918cc26-3566-4544-a87f-de0827d7fcad"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="39040e5d-2b9b-430c-bbff-4095e63f0447"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="11d77bc2-b925-485a-99cc-4f73a9536772">
+      <evaluationMayFail>true</evaluationMayFail>
+      <expression>SideA_Ke</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="fe58b6cd-d18e-4bf8-9ffe-43e9795ad100"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5f10356b-5ff0-428f-83e4-9562a78673c2"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="ec81e8d2-8861-44af-af12-e2276a9874a3">
+      <evaluationMayFail>true</evaluationMayFail>
+      <expression>SideA_Kt</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="886cd566-c013-4733-ac35-b535dd80d75a"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="33732acb-5be8-47b2-ae90-6af232d44b91"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="cfd00339-8432-4836-a05e-b7bb0a19b564">
+      <expression>SideA_Physical_Param</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="4c7ba797-af37-42f3-bb98-4684c2047ba1"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="6c196a01-e89e-4771-9da9-bd0f1ce73684"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="f5216795-1de9-4193-b197-19de43457be2">
+      <expression>[0 0]</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="641ba6f7-66f3-4ec7-be27-0cdc70b5bae9"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8">
       <expression>autosharedicon(&apos;pbexteriorpmsm&apos;,gcb, &apos;Initialization&apos;);
 
 % as set_param in same block is not setting the value for the 
@@ -471,421 +457,435 @@ if ~isempty(Ldq_val)
 end</expression>
       <isAssignable>false</isAssignable>
       <ownerBlockPath>ParallelTestBench/SKP 6485</ownerBlockPath>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="6a5f4153-0a8c-46cc-878c-ab998d38097c"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="2a128bdf-3a6b-4366-9cbe-3701a607ee22"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="5abf1e58-8c86-4d11-9f2c-2a97bb9a6f25"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="daba98e1-c0cd-4db4-ae5f-4906ea9d05f2"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="314dfc7d-87ea-4350-9372-bd413ee644f2"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="a9f87da7-9b5e-481f-bdc7-e6f4001aebe5"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="fc25a23c-bfcc-495b-9fc1-88f160261525"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="3cafbbfb-ee27-4261-9459-746afaf31a15"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="1447faef-f224-4943-a305-b51d89d50dd7"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="9c0647d4-265b-4e0f-8c25-a1910927bedf"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="17799def-0b7a-4762-8a06-8e3936112748"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="d7f8250d-9f09-4148-b61c-b996190741b1"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="780380b3-02e3-4c1c-8a57-9ecc004db473"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="38e304dd-d0f4-4af4-85ff-5fa48c6cad57"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="cb2fbc37-45e7-4133-beac-81f1e44b1152"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="3295e12f-b216-4a28-8fce-c67236b5b181"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="d12906ec-c96d-4a1e-b491-096a580737bc"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="51f11281-23f9-43b3-aca5-f624d6433ee2"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="2b4350bd-3ae7-4dd6-8f0b-d5b880048db1"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="0286f5e2-b38d-4176-8eed-1a6fc1818974"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="8b8faaf9-4535-43ff-98c5-54f903f98e86"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="ca02e34b-60d9-4adf-bd6b-0f0e9a684218"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="b277b2bb-c414-4d72-ba77-095b3d87dfe1"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="b494392b-7993-426b-adb2-28fa38216cd4"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="f4889407-5fa5-4947-b9e4-039afd83f6d4"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="6791ab74-af34-4bc0-88c6-d766a3546a46"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="60223e33-0246-4e60-8170-3e6cd3e94406"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="e0dd9986-e88e-49a0-98f9-8653f80c94a8"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="de84f8e8-ee70-4fbf-9a2a-b0d836c3f6c4"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="dadba2cd-a6c6-41c1-8e20-4db2229561af"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="3b0fb2d8-9e56-487a-933a-4f3136e06d3d"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="4de3257a-50d8-47b5-a2e0-3edadb537f63"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="7d804fbc-627a-41b2-b2af-d72dbac3ac00"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="29df4ae7-09e1-4baf-9a69-3cb83099660f"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="931acbfd-3270-455f-a1e6-5157cc71beb3"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="3715f5f4-00f6-4f40-b1d0-c7e493bc7274"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="3095df3b-a3fb-4b08-9b68-521f87c86ebf"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="d4db1175-ea8f-45d2-875f-2483f51be68e"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="0996d5e0-0d9c-4978-99aa-ad558deb0832"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="574d3f03-9277-4c0a-b42e-d1298b77c10d"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="49a7f342-ec28-49bb-a827-345530ecc72d">
+      <expression>0</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="50a5b487-16e9-4db2-98b1-8a733f0972fb"/>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="976c7e53-ae92-4bdf-bbaf-7588380d72bc"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="873d3138-75e7-4a11-a8b9-42bd355f4008">
+      <evaluationMayFail>true</evaluationMayFail>
+      <expression>&apos;autolibpmsmexterior/Surface Mount PMSM&apos;</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="df30fbf7-287e-4ecd-b5d6-2ef822c87f10"/>
+    </expressions>
+    <expressions type="slsa.mm.parametertuning.Expression" uuid="e89ae4d1-b9ff-4bb5-88d8-3b4ce783bf7c">
+      <expression>2</expression>
+      <users type="slsa.mm.parametertuning.VariableDefinition" uuid="f6737852-669a-4044-bcac-1093544177c3"/>
     </expressions>
     <name>ParallelTestBench</name>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="713f69df-c27e-40c8-a52c-fe3ffa863ad5">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="17799def-0b7a-4762-8a06-8e3936112748"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="75dc0ef4-8787-4b44-a38d-d5e83219959c"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="03d96a85-8c0a-45d8-bd05-3830c0028204">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="f2a4f9c0-de01-4fb0-95c8-48b30f377369"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="ca30eb8c-e371-42f9-9161-9aa65d268e75"/>
+    </variableDefinitions>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="ad2fd595-06f7-41d5-9ce2-42ba1668485a">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="f4889407-5fa5-4947-b9e4-039afd83f6d4"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="529f0746-00be-4c34-b889-fd45da6f38d9"/>
+    </variableDefinitions>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="2dc5e9b3-bc1f-4485-836a-e0a726a9f43a">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="6791ab74-af34-4bc0-88c6-d766a3546a46"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="92231eea-8a3a-4b29-b5b6-17e394ffaa02"/>
       <isTunable>false</isTunable>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="915417af-6a1f-467b-9f3c-7d493efbe78f">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="5abf1e58-8c86-4d11-9f2c-2a97bb9a6f25"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="42d2f097-b473-4ed2-bb7c-a4e7ca919000"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="85571ee4-a699-481b-9a55-0317fdd408ef">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="75a5d991-cd36-4760-a8f6-9d0cfaa1545f"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="ca30eb8c-e371-42f9-9161-9aa65d268e75"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="2989f7e5-d9be-4200-a78c-5443ab58f684">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="3295e12f-b216-4a28-8fce-c67236b5b181"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="c9ba69f9-6298-47d5-ab7d-64c2154d93d2"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="ae530e54-c4aa-4eff-a20e-932082f0dc74">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="3095df3b-a3fb-4b08-9b68-521f87c86ebf"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="649df53b-dcfa-41f6-b024-7eec94647dff"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="299d80af-25f1-48a8-8bdc-b16917d73bc2">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="30179907-6e6a-41ce-8e03-2a3e25c12dbd"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="4d78ad92-01a3-47d9-9794-79b03add998c"/>
-    </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="b3020a20-ff4e-43c6-b051-dbaa0cdd3052">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="2a128bdf-3a6b-4366-9cbe-3701a607ee22"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="55b9a014-6179-4323-b090-ff9982692e5b"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="8e797b46-9109-4a5b-b616-b2360b792eba">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="5c50672d-514a-4e6b-bf96-f59e287b12c2"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="f1e77fe4-9840-4f2e-b961-01b3c4af132f"/>
       <isTunable>false</isTunable>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="cb32476a-9bec-42f8-a66f-db04b54c65f0">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="50b936ec-19bb-4c6d-ad40-8087d25c8d31"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="4d78ad92-01a3-47d9-9794-79b03add998c"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="f2d48882-182d-449e-aa1a-c690be85d1b5">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="4de3257a-50d8-47b5-a2e0-3edadb537f63"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="529f0746-00be-4c34-b889-fd45da6f38d9"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="70ded316-11ec-49f6-bff2-7152b89e199a">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="2b4350bd-3ae7-4dd6-8f0b-d5b880048db1"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="118f99c9-d507-4595-ae3e-dcc0b0018d8d"/>
-    </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="d8a9cb4b-87ce-42c2-a9cf-4dfa4c276b1d">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="13cdfaa7-3676-4654-87bd-1945bf2b88f5"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="7e2e19c4-ecba-4394-a806-7bcaeb26fc1e"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="b23fe427-24ef-402e-a84b-11debe50aa81">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="d4db1175-ea8f-45d2-875f-2483f51be68e"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="92231eea-8a3a-4b29-b5b6-17e394ffaa02"/>
       <isTunable>false</isTunable>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="7fa414e7-b169-43d5-8169-914172f26164">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="1447faef-f224-4943-a305-b51d89d50dd7"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="75dc0ef4-8787-4b44-a38d-d5e83219959c"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="e73c76cb-25f9-41c3-af21-17ea4889e932">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="ca02e34b-60d9-4adf-bd6b-0f0e9a684218"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="e5f9a86b-0f67-4693-a028-2bdfc94fae05"/>
       <isTunable>false</isTunable>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="868595e6-52a5-4e2e-944c-5f4b9a111f37">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="a9f87da7-9b5e-481f-bdc7-e6f4001aebe5"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="12bfa000-8606-462f-83bc-542154bb3048"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="946705b4-830f-4e35-a58e-2dcf573e2573">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="0996d5e0-0d9c-4978-99aa-ad558deb0832"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="2fc34e46-f84a-449b-9118-aa4f6614d5f2"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="fd0765fe-c256-4da3-9d71-d53d88aba1f9">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="780380b3-02e3-4c1c-8a57-9ecc004db473"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="14b2f697-a3da-48fd-a86d-d0bbd596541d"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="e37eedbf-2929-4458-94ff-4c860459435f">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="b277b2bb-c414-4d72-ba77-095b3d87dfe1"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="952d2cb8-fcb7-4690-b975-ebb9b79a8389"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="c7168565-70a4-4719-acf6-e275a9acf6a8">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="9c0647d4-265b-4e0f-8c25-a1910927bedf"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="75dc0ef4-8787-4b44-a38d-d5e83219959c"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="9918cc26-3566-4544-a87f-de0827d7fcad">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="7d804fbc-627a-41b2-b2af-d72dbac3ac00"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="e205ebe0-e070-4fae-9938-ec1a0a428815"/>
+    </variableDefinitions>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="886cd566-c013-4733-ac35-b535dd80d75a">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="931acbfd-3270-455f-a1e6-5157cc71beb3"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="ec81e8d2-8861-44af-af12-e2276a9874a3"/>
+    </variableDefinitions>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="08d9989e-ae1f-41c6-b140-4b4f6892afcf">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="b494392b-7993-426b-adb2-28fa38216cd4"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="92231eea-8a3a-4b29-b5b6-17e394ffaa02"/>
       <isTunable>false</isTunable>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="3951648c-0a19-46f4-81d5-fa430a6264ad">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="51f11281-23f9-43b3-aca5-f624d6433ee2"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="7bb6d831-cc52-400e-87ee-610c5c4f79ab"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="fe58b6cd-d18e-4bf8-9ffe-43e9795ad100">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="29df4ae7-09e1-4baf-9a69-3cb83099660f"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="11d77bc2-b925-485a-99cc-4f73a9536772"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="e7730cf4-3c31-4c7c-b509-eb37b353e8b1">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="6a5f4153-0a8c-46cc-878c-ab998d38097c"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="7cf41fca-0ce3-43ad-b48e-556f999610ad"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="4c7ba797-af37-42f3-bb98-4684c2047ba1">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="de84f8e8-ee70-4fbf-9a2a-b0d836c3f6c4"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="cfd00339-8432-4836-a05e-b7bb0a19b564"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="32ce7268-b942-4437-bc54-beeab47a904b">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="3cafbbfb-ee27-4261-9459-746afaf31a15"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="1b4485d4-54b9-46ba-a6d2-53f1e792a1f6"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="641ba6f7-66f3-4ec7-be27-0cdc70b5bae9">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="dadba2cd-a6c6-41c1-8e20-4db2229561af"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="f5216795-1de9-4193-b197-19de43457be2"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="8e0e3022-07bb-4513-a9ba-71ba959faa28">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="38e304dd-d0f4-4af4-85ff-5fa48c6cad57"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="2f9ebb63-a680-4f9c-bff0-1d36b6f86492"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="50a5b487-16e9-4db2-98b1-8a733f0972fb">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="574d3f03-9277-4c0a-b42e-d1298b77c10d"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="49a7f342-ec28-49bb-a827-345530ecc72d"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="431e7f22-bbfb-46b5-9b9d-51af99bf22cb">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="0286f5e2-b38d-4176-8eed-1a6fc1818974"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="8c772d6d-174b-4218-8244-0c086e30f608"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="976c7e53-ae92-4bdf-bbaf-7588380d72bc">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="3b0fb2d8-9e56-487a-933a-4f3136e06d3d"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="49a7f342-ec28-49bb-a827-345530ecc72d"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="7562c05d-8727-48e2-beb6-6dec35dfb056">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="cb2fbc37-45e7-4133-beac-81f1e44b1152"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="8c772d6d-174b-4218-8244-0c086e30f608"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="e65a9c03-dad0-4edb-b5b5-45d424ee9e3c">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="8b8faaf9-4535-43ff-98c5-54f903f98e86"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="529f0746-00be-4c34-b889-fd45da6f38d9"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="5b660938-9c79-489b-91d3-ff58f1233dec">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="314dfc7d-87ea-4350-9372-bd413ee644f2"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="c9ba69f9-6298-47d5-ab7d-64c2154d93d2"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="df30fbf7-287e-4ecd-b5d6-2ef822c87f10">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="3715f5f4-00f6-4f40-b1d0-c7e493bc7274"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="873d3138-75e7-4a11-a8b9-42bd355f4008"/>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="a1179713-d8e3-4434-8f52-ccb76a8d7227">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="daba98e1-c0cd-4db4-ae5f-4906ea9d05f2"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="c9ba69f9-6298-47d5-ab7d-64c2154d93d2"/>
-    </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="d7611b48-4846-4c71-ab6f-9693999a5966">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="d12906ec-c96d-4a1e-b491-096a580737bc"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="85d17a0e-6c2c-49ad-9658-8621db594038"/>
-    </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="f66bda8b-616f-49ec-ab0d-bb852274e115">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="fc25a23c-bfcc-495b-9fc1-88f160261525"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="11b2e35c-a171-4406-a6c3-dd3fc7e404f4"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="80754f4d-b719-40b2-b5fc-96f58fe3bde8">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="60223e33-0246-4e60-8170-3e6cd3e94406"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="318702b1-bffa-413f-82b1-5d0c3dadfd06"/>
       <isTunable>false</isTunable>
     </variableDefinitions>
-    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="ea6d4825-4347-4fe2-bf63-a43ae4a14268">
-      <variable type="slsa.mm.parametertuning.Variable" uuid="91fc982a-ed3c-47bc-ac0e-9b36b6c2c666"/>
-      <expression type="slsa.mm.parametertuning.Expression" uuid="b58594da-b18a-4e44-afe1-2de34b9fc8d6"/>
+    <variableDefinitions type="slsa.mm.parametertuning.VariableDefinition" uuid="f6737852-669a-4044-bcac-1093544177c3">
+      <variable type="slsa.mm.parametertuning.Variable" uuid="4dd324f6-92b9-471b-a784-6e7e8aaf04c1"/>
+      <expression type="slsa.mm.parametertuning.Expression" uuid="e89ae4d1-b9ff-4bb5-88d8-3b4ce783bf7c"/>
       <isTunable>false</isTunable>
     </variableDefinitions>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="59a05e02-3946-47cf-855f-201c205fef63">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="1b4485d4-54b9-46ba-a6d2-53f1e792a1f6"/>
-      <name>SideA_Physical_Param</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="d910f348-a654-4faf-98b5-5832c352b403">
-      <name>Batt_Cap</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="98453aab-c4eb-4930-a6f9-4fe20f9784c5">
-      <name>Batt_Parr</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="18bf49f3-36a5-4c64-bf71-7f82fc6b5e00">
-      <name>Dyno_Kt</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="26e8085a-1e6c-458b-9739-75aede01e1cf">
-      <name>Batt_Series</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="b7695363-00b2-4bfd-87b6-09b17afb7d45">
-      <name>Dyno_Ratio</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="df4f74b2-bc05-472c-bfc9-8ded4117b790">
-      <name>Power_Thr_Map</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="df694087-91a4-4b12-a673-029a002b9f34">
-      <name>Dyno_Ke</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="846b0103-6398-4610-9172-d1f370f92b40">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="7508bf0f-c035-4e4f-a7f0-c8891f34dd8a"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="c19c66da-589d-486a-b92e-b54157dbe573"/>
-      <name>Fuel_Map</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="cb2fbc37-45e7-4133-beac-81f1e44b1152">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="7562c05d-8727-48e2-beb6-6dec35dfb056"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>omega_init</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="cb389cd8-2e2d-4527-8f68-7be9063dc65a">
-      <name>Fuel_MapE</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="0d7f64b9-5b1e-4d85-bd24-5f935753eb36">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="14b2f697-a3da-48fd-a86d-d0bbd596541d"/>
-      <name>SideA_Ldq</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="cd272691-ca18-460f-afdb-6a858f799ec7">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="3b570232-885a-4b8d-86ce-1d89144d0f9c"/>
-      <name>Spd_BP</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="0dd2d4f7-ed58-4a1a-b7f8-115aa4e83afe">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="46618576-46d7-4f0c-86e5-b293d5bf55d3"/>
-      <name>Power_Map</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="4519b590-8114-4c25-bf4e-735d23d2b964">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="118f99c9-d507-4595-ae3e-dcc0b0018d8d"/>
-      <name>SideA_N</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="3edacee9-bc6e-4bdd-92eb-6c6c3e51fabd">
-      <name>SideA_RatedTrq</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="fa7f6913-8dde-45dc-99fd-e57c3882f847">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="12bfa000-8606-462f-83bc-542154bb3048"/>
-      <name>SideA_Rs</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="9222e693-2e18-4ad6-9f9f-32ebdd3dab72">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="7bb6d831-cc52-400e-87ee-610c5c4f79ab"/>
-      <name>SideA_Ke</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="12fc19d7-998c-4317-b74c-3b7e0ebf4777">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="c9ba69f9-6298-47d5-ab7d-64c2154d93d2"/>
-      <name>SideA_lambda</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="fc25a23c-bfcc-495b-9fc1-88f160261525">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="f66bda8b-616f-49ec-ab0d-bb852274e115"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>aMode</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="3cafbbfb-ee27-4261-9459-746afaf31a15">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="32ce7268-b942-4437-bc54-beeab47a904b"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>mechanical</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="bc2dfacb-9847-4fee-a924-a72217f9581a">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="c963798b-2477-41cd-906a-f6b69eb48b84"/>
-      <name>Trq_BP</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="30179907-6e6a-41ce-8e03-2a3e25c12dbd">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="299d80af-25f1-48a8-8bdc-b16917d73bc2"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="e01a9ee4-2e4b-4f44-9ae4-a1755adf3f5f"/>
-      <name>Lq</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="ab214759-db16-4d76-968d-579bac68ea9f"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="50b936ec-19bb-4c6d-ad40-8087d25c8d31">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="cb32476a-9bec-42f8-a66f-db04b54c65f0"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="212cf5c5-a6e5-47c9-b64f-2c9904d757de"/>
-      <name>Ld</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="ab214759-db16-4d76-968d-579bac68ea9f"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="13cdfaa7-3676-4654-87bd-1945bf2b88f5">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="d8a9cb4b-87ce-42c2-a9cf-4dfa4c276b1d"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="3c4fbda3-1342-4aeb-b20e-01649ee9db6c"/>
-      <name>Tst</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="ab214759-db16-4d76-968d-579bac68ea9f"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="daba98e1-c0cd-4db4-ae5f-4906ea9d05f2">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="a1179713-d8e3-4434-8f52-ccb76a8d7227"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>lambda_pm_calc</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="5abf1e58-8c86-4d11-9f2c-2a97bb9a6f25">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="915417af-6a1f-467b-9f3c-7d493efbe78f"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="866f9577-af0c-4712-9f2b-030ce2953114"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>Ldq</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="1447faef-f224-4943-a305-b51d89d50dd7">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="7fa414e7-b169-43d5-8169-914172f26164"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>port_config</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="d7f8250d-9f09-4148-b61c-b996190741b1">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>FilePath</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="17799def-0b7a-4762-8a06-8e3936112748">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="713f69df-c27e-40c8-a52c-fe3ffa863ad5"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>sim_type</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="6a5f4153-0a8c-46cc-878c-ab998d38097c">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="e7730cf4-3c31-4c7c-b509-eb37b353e8b1"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="931acbfd-3270-455f-a1e6-5157cc71beb3">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="886cd566-c013-4733-ac35-b535dd80d75a"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
       <name>Kt</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
     </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="2a128bdf-3a6b-4366-9cbe-3701a607ee22">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="b3020a20-ff4e-43c6-b051-dbaa0cdd3052"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>Ts</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="5311e91f-6987-4dfe-a69d-d4fef4e57d98">
+      <name>Dyno_Ratio</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
     </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="2b4350bd-3ae7-4dd6-8f0b-d5b880048db1">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="70ded316-11ec-49f6-bff2-7152b89e199a"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>P</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="abd2dd92-b59a-48ec-8df9-19e8c6164db9">
+      <name>Batt_Cap</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
     </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="a9f87da7-9b5e-481f-bdc7-e6f4001aebe5">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="868595e6-52a5-4e2e-944c-5f4b9a111f37"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="f613faf9-bdab-4f44-bae9-881de1a658be">
+      <name>Dyno_Ke</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="de84f8e8-ee70-4fbf-9a2a-b0d836c3f6c4">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="4c7ba797-af37-42f3-bb98-4684c2047ba1"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>mechanical</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="5ea1f193-b04b-4fff-bbce-4e75b19e5693">
+      <name>Batt_Parr</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="75a5d991-cd36-4760-a8f6-9d0cfaa1545f">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="85571ee4-a699-481b-9a55-0317fdd408ef"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="5758f615-dea4-43c5-9365-2514fe20f9e8"/>
+      <name>Ld</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="d1f10151-3eb7-4378-b5bd-cd065fa8f9bc"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="350286dd-a29c-4e76-b7f7-8504371cabee">
+      <name>Fuel_MapE</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="8539dde0-6378-4b1e-8f0c-3135499fbaa6">
+      <name>Dyno_Kt</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="2d898292-7eaa-4f69-9e36-9426624bb233">
+      <name>Batt_Series</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="029d62af-2fcc-41e6-86fa-dc49a9aec849">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="e7e4b0b7-5a47-40d1-9cc8-6c88a07566e6"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="7ba3cc14-6ea0-44a3-a4d2-ce348f8d22c5"/>
+      <name>Fuel_Map</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="04f051bf-1508-4e82-b1c1-5910f9eda3d6">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="f237d1f0-4651-46b6-8433-95d98043db12"/>
+      <name>Power_Map</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="cee6f13a-f3b5-4e17-a74d-dac9c9e509ea">
+      <name>Power_Thr_Map</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="5c50672d-514a-4e6b-bf96-f59e287b12c2">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="8e797b46-9109-4a5b-b616-b2360b792eba"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="7aad6822-6a81-4396-93a7-ed2641f83717"/>
+      <name>Tst</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="d1f10151-3eb7-4378-b5bd-cd065fa8f9bc"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="5caf3a4f-bc1a-49fb-b491-66cd2b2dd665">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="2fc34e46-f84a-449b-9118-aa4f6614d5f2"/>
+      <name>SideA_N</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="6c196a01-e89e-4771-9da9-bd0f1ce73684">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="cfd00339-8432-4836-a05e-b7bb0a19b564"/>
+      <name>SideA_Physical_Param</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="d9f6d3e6-b8f9-4511-955b-b6f71c6b9210">
+      <name>SideA_RatedTrq</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="075b49eb-8264-46b1-b52f-9632fb9e3ebf">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="952d2cb8-fcb7-4690-b975-ebb9b79a8389"/>
+      <name>SideA_Rs</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="6791ab74-af34-4bc0-88c6-d766a3546a46">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="2dc5e9b3-bc1f-4485-836a-e0a726a9f43a"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>port_config</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="27550940-3402-4ae2-8273-dce0266ae863">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="529f0746-00be-4c34-b889-fd45da6f38d9"/>
+      <name>SideA_lambda</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="78a07149-643c-4202-9929-fefdf2c781af">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="1bb76b26-8a49-4007-ae74-1af3c7699437"/>
+      <name>Spd_BP</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="5f10356b-5ff0-428f-83e4-9562a78673c2">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="11d77bc2-b925-485a-99cc-4f73a9536772"/>
+      <name>SideA_Ke</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="5fa18cfc-6233-49a7-ba98-c0b0fdda60eb">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="10962ee1-ea22-4726-bc23-76e800457090"/>
+      <name>Trq_BP</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="b277b2bb-c414-4d72-ba77-095b3d87dfe1">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="e37eedbf-2929-4458-94ff-4c860459435f"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
       <name>Rs</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
     </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="38e304dd-d0f4-4af4-85ff-5fa48c6cad57">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="8e0e3022-07bb-4513-a9ba-71ba959faa28"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>idq0</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="f2a4f9c0-de01-4fb0-95c8-48b30f377369">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="03d96a85-8c0a-45d8-bd05-3830c0028204"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="845d4978-7209-4e0c-a19c-188a664ea900"/>
+      <name>Lq</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="d1f10151-3eb7-4378-b5bd-cd065fa8f9bc"/>
     </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="780380b3-02e3-4c1c-8a57-9ecc004db473">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="fd0765fe-c256-4da3-9d71-d53d88aba1f9"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="3095df3b-a3fb-4b08-9b68-521f87c86ebf">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="ae530e54-c4aa-4eff-a20e-932082f0dc74"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="d74a5b1d-ac68-475f-bc7f-5617485e12c4"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>Ldq</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="d4db1175-ea8f-45d2-875f-2483f51be68e">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="b23fe427-24ef-402e-a84b-11debe50aa81"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>sim_type</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="ca02e34b-60d9-4adf-bd6b-0f0e9a684218">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="e73c76cb-25f9-41c3-af21-17ea4889e932"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>Ts</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="60223e33-0246-4e60-8170-3e6cd3e94406">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="80754f4d-b719-40b2-b5fc-96f58fe3bde8"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>aMode</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="e0dd9986-e88e-49a0-98f9-8653f80c94a8">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>FilePath</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="0996d5e0-0d9c-4978-99aa-ad558deb0832">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="946705b4-830f-4e35-a58e-2dcf573e2573"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>P</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="39040e5d-2b9b-430c-bbff-4095e63f0447">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="e205ebe0-e070-4fae-9938-ec1a0a428815"/>
+      <name>SideA_Ldq</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="7d804fbc-627a-41b2-b2af-d72dbac3ac00">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="9918cc26-3566-4544-a87f-de0827d7fcad"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
       <name>Ldq_</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
     </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="9c0647d4-265b-4e0f-8c25-a1910927bedf">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="c7168565-70a4-4719-acf6-e275a9acf6a8"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>KConstText</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="3295e12f-b216-4a28-8fce-c67236b5b181">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="2989f7e5-d9be-4200-a78c-5443ab58f684"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>lambda_pm</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="91fc982a-ed3c-47bc-ac0e-9b36b6c2c666">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="ea6d4825-4347-4fe2-bf63-a43ae4a14268"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="af701470-c02a-470e-a99d-7621655fc8ee"/>
-      <name>Cps</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="4aa8eaf1-f7de-4448-84cb-04a9920d53f9"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="d12906ec-c96d-4a1e-b491-096a580737bc">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="d7611b48-4846-4c71-ab6f-9693999a5966"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>RefBlkName</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="51f11281-23f9-43b3-aca5-f624d6433ee2">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="3951648c-0a19-46f4-81d5-fa430a6264ad"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>Ke</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="5b942774-f1dc-4ede-b161-d9b956ddeb71">
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="7cf41fca-0ce3-43ad-b48e-556f999610ad"/>
-      <name>SideA_Kt</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="0286f5e2-b38d-4176-8eed-1a6fc1818974">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="431e7f22-bbfb-46b5-9b9d-51af99bf22cb"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
-      <name>theta_init</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
-    </variables>
-    <variables type="slsa.mm.parametertuning.Variable" uuid="314dfc7d-87ea-4350-9372-bd413ee644f2">
-      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="5b660938-9c79-489b-91d3-ff58f1233dec"/>
-      <expressions type="slsa.mm.parametertuning.Expression" uuid="2e8199ec-14d9-410a-a5bd-479e1748f4f7"/>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="f4889407-5fa5-4947-b9e4-039afd83f6d4">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="ad2fd595-06f7-41d5-9ce2-42ba1668485a"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
       <name>KConst</name>
-      <workspace type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057"/>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
     </variables>
-    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="27a9af3e-ee2f-42d3-beed-53b055dac501">
+    <variables type="slsa.mm.parametertuning.Variable" uuid="b494392b-7993-426b-adb2-28fa38216cd4">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="08d9989e-ae1f-41c6-b140-4b4f6892afcf"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>KConstText</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="4dd324f6-92b9-471b-a784-6e7e8aaf04c1">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="f6737852-669a-4044-bcac-1093544177c3"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="620b3e4f-971e-47eb-ad22-ca13f725a1f0"/>
+      <name>Cps</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="df042063-3017-42e5-a2d5-64bdec9c1adb"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="4de3257a-50d8-47b5-a2e0-3edadb537f63">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="f2d48882-182d-449e-aa1a-c690be85d1b5"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>lambda_pm</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="29df4ae7-09e1-4baf-9a69-3cb83099660f">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="fe58b6cd-d18e-4bf8-9ffe-43e9795ad100"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>Ke</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="33732acb-5be8-47b2-ae90-6af232d44b91">
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="ec81e8d2-8861-44af-af12-e2276a9874a3"/>
+      <name>SideA_Kt</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="dadba2cd-a6c6-41c1-8e20-4db2229561af">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="641ba6f7-66f3-4ec7-be27-0cdc70b5bae9"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>idq0</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="574d3f03-9277-4c0a-b42e-d1298b77c10d">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="50a5b487-16e9-4db2-98b1-8a733f0972fb"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>theta_init</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="3b0fb2d8-9e56-487a-933a-4f3136e06d3d">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="976c7e53-ae92-4bdf-bbaf-7588380d72bc"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>omega_init</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="8b8faaf9-4535-43ff-98c5-54f903f98e86">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="e65a9c03-dad0-4edb-b5b5-45d424ee9e3c"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>lambda_pm_calc</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <variables type="slsa.mm.parametertuning.Variable" uuid="3715f5f4-00f6-4f40-b1d0-c7e493bc7274">
+      <definition type="slsa.mm.parametertuning.VariableDefinition" uuid="df30fbf7-287e-4ecd-b5d6-2ef822c87f10"/>
+      <expressions type="slsa.mm.parametertuning.Expression" uuid="098e9e64-e1cf-4b0a-a018-0e4277a9ceb8"/>
+      <name>RefBlkName</name>
+      <workspace type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532"/>
+    </variables>
+    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="909a5afe-7522-43ee-b583-1d48eaf84290">
       <name>global-workspace</name>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="59a05e02-3946-47cf-855f-201c205fef63"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="d910f348-a654-4faf-98b5-5832c352b403"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="98453aab-c4eb-4930-a6f9-4fe20f9784c5"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="18bf49f3-36a5-4c64-bf71-7f82fc6b5e00"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="26e8085a-1e6c-458b-9739-75aede01e1cf"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="b7695363-00b2-4bfd-87b6-09b17afb7d45"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="df4f74b2-bc05-472c-bfc9-8ded4117b790"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="df694087-91a4-4b12-a673-029a002b9f34"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="846b0103-6398-4610-9172-d1f370f92b40"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="cb389cd8-2e2d-4527-8f68-7be9063dc65a"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="0d7f64b9-5b1e-4d85-bd24-5f935753eb36"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="cd272691-ca18-460f-afdb-6a858f799ec7"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="0dd2d4f7-ed58-4a1a-b7f8-115aa4e83afe"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="4519b590-8114-4c25-bf4e-735d23d2b964"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="3edacee9-bc6e-4bdd-92eb-6c6c3e51fabd"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="fa7f6913-8dde-45dc-99fd-e57c3882f847"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="9222e693-2e18-4ad6-9f9f-32ebdd3dab72"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="12fc19d7-998c-4317-b74c-3b7e0ebf4777"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="bc2dfacb-9847-4fee-a924-a72217f9581a"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="5b942774-f1dc-4ede-b161-d9b956ddeb71"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5311e91f-6987-4dfe-a69d-d4fef4e57d98"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="abd2dd92-b59a-48ec-8df9-19e8c6164db9"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="f613faf9-bdab-4f44-bae9-881de1a658be"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5ea1f193-b04b-4fff-bbce-4e75b19e5693"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="350286dd-a29c-4e76-b7f7-8504371cabee"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="8539dde0-6378-4b1e-8f0c-3135499fbaa6"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="2d898292-7eaa-4f69-9e36-9426624bb233"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="029d62af-2fcc-41e6-86fa-dc49a9aec849"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="04f051bf-1508-4e82-b1c1-5910f9eda3d6"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="cee6f13a-f3b5-4e17-a74d-dac9c9e509ea"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5caf3a4f-bc1a-49fb-b491-66cd2b2dd665"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="6c196a01-e89e-4771-9da9-bd0f1ce73684"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="d9f6d3e6-b8f9-4511-955b-b6f71c6b9210"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="075b49eb-8264-46b1-b52f-9632fb9e3ebf"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="27550940-3402-4ae2-8273-dce0266ae863"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="78a07149-643c-4202-9929-fefdf2c781af"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5f10356b-5ff0-428f-83e4-9562a78673c2"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5fa18cfc-6233-49a7-ba98-c0b0fdda60eb"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="39040e5d-2b9b-430c-bbff-4095e63f0447"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="33732acb-5be8-47b2-ae90-6af232d44b91"/>
     </workspaces>
-    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="ab214759-db16-4d76-968d-579bac68ea9f">
+    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="d1f10151-3eb7-4378-b5bd-cd065fa8f9bc">
       <name>ParallelTestBench:1242</name>
       <type>MASK</type>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="50b936ec-19bb-4c6d-ad40-8087d25c8d31"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="30179907-6e6a-41ce-8e03-2a3e25c12dbd"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="13cdfaa7-3676-4654-87bd-1945bf2b88f5"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="f2a4f9c0-de01-4fb0-95c8-48b30f377369"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="75a5d991-cd36-4760-a8f6-9d0cfaa1545f"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="5c50672d-514a-4e6b-bf96-f59e287b12c2"/>
     </workspaces>
-    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="8ce158f2-baef-4944-bbcc-b663240aa057">
-      <name>ParallelTestBench:1238</name>
-      <type>MASK</type>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="6a5f4153-0a8c-46cc-878c-ab998d38097c"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="2a128bdf-3a6b-4366-9cbe-3701a607ee22"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="daba98e1-c0cd-4db4-ae5f-4906ea9d05f2"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="5abf1e58-8c86-4d11-9f2c-2a97bb9a6f25"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="1447faef-f224-4943-a305-b51d89d50dd7"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="17799def-0b7a-4762-8a06-8e3936112748"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="d7f8250d-9f09-4148-b61c-b996190741b1"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="2b4350bd-3ae7-4dd6-8f0b-d5b880048db1"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="a9f87da7-9b5e-481f-bdc7-e6f4001aebe5"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="38e304dd-d0f4-4af4-85ff-5fa48c6cad57"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="780380b3-02e3-4c1c-8a57-9ecc004db473"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="9c0647d4-265b-4e0f-8c25-a1910927bedf"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="3295e12f-b216-4a28-8fce-c67236b5b181"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="d12906ec-c96d-4a1e-b491-096a580737bc"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="51f11281-23f9-43b3-aca5-f624d6433ee2"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="fc25a23c-bfcc-495b-9fc1-88f160261525"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="3cafbbfb-ee27-4261-9459-746afaf31a15"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="0286f5e2-b38d-4176-8eed-1a6fc1818974"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="cb2fbc37-45e7-4133-beac-81f1e44b1152"/>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="314dfc7d-87ea-4350-9372-bd413ee644f2"/>
-    </workspaces>
-    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="4aa8eaf1-f7de-4448-84cb-04a9920d53f9">
+    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="df042063-3017-42e5-a2d5-64bdec9c1adb">
       <name>ParallelTestBench:504</name>
       <type>MASK</type>
-      <variables type="slsa.mm.parametertuning.Variable" uuid="91fc982a-ed3c-47bc-ac0e-9b36b6c2c666"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="4dd324f6-92b9-471b-a784-6e7e8aaf04c1"/>
+    </workspaces>
+    <workspaces type="slsa.mm.parametertuning.Workspace" uuid="e7200381-1dd7-45a6-bd5b-585b2e7c4532">
+      <name>ParallelTestBench:1238</name>
+      <type>MASK</type>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="60223e33-0246-4e60-8170-3e6cd3e94406"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="e0dd9986-e88e-49a0-98f9-8653f80c94a8"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="3095df3b-a3fb-4b08-9b68-521f87c86ebf"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="6791ab74-af34-4bc0-88c6-d766a3546a46"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="d4db1175-ea8f-45d2-875f-2483f51be68e"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="b277b2bb-c414-4d72-ba77-095b3d87dfe1"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="ca02e34b-60d9-4adf-bd6b-0f0e9a684218"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="0996d5e0-0d9c-4978-99aa-ad558deb0832"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="7d804fbc-627a-41b2-b2af-d72dbac3ac00"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="f4889407-5fa5-4947-b9e4-039afd83f6d4"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="b494392b-7993-426b-adb2-28fa38216cd4"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="4de3257a-50d8-47b5-a2e0-3edadb537f63"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="29df4ae7-09e1-4baf-9a69-3cb83099660f"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="931acbfd-3270-455f-a1e6-5157cc71beb3"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="de84f8e8-ee70-4fbf-9a2a-b0d836c3f6c4"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="dadba2cd-a6c6-41c1-8e20-4db2229561af"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="574d3f03-9277-4c0a-b42e-d1298b77c10d"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="3b0fb2d8-9e56-487a-933a-4f3136e06d3d"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="8b8faaf9-4535-43ff-98c5-54f903f98e86"/>
+      <variables type="slsa.mm.parametertuning.Variable" uuid="3715f5f4-00f6-4f40-b1d0-c7e493bc7274"/>
     </workspaces>
   </slsa.mm.parametertuning.VariableRegistry>
 </MF0>

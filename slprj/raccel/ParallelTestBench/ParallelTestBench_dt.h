@@ -20,7 +20,7 @@ char_T * rtDataTypeNames [ ] = { "real_T" , "real32_T" , "int8_T" , "uint8_T"
 "fcn_call_T" , "int_T" , "pointer_T" , "action_T" , "timer_uint32_pair_T" ,
 "physical_connection" , "int64_T" , "uint64_T" , "uint64_T" , "int64_T" ,
 "uint_T" , "char_T" , "uchar_T" , "time_T" } ; static DataTypeTransition
-rtBTransitions [ ] = { { ( char_T * ) ( & rtB . irttg002ix ) , 0 , 0 , 187 }
+rtBTransitions [ ] = { { ( char_T * ) ( & rtB . irttg002ix ) , 0 , 0 , 190 }
 , { ( char_T * ) ( & rtB . kt4qdvgqqh ) , 3 , 0 , 2 } , { ( char_T * ) ( &
 rtDW . hjhhmazifh ) , 0 , 0 , 20 } , { ( char_T * ) ( & rtDW . etki2a0fmr .
 LoggedData ) , 11 , 0 , 68 } , { ( char_T * ) ( & rtDW . jclc1m30fx ) , 10 ,
@@ -30,7 +30,7 @@ gnqj1fyav2 ) , 8 , 0 , 7 } , { ( char_T * ) ( & rtDW . n0kqgy2htn .
 iibbwx5nxu ) , 2 , 0 , 1 } , { ( char_T * ) ( & rtDW . l55fduec5sc .
 iibbwx5nxu ) , 2 , 0 , 1 } } ; static DataTypeTransitionTable rtBTransTable =
 { 10U , rtBTransitions } ; static DataTypeTransition rtPTransitions [ ] = { {
-( char_T * ) ( & rtP . Batt_Cap ) , 0 , 0 , 1132 } , { ( char_T * ) ( & rtP .
+( char_T * ) ( & rtP . Batt_Cap ) , 0 , 0 , 1139 } , { ( char_T * ) ( & rtP .
 uDLookupTable_maxIndex [ 0 ] ) , 7 , 0 , 26 } , { ( char_T * ) ( & rtP .
 Switch3_Threshold ) , 3 , 0 , 6 } } ; static DataTypeTransitionTable
 rtPTransTable = { 3U , rtPTransitions } ;

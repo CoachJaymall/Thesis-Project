@@ -3,7 +3,6 @@
 #include "ParallelTestBench_private.h"
 #include "ParallelTestBench_types.h"
 #include "mwmathutil.h"
-#include <math.h>
 #include <string.h>
 #include <stddef.h>
 #include "rt_logging_mmi.h"
@@ -241,7 +240,7 @@ fromwksInfo -> origWorkspaceVarName =
 ; fromwksInfo -> origDataTypeId = 0 ; fromwksInfo -> origIsComplex = 0 ;
 fromwksInfo -> origWidth = 1 ; fromwksInfo -> origElSize = sizeof ( real_T )
 ; fromwksInfo -> data = ( void * ) rtP . fromWS_Signal1_Data0 ; fromwksInfo
--> nDataPoints = 8 ; fromwksInfo -> time = ( double * ) rtP .
+-> nDataPoints = 15 ; fromwksInfo -> time = ( double * ) rtP .
 fromWS_Signal1_Time0 ; rtDW . bw5y0i4p2l . TimePtr = fromwksInfo -> time ;
 rtDW . bw5y0i4p2l . DataPtr = fromwksInfo -> data ; rtDW . bw5y0i4p2l .
 RSimInfoPtr = fromwksInfo ; } rtDW . d05f353xni . PrevIndex = 0 ; } tmp =
@@ -263,7 +262,7 @@ mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO ; modelParameters . mStartTime =
 0.0 ; modelParameters . mLoadInitialState = false ; modelParameters .
 mUseSimState = false ; modelParameters . mLinTrimCompile = false ;
 modelParameters . mLoggingMode = SSC_LOGGING_OFF ; modelParameters .
-mRTWModifiedTimeStamp = 6.37797667E+8 ; modelParameters . mZcDisabled = true
+mRTWModifiedTimeStamp = 6.38752927E+8 ; modelParameters . mZcDisabled = true
 ; modelParameters . mUseModelRefSolver = false ; modelParameters .
 mTargetFPGAHIL = false ; tmp_i = 0.001 ; modelParameters . mSolverTolerance =
 tmp_i ; tmp_i = 5.0E-5 ; modelParameters . mFixedStepSize = tmp_i ; tmp_p =
@@ -296,7 +295,7 @@ mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO ; modelParameters_p . mStartTime =
 0.0 ; modelParameters_p . mLoadInitialState = false ; modelParameters_p .
 mUseSimState = false ; modelParameters_p . mLinTrimCompile = false ;
 modelParameters_p . mLoggingMode = SSC_LOGGING_OFF ; modelParameters_p .
-mRTWModifiedTimeStamp = 6.37797667E+8 ; modelParameters_p . mZcDisabled =
+mRTWModifiedTimeStamp = 6.38752927E+8 ; modelParameters_p . mZcDisabled =
 true ; modelParameters_p . mUseModelRefSolver = false ; modelParameters_p .
 mTargetFPGAHIL = false ; tmp_i = 0.001 ; modelParameters_p . mSolverTolerance
 = tmp_i ; tmp_i = 5.0E-5 ; modelParameters_p . mFixedStepSize = tmp_i ; tmp_p
@@ -329,7 +328,7 @@ mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO ; modelParameters_e . mStartTime =
 0.0 ; modelParameters_e . mLoadInitialState = false ; modelParameters_e .
 mUseSimState = false ; modelParameters_e . mLinTrimCompile = false ;
 modelParameters_e . mLoggingMode = SSC_LOGGING_OFF ; modelParameters_e .
-mRTWModifiedTimeStamp = 6.37782416E+8 ; modelParameters_e . mZcDisabled =
+mRTWModifiedTimeStamp = 6.38752927E+8 ; modelParameters_e . mZcDisabled =
 true ; modelParameters_e . mUseModelRefSolver = false ; modelParameters_e .
 mTargetFPGAHIL = false ; tmp_i = 0.001 ; modelParameters_e . mSolverTolerance
 = tmp_i ; tmp_i = 5.0E-5 ; modelParameters_e . mFixedStepSize = tmp_i ; tmp_p
@@ -362,7 +361,7 @@ mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO ; modelParameters_i . mStartTime =
 0.0 ; modelParameters_i . mLoadInitialState = false ; modelParameters_i .
 mUseSimState = false ; modelParameters_i . mLinTrimCompile = false ;
 modelParameters_i . mLoggingMode = SSC_LOGGING_OFF ; modelParameters_i .
-mRTWModifiedTimeStamp = 6.37782416E+8 ; modelParameters_i . mZcDisabled =
+mRTWModifiedTimeStamp = 6.38752927E+8 ; modelParameters_i . mZcDisabled =
 true ; modelParameters_i . mUseModelRefSolver = false ; modelParameters_i .
 mTargetFPGAHIL = false ; tmp_i = 0.001 ; modelParameters_i . mSolverTolerance
 = tmp_i ; tmp_i = 5.0E-5 ; modelParameters_i . mFixedStepSize = tmp_i ; tmp_p
@@ -397,7 +396,7 @@ fromwksInfo -> origWorkspaceVarName =
 ; fromwksInfo -> origDataTypeId = 0 ; fromwksInfo -> origIsComplex = 0 ;
 fromwksInfo -> origWidth = 1 ; fromwksInfo -> origElSize = sizeof ( real_T )
 ; fromwksInfo -> data = ( void * ) rtP . fromWS_Signal1_Data0_n4yqnlgdbj ;
-fromwksInfo -> nDataPoints = 13 ; fromwksInfo -> time = ( double * ) rtP .
+fromwksInfo -> nDataPoints = 8 ; fromwksInfo -> time = ( double * ) rtP .
 fromWS_Signal1_Time0_pgpp53252z ; rtDW . hvxajhbgno . TimePtr = fromwksInfo
 -> time ; rtDW . hvxajhbgno . DataPtr = fromwksInfo -> data ; rtDW .
 hvxajhbgno . RSimInfoPtr = fromwksInfo ; } rtDW . eixvkodrjc . PrevIndex = 0
@@ -409,7 +408,7 @@ fromwksInfo -> origWorkspaceVarName =
 ; fromwksInfo -> origDataTypeId = 0 ; fromwksInfo -> origIsComplex = 0 ;
 fromwksInfo -> origWidth = 1 ; fromwksInfo -> origElSize = sizeof ( real_T )
 ; fromwksInfo -> data = ( void * ) rtP . fromWS_Signal1_Data0_prwgobmyi3 ;
-fromwksInfo -> nDataPoints = 10 ; fromwksInfo -> time = ( double * ) rtP .
+fromwksInfo -> nDataPoints = 12 ; fromwksInfo -> time = ( double * ) rtP .
 fromWS_Signal1_Time0_eamifk5xcs ; rtDW . fr1mfxzf32 . TimePtr = fromwksInfo
 -> time ; rtDW . fr1mfxzf32 . DataPtr = fromwksInfo -> data ; rtDW .
 fr1mfxzf32 . RSimInfoPtr = fromwksInfo ; } rtDW . dtpp4iwgtx . PrevIndex = 0
@@ -432,7 +431,7 @@ mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO ; modelParameters_m . mStartTime =
 0.0 ; modelParameters_m . mLoadInitialState = false ; modelParameters_m .
 mUseSimState = false ; modelParameters_m . mLinTrimCompile = false ;
 modelParameters_m . mLoggingMode = SSC_LOGGING_OFF ; modelParameters_m .
-mRTWModifiedTimeStamp = 6.37713896E+8 ; modelParameters_m . mZcDisabled =
+mRTWModifiedTimeStamp = 6.38752927E+8 ; modelParameters_m . mZcDisabled =
 true ; modelParameters_m . mUseModelRefSolver = false ; modelParameters_m .
 mTargetFPGAHIL = false ; tmp_i = 0.001 ; modelParameters_m . mSolverTolerance
 = tmp_i ; tmp_i = 5.0E-5 ; modelParameters_m . mFixedStepSize = tmp_i ; tmp_p
@@ -465,7 +464,7 @@ mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO ; modelParameters_g . mStartTime =
 0.0 ; modelParameters_g . mLoadInitialState = false ; modelParameters_g .
 mUseSimState = false ; modelParameters_g . mLinTrimCompile = false ;
 modelParameters_g . mLoggingMode = SSC_LOGGING_OFF ; modelParameters_g .
-mRTWModifiedTimeStamp = 6.37713896E+8 ; modelParameters_g . mZcDisabled =
+mRTWModifiedTimeStamp = 6.38752927E+8 ; modelParameters_g . mZcDisabled =
 true ; modelParameters_g . mUseModelRefSolver = false ; modelParameters_g .
 mTargetFPGAHIL = false ; tmp_i = 0.001 ; modelParameters_g . mSolverTolerance
 = tmp_i ; tmp_i = 5.0E-5 ; modelParameters_g . mFixedStepSize = tmp_i ; tmp_p
@@ -497,21 +496,21 @@ msg_p ; real_T hdsvmy35zz [ 12 ] ; real_T ncdbowaevb [ 11 ] ; real_T tmp_e [
 real_T tmp [ 4 ] ; real_T tmp_c [ 4 ] ; real_T tmp_m [ 4 ] ; real_T fractions
 [ 2 ] ; real_T fractions_e [ 2 ] ; real_T fractions_p [ 2 ] ; real_T mX [ 2 ]
 ; real_T bdhw0fpgj2 ; real_T c5xy34bpvg ; real_T e5n5p5jwen ; real_T
-enkodslmzh ; real_T ha2dpbznfc ; real_T jjcpw4yqmp ; real_T kapenr40ft ;
-real_T mX_e ; real_T mX_i ; real_T mX_p ; real_T mcm3lpg1nv ; real_T
-nycml4qlmt ; real_T time ; real_T time_b ; real_T time_c ; real_T time_e ;
-real_T time_f ; real_T time_g ; real_T time_i ; real_T time_j ; real_T time_k
-; real_T time_m ; real_T time_n ; real_T time_p ; real_T u ; real_T u0 ;
-real_T x ; real_T * icStorePtr ; int32_T i ; int32_T i_p ; int_T jc [ 3 ] ;
-int_T tmp_f [ 3 ] ; int_T tmp_i [ 3 ] ; int_T tmp_n [ 3 ] ; int_T ir [ 2 ] ;
-int_T jc_e [ 2 ] ; int_T jc_g [ 2 ] ; int_T jc_i [ 2 ] ; int_T jc_m [ 2 ] ;
-int_T jc_p [ 2 ] ; int_T tmp_g [ 2 ] ; int_T tmp_k [ 2 ] ; int_T tmp_p [ 2 ]
-; int_T ir_e ; int_T ir_p ; uint32_T bpIndices [ 2 ] ; uint32_T bpIndices_e [
-2 ] ; uint32_T bpIndices_p [ 2 ] ; int8_T rtAction ; int8_T rtPrevAction ;
-boolean_T first_output ; srClearBC ( rtDW . auskljzuj1 ) ; srClearBC ( rtDW .
-cgq2mdkand ) ; srClearBC ( rtDW . fn0wimupx0 ) ; srClearBC ( rtDW .
-byziukqaaz ) ; srClearBC ( rtDW . ns1xtz2b4p ) ; srClearBC ( rtDW .
-okv3jznoxf ) ; srClearBC ( rtDW . miza0bwslu ) ; srClearBC ( rtDW .
+enkodslmzh ; real_T jjcpw4yqmp ; real_T kapenr40ft ; real_T mX_e ; real_T
+mX_i ; real_T mX_p ; real_T mcm3lpg1nv ; real_T nebanodcpb ; real_T
+nycml4qlmt ; real_T oghiuwodgz ; real_T time ; real_T time_b ; real_T time_c
+; real_T time_e ; real_T time_f ; real_T time_g ; real_T time_i ; real_T
+time_j ; real_T time_k ; real_T time_m ; real_T time_n ; real_T time_p ;
+real_T u ; real_T u0 ; real_T x ; real_T * icStorePtr ; int32_T i ; int32_T
+i_p ; int_T jc [ 3 ] ; int_T tmp_f [ 3 ] ; int_T tmp_i [ 3 ] ; int_T tmp_n [
+3 ] ; int_T ir [ 2 ] ; int_T jc_e [ 2 ] ; int_T jc_g [ 2 ] ; int_T jc_i [ 2 ]
+; int_T jc_m [ 2 ] ; int_T jc_p [ 2 ] ; int_T tmp_g [ 2 ] ; int_T tmp_k [ 2 ]
+; int_T tmp_p [ 2 ] ; int_T ir_e ; int_T ir_p ; uint32_T bpIndices [ 2 ] ;
+uint32_T bpIndices_e [ 2 ] ; uint32_T bpIndices_p [ 2 ] ; int8_T rtAction ;
+int8_T rtPrevAction ; boolean_T first_output ; srClearBC ( rtDW . auskljzuj1
+) ; srClearBC ( rtDW . cgq2mdkand ) ; srClearBC ( rtDW . fn0wimupx0 ) ;
+srClearBC ( rtDW . byziukqaaz ) ; srClearBC ( rtDW . ns1xtz2b4p ) ; srClearBC
+( rtDW . okv3jznoxf ) ; srClearBC ( rtDW . miza0bwslu ) ; srClearBC ( rtDW .
 l55fduec5sc . iibbwx5nxu ) ; srClearBC ( rtDW . lpzxn11asy ) ; srClearBC (
 rtDW . jbdxmczt2f ) ; srClearBC ( rtDW . fe1jlxthwc ) ; srClearBC ( rtDW .
 ifu2rmppxs ) ; srClearBC ( rtDW . iuutt5gbfx ) ; srClearBC ( rtDW .
@@ -526,7 +525,7 @@ au0ix1q5sj = 1.0 / rtP . DatasheetBattery_Tc * rtB . irttg002ix ; if (
 ssIsSampleHit ( rtS , 1 , 0 ) ) { } { real_T * pDataValues = ( real_T * )
 rtDW . bw5y0i4p2l . DataPtr ; real_T * pTimeValues = ( real_T * ) rtDW .
 bw5y0i4p2l . TimePtr ; int_T currTimeIndex = rtDW . d05f353xni . PrevIndex ;
-real_T t = ssGetTaskTime ( rtS , 0 ) ; if ( t > pTimeValues [ 7 ] ) {
+real_T t = ssGetTaskTime ( rtS , 0 ) ; if ( t > pTimeValues [ 14 ] ) {
 ob0w4htruw = 0.0 ; } else { int numPoints , lastPoint ; FWksInfo *
 fromwksInfo = ( FWksInfo * ) rtDW . bw5y0i4p2l . RSimInfoPtr ; numPoints =
 fromwksInfo -> nDataPoints ; lastPoint = numPoints - 1 ; if ( t <=
@@ -746,8 +745,8 @@ rtB . ivfnl2doo0 ; rtB . e4wlihh0yp = rtB . a51hahehmm [ 1 ] + rtB .
 cftqthzuab ; { real_T * pDataValues = ( real_T * ) rtDW . hvxajhbgno .
 DataPtr ; real_T * pTimeValues = ( real_T * ) rtDW . hvxajhbgno . TimePtr ;
 int_T currTimeIndex = rtDW . eixvkodrjc . PrevIndex ; real_T t =
-ssGetTaskTime ( rtS , 0 ) ; if ( t > pTimeValues [ 12 ] ) { rtB . m3wbmdk01n
-= 0.0 ; } else { int numPoints , lastPoint ; FWksInfo * fromwksInfo = (
+ssGetTaskTime ( rtS , 0 ) ; if ( t > pTimeValues [ 7 ] ) { rtB . m3wbmdk01n =
+0.0 ; } else { int numPoints , lastPoint ; FWksInfo * fromwksInfo = (
 FWksInfo * ) rtDW . hvxajhbgno . RSimInfoPtr ; numPoints = fromwksInfo ->
 nDataPoints ; lastPoint = numPoints - 1 ; if ( t <= pTimeValues [ 0 ] ) {
 currTimeIndex = 0 ; } else if ( t >= pTimeValues [ lastPoint ] ) {
@@ -765,7 +764,7 @@ real_T ) rtInterpolate ( d1 , d2 , f1 , f2 ) ; pDataValues += numPoints ; } }
 } } { real_T * pDataValues = ( real_T * ) rtDW . fr1mfxzf32 . DataPtr ;
 real_T * pTimeValues = ( real_T * ) rtDW . fr1mfxzf32 . TimePtr ; int_T
 currTimeIndex = rtDW . dtpp4iwgtx . PrevIndex ; real_T t = ssGetTaskTime (
-rtS , 0 ) ; if ( t > pTimeValues [ 9 ] ) { rtB . cq2d2pwdt4 = 0.0 ; } else {
+rtS , 0 ) ; if ( t > pTimeValues [ 11 ] ) { rtB . cq2d2pwdt4 = 0.0 ; } else {
 int numPoints , lastPoint ; FWksInfo * fromwksInfo = ( FWksInfo * ) rtDW .
 fr1mfxzf32 . RSimInfoPtr ; numPoints = fromwksInfo -> nDataPoints ; lastPoint
 = numPoints - 1 ; if ( t <= pTimeValues [ 0 ] ) { currTimeIndex = 0 ; } else
@@ -961,14 +960,17 @@ ea1x0lvxve ; rtB . hq4mhr11mq = rtB . m12o31k1vs [ 0 ] ; if ( ssIsSampleHit (
 rtS , 1 , 0 ) ) { rtB . mqvpg31jlu = rtP . Constant_Value ; rtB . a4b4l1echj
 = rtP . Constant1_Value ; } if ( ssIsModeUpdateTimeStep ( rtS ) ) {
 srUpdateBC ( rtDW . cgq2mdkand ) ; } break ; } if ( ssIsSampleHit ( rtS , 1 ,
-0 ) ) { } jjcpw4yqmp = trunc ( rtB . gmqd0r1s5n ) ; e5n5p5jwen = trunc ( rtB
-. m12o31k1vs [ 0 ] ) ; rtPrevAction = rtDW . fxz4zvrdnk ; if (
-ssIsModeUpdateTimeStep ( rtS ) ) { if ( ( jjcpw4yqmp != 0.0 ) && ( e5n5p5jwen
-!= 0.0 ) ) { rtAction = 0 ; } else if ( ( jjcpw4yqmp == 0.0 ) && ( e5n5p5jwen
-== 0.0 ) ) { rtAction = 1 ; } else { rtAction = 2 ; } rtDW . fxz4zvrdnk =
-rtAction ; } else { rtAction = rtDW . fxz4zvrdnk ; } if ( rtPrevAction !=
-rtAction ) { ssSetBlockStateForSolverChangedAtMajorStep ( rtS ) ; } switch (
-rtAction ) { case 0 : rtPrevAction = rtDW . mjf1zdwwpb ; if (
+0 ) ) { } if ( rtB . gmqd0r1s5n < 0.0 ) { jjcpw4yqmp = muDoubleScalarCeil (
+rtB . gmqd0r1s5n ) ; } else { jjcpw4yqmp = muDoubleScalarFloor ( rtB .
+gmqd0r1s5n ) ; } e5n5p5jwen = rtB . m12o31k1vs [ 0 ] ; if ( e5n5p5jwen < 0.0
+) { e5n5p5jwen = muDoubleScalarCeil ( e5n5p5jwen ) ; } else { e5n5p5jwen =
+muDoubleScalarFloor ( e5n5p5jwen ) ; } rtPrevAction = rtDW . fxz4zvrdnk ; if
+( ssIsModeUpdateTimeStep ( rtS ) ) { if ( ( jjcpw4yqmp != 0.0 ) && (
+e5n5p5jwen != 0.0 ) ) { rtAction = 0 ; } else if ( ( jjcpw4yqmp == 0.0 ) && (
+e5n5p5jwen == 0.0 ) ) { rtAction = 1 ; } else { rtAction = 2 ; } rtDW .
+fxz4zvrdnk = rtAction ; } else { rtAction = rtDW . fxz4zvrdnk ; } if (
+rtPrevAction != rtAction ) { ssSetBlockStateForSolverChangedAtMajorStep ( rtS
+) ; } switch ( rtAction ) { case 0 : rtPrevAction = rtDW . mjf1zdwwpb ; if (
 ssIsModeUpdateTimeStep ( rtS ) ) { rtAction = ( int8_T ) ! ( rtB . a4b4l1echj
 == 0.0 ) ; rtDW . mjf1zdwwpb = rtAction ; } else { rtAction = rtDW .
 mjf1zdwwpb ; } if ( rtPrevAction != rtAction ) {
@@ -1149,14 +1151,68 @@ Integrator_LowerSat_bbrmas44s3 ; } else { rtB . ocvt3xrn00 = rtX . ju22bzmclv
 j14q1l0ljs [ 0 ] = rtB . ht0sdc4e2n ; bdhw0fpgj2 = rtB . nufjeirxpo *
 jjcpw4yqmp + rtB . ocvt3xrn00 * e5n5p5jwen ; rtB . nfsnsrxlvr = rtP .
 Gain2_Gain_hwyq1kurck * rtB . ht0sdc4e2n + rtP . Gain3_Gain_lvn3xsxcbg *
-bdhw0fpgj2 ; rtB . j14q1l0ljs [ 1 ] = rtB . nfsnsrxlvr ; rtB . j14q1l0ljs [ 2
-] = rtP . Gain1_Gain_heyv1n0f4a * rtB . ht0sdc4e2n + rtP .
-Gain4_Gain_c032xsbfri * bdhw0fpgj2 ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { }
-rtB . fpnl3wyn4z = rtB . nufjeirxpo * rtB . ocvt3xrn00 ; rtB . krukbv1au2 =
-rtB . fpnl3wyn4z * rtB . dmu1xpyaah ; rtB . krguxydvse = rtP . SideA_lambda *
-rtB . ocvt3xrn00 ; rtB . lufxmyxbr0 = rtB . krukbv1au2 + rtB . krguxydvse ;
-rtB . ivjcnxt5l0 = 1.5 * rtP . SideA_N * rtB . lufxmyxbr0 ; rtB . dwin0lk10m
-= rtB . i4tiig10qa * rtB . ivjcnxt5l0 * rtP . Gain_Gain_bcxpylev1y ; if (
+bdhw0fpgj2 ; rtB . j14q1l0ljs [ 1 ] = rtB . nfsnsrxlvr ; bdhw0fpgj2 = rtP .
+Gain1_Gain_heyv1n0f4a * rtB . ht0sdc4e2n + rtP . Gain4_Gain_c032xsbfri *
+bdhw0fpgj2 ; rtB . j14q1l0ljs [ 2 ] = bdhw0fpgj2 ; if ( ssIsSampleHit ( rtS ,
+1 , 0 ) ) { } rtB . fpnl3wyn4z = rtB . nufjeirxpo * rtB . ocvt3xrn00 ; rtB .
+krukbv1au2 = rtB . fpnl3wyn4z * rtB . dmu1xpyaah ; rtB . krguxydvse = rtP .
+SideA_lambda * rtB . ocvt3xrn00 ; rtB . lufxmyxbr0 = rtB . krukbv1au2 + rtB .
+krguxydvse ; rtB . ivjcnxt5l0 = 1.5 * rtP . SideA_N * rtB . lufxmyxbr0 ; if (
+rtP . ManualSwitch1_CurrentSetting == 1 ) { nebanodcpb = rtB . lxakjhp4ut ; }
+else { nebanodcpb = rtP . Constant2_Value_iswfbqmgg0 ; } rtB . cvfcfkbbot =
+0.10471975511965977 * nebanodcpb ; rtB . ck20ozhunb = 1.0 / rtP . Dyno_Ratio
+* rtB . a51hahehmm [ 0 ] ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { rtB .
+gg2bbcdrrw = ( rtB . cvfcfkbbot - rtDW . e3d0a5oz4x ) * rtP .
+SurfaceMountPMController1_Ksf ; nebanodcpb = rtDW . e3d0a5oz4x - rtB .
+ck20ozhunb ; rtB . gssztf5fdg = rtP . DiscreteTimeIntegrator_gainval *
+nebanodcpb + rtDW . pgf331hvhc ; rtB . m5zlrndttj = rtP .
+DiscreteTimeIntegrator1_gainval * rtB . gssztf5fdg + rtDW . bxrcqiwwif ;
+nebanodcpb = ( ( rtP . SurfaceMountPMController1_Jcomp * rtB . gg2bbcdrrw +
+rtP . SurfaceMountPMController1_Fv * rtDW . e3d0a5oz4x ) + rtP .
+SurfaceMountPMController1_Fs * muDoubleScalarSign ( rtDW . e3d0a5oz4x ) ) + (
+( rtP . SurfaceMountPMController1_Kisa * rtB . m5zlrndttj + rtP .
+SurfaceMountPMController1_Ksa * rtB . gssztf5fdg ) + rtP .
+SurfaceMountPMController1_ba * nebanodcpb ) ; oghiuwodgz = ( rtB . ht0sdc4e2n
++ rtB . nfsnsrxlvr ) * rtP . Gain5_Gain ; kapenr40ft = ( rtP . Gain_Gain *
+rtB . ht0sdc4e2n + rtP . Gain1_Gain * rtB . nfsnsrxlvr ) + rtP . Gain4_Gain *
+oghiuwodgz ; nycml4qlmt = rtP . Gain2_Gain * rtB . nfsnsrxlvr + rtP .
+Gain3_Gain * oghiuwodgz ; oghiuwodgz = rtP . Gain1_Gain_j1b2wfl0wo * rtB .
+au0ix1q5sj ; a1liohfrsm = muDoubleScalarMin ( muDoubleScalarAbs ( nebanodcpb
+) / rtB . cguxiwph41 , rtP . SurfaceMountPMController1_idq_limits ) ;
+mcm3lpg1nv = rtP . SideA_N * muDoubleScalarAbs ( rtB . ck20ozhunb ) ; if (
+mcm3lpg1nv <= oghiuwodgz / rtB . nhto33wndj ) { rtB . hzgfvz42dk = a1liohfrsm
+; srUpdateBC ( rtDW . miza0bwslu ) ; } else { oghiuwodgz /= muDoubleScalarMax
+( mcm3lpg1nv , rtP . Constant2_Value ) ; nxw4bomkqu = muDoubleScalarSqrt (
+muDoubleScalarMax ( oghiuwodgz * oghiuwodgz - rtB . d0ddtqwuj5 , rtP .
+Constant3_Value ) ) / rtP . Constant5_Value ; if ( a1liohfrsm < nxw4bomkqu )
+{ l55fduec5s ( a1liohfrsm , & rtB . hzgfvz42dk ) ; } else { l55fduec5s (
+nxw4bomkqu , & rtB . hzgfvz42dk ) ; } srUpdateBC ( rtDW . lpzxn11asy ) ; }
+muDoubleScalarSinCos ( rtP . SideA_N * rtB . ii512bfhkj , & oghiuwodgz , &
+mcm3lpg1nv ) ; enkodslmzh = kapenr40ft * mcm3lpg1nv + nycml4qlmt * oghiuwodgz
+; c5xy34bpvg = rtP . SideA_N * rtB . ck20ozhunb ; kapenr40ft = nycml4qlmt *
+mcm3lpg1nv - kapenr40ft * oghiuwodgz ; nebanodcpb = rtB . hzgfvz42dk *
+muDoubleScalarSign ( nebanodcpb ) - kapenr40ft ; nycml4qlmt = rtP .
+Constant4_Value - enkodslmzh ; u0 = rtP . SurfaceMountPMController1_Ki *
+nycml4qlmt * rtP . Gain1_Gain_he3uzhz5qz + rtDW . hbjtppjnxc ; if ( u0 > rtP
+. Saturation_UpperSat ) { rtB . h2k2rk41bt = rtP . Saturation_UpperSat ; }
+else if ( u0 < rtP . Saturation_LowerSat ) { rtB . h2k2rk41bt = rtP .
+Saturation_LowerSat ; } else { rtB . h2k2rk41bt = u0 ; } u0 = rtP .
+SurfaceMountPMController1_Ki * nebanodcpb * rtP . Gain1_Gain_nnzhsn1hyd +
+rtDW . oajcj2f1f5 ; if ( u0 > rtP . Saturation_UpperSat_phs0dpqpzg ) { rtB .
+gnyyc12ptg = rtP . Saturation_UpperSat_phs0dpqpzg ; } else if ( u0 < rtP .
+Saturation_LowerSat_gdduvb3oo2 ) { rtB . gnyyc12ptg = rtP .
+Saturation_LowerSat_gdduvb3oo2 ; } else { rtB . gnyyc12ptg = u0 ; }
+kapenr40ft = ( rtP . SurfaceMountPMController1_Kp_d * nycml4qlmt + rtDW .
+hbjtppjnxc ) - rtP . Proportional_Gain2_Gain * kapenr40ft * c5xy34bpvg ;
+nebanodcpb = ( rtP . Proportional_Gain3_Gain * enkodslmzh + rtP .
+SideA_lambda ) * c5xy34bpvg + ( rtP . SurfaceMountPMController1_Kp_q *
+nebanodcpb + rtDW . oajcj2f1f5 ) ; rtB . jjopdzn0py = kapenr40ft * mcm3lpg1nv
+- nebanodcpb * oghiuwodgz ; nebanodcpb = kapenr40ft * oghiuwodgz + nebanodcpb
+* mcm3lpg1nv ; rtB . hbxfzslsut = rtP . Gain2_Gain_en3fcdxiec * rtB .
+jjopdzn0py + rtP . Gain3_Gain_h5v1k1sppn * nebanodcpb ; rtB . enyymmluck =
+rtP . Gain1_Gain_fvtzit2ppk * rtB . jjopdzn0py + rtP . Gain4_Gain_ne1f41rvzn
+* nebanodcpb ; } rtB . mkzwwcawji = ( rtB . ht0sdc4e2n * rtB . jjopdzn0py +
+rtB . nfsnsrxlvr * rtB . hbxfzslsut ) + bdhw0fpgj2 * rtB . enyymmluck ; if (
 ssIsSampleHit ( rtS , 1 , 0 ) ) { } if ( ssIsModeUpdateTimeStep ( rtS ) ) {
 if ( rtDW . d24a3iy2yr != 0 ) { rtX . k0f2ivlpoh = rtB . max0cti2zd ; } if (
 rtX . k0f2ivlpoh >= rtP . Batt_Cap ) { if ( rtX . k0f2ivlpoh != rtP .
@@ -1174,97 +1230,44 @@ rtS , 1 , 0 ) ) { } rtB . h1yvg3hrrj = 1.0 / rtP . Dyno_Kt * rtB . cftqthzuab
 ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { } rtB . i32tsyahbh =
 9.5492965855137211 * rtB . ea1x0lvxve ; rtB . c210qvuzpq = 9.5492965855137211
 * rtB . m12o31k1vs [ 0 ] ; rtB . nlnobuqb4t = 9.5492965855137211 * rtB .
-a51hahehmm [ 0 ] ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { } if ( rtP .
-ManualSwitch1_CurrentSetting == 1 ) { bdhw0fpgj2 = rtB . lxakjhp4ut ; } else
-{ bdhw0fpgj2 = rtP . Constant2_Value_iswfbqmgg0 ; } rtB . cvfcfkbbot =
-0.10471975511965977 * bdhw0fpgj2 ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { }
-rtB . k21i5spcnm = rtP . RPMtodegs_Gain * rtB . gmqd0r1s5n ; rtB . chctnrcvr3
-= - 1.0 / ( rtP . Batt_Parr * 3600.0 ) * rtB . ocvt3xrn00 ; rtB . d44xfr2uxh
-= 1.0 / rtP . Batt_Parr * rtB . ocvt3xrn00 ; rtB . ksa4mls0wk =
-look2_binlcapw ( rtP . Constant3_Value_clw2lo3chi , rtB . fcdzod43fw , rtP .
+a51hahehmm [ 0 ] ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { rtB . bvlzron2lo =
+( rtP . Gain_Gain_a2pdrz3qwa * rtB . jjopdzn0py + rtP . Gain1_Gain_p2f3paaf35
+* rtB . hbxfzslsut ) + rtP . Gain4_Gain_a3qhxjwm2o * rtB . enyymmluck ; rtB .
+bdpeazbcik = rtP . Gain2_Gain_f3g2yr2rkw * rtB . hbxfzslsut + rtP .
+Gain3_Gain_kigulbfrzl * rtB . enyymmluck ; } rtB . k21i5spcnm = rtP .
+RPMtodegs_Gain * rtB . gmqd0r1s5n ; rtB . chctnrcvr3 = - 1.0 / ( rtP .
+Batt_Parr * 3600.0 ) * rtB . ocvt3xrn00 ; rtB . d44xfr2uxh = 1.0 / rtP .
+Batt_Parr * rtB . ocvt3xrn00 ; rtB . ksa4mls0wk = look2_binlcapw ( rtP .
+Constant3_Value_clw2lo3chi , rtB . fcdzod43fw , rtP .
 DatasheetBattery_BattTempBp , rtP . DatasheetBattery_CapSOCBp , rtP .
 DatasheetBattery_RInt , rtP . R_maxIndex , 7U ) * rtB . d44xfr2uxh ; rtB .
 fkufe2dwcc = look1_binlcapw ( rtB . fcdzod43fw , rtP .
 DatasheetBattery_CapLUTBp , rtP . DatasheetBattery_Em , 100U ) - rtB .
 ksa4mls0wk ; rtB . aarbwzwmur = rtP . Batt_Series * rtB . fkufe2dwcc ; rtB .
-m3te3eovpd = rtB . aarbwzwmur - rtB . au0ix1q5sj ; rtB . ck20ozhunb = 1.0 /
-rtP . Dyno_Ratio * rtB . a51hahehmm [ 0 ] ; rtB . em2j1rtzfx = rtB .
+m3te3eovpd = rtB . aarbwzwmur - rtB . au0ix1q5sj ; rtB . em2j1rtzfx = rtB .
 i4tiig10qa * rtB . fyijl5q30k ; rtB . baetrfr4r5 = rtP .
 Gain5_Gain_ofpzj4djyh * rtB . i4tiig10qa ; rtB . k2zygd0izr = rtB .
 ludaotrnqc * muDoubleScalarTanh ( rtB . baetrfr4r5 ) ; rtB . m4hxih4mk4 = ( (
 rtB . ivjcnxt5l0 - rtB . obpp1l4vac ) - rtB . em2j1rtzfx ) - rtB . k2zygd0izr
 ; rtB . gvb04ezgus = rtB . m4hxih4mk4 / rtB . ct0fhunmet ; rtB . lh5ejoytai =
-rtP . SideA_N * rtB . i4tiig10qa ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { rtB
-. gg2bbcdrrw = ( rtB . cvfcfkbbot - rtDW . e3d0a5oz4x ) * rtP .
-SurfaceMountPMController1_Ksf ; bdhw0fpgj2 = rtDW . e3d0a5oz4x - rtB .
-ck20ozhunb ; rtB . gssztf5fdg = rtP . DiscreteTimeIntegrator_gainval *
-bdhw0fpgj2 + rtDW . pgf331hvhc ; rtB . m5zlrndttj = rtP .
-DiscreteTimeIntegrator1_gainval * rtB . gssztf5fdg + rtDW . bxrcqiwwif ;
-ha2dpbznfc = ( ( rtP . SurfaceMountPMController1_Jcomp * rtB . gg2bbcdrrw +
-rtP . SurfaceMountPMController1_Fv * rtDW . e3d0a5oz4x ) + rtP .
-SurfaceMountPMController1_Fs * muDoubleScalarSign ( rtDW . e3d0a5oz4x ) ) + (
-( rtP . SurfaceMountPMController1_Kisa * rtB . m5zlrndttj + rtP .
-SurfaceMountPMController1_Ksa * rtB . gssztf5fdg ) + rtP .
-SurfaceMountPMController1_ba * bdhw0fpgj2 ) ; bdhw0fpgj2 = ( rtB . ht0sdc4e2n
-+ rtB . nfsnsrxlvr ) * rtP . Gain5_Gain ; kapenr40ft = ( rtP . Gain_Gain *
-rtB . ht0sdc4e2n + rtP . Gain1_Gain * rtB . nfsnsrxlvr ) + rtP . Gain4_Gain *
-bdhw0fpgj2 ; nycml4qlmt = rtP . Gain2_Gain * rtB . nfsnsrxlvr + rtP .
-Gain3_Gain * bdhw0fpgj2 ; bdhw0fpgj2 = rtP . Gain1_Gain_j1b2wfl0wo * rtB .
-au0ix1q5sj ; a1liohfrsm = muDoubleScalarMin ( muDoubleScalarAbs ( ha2dpbznfc
-) / rtB . cguxiwph41 , rtP . SurfaceMountPMController1_idq_limits ) ;
-mcm3lpg1nv = rtP . SideA_N * muDoubleScalarAbs ( rtB . ck20ozhunb ) ; if (
-mcm3lpg1nv <= bdhw0fpgj2 / rtB . nhto33wndj ) { rtB . hzgfvz42dk = a1liohfrsm
-; srUpdateBC ( rtDW . miza0bwslu ) ; } else { bdhw0fpgj2 /= muDoubleScalarMax
-( mcm3lpg1nv , rtP . Constant2_Value ) ; nxw4bomkqu = muDoubleScalarSqrt (
-muDoubleScalarMax ( bdhw0fpgj2 * bdhw0fpgj2 - rtB . d0ddtqwuj5 , rtP .
-Constant3_Value ) ) / rtP . Constant5_Value ; if ( a1liohfrsm < nxw4bomkqu )
-{ l55fduec5s ( a1liohfrsm , & rtB . hzgfvz42dk ) ; } else { l55fduec5s (
-nxw4bomkqu , & rtB . hzgfvz42dk ) ; } srUpdateBC ( rtDW . lpzxn11asy ) ; }
-muDoubleScalarSinCos ( rtP . SideA_N * rtB . ii512bfhkj , & bdhw0fpgj2 , &
-mcm3lpg1nv ) ; enkodslmzh = kapenr40ft * mcm3lpg1nv + nycml4qlmt * bdhw0fpgj2
-; c5xy34bpvg = rtP . SideA_N * rtB . ck20ozhunb ; kapenr40ft = nycml4qlmt *
-mcm3lpg1nv - kapenr40ft * bdhw0fpgj2 ; ha2dpbznfc = rtB . hzgfvz42dk *
-muDoubleScalarSign ( ha2dpbznfc ) - kapenr40ft ; nycml4qlmt = rtP .
-Constant4_Value - enkodslmzh ; u0 = rtP . SurfaceMountPMController1_Ki *
-nycml4qlmt * rtP . Gain1_Gain_he3uzhz5qz + rtDW . hbjtppjnxc ; if ( u0 > rtP
-. Saturation_UpperSat ) { rtB . h2k2rk41bt = rtP . Saturation_UpperSat ; }
-else if ( u0 < rtP . Saturation_LowerSat ) { rtB . h2k2rk41bt = rtP .
-Saturation_LowerSat ; } else { rtB . h2k2rk41bt = u0 ; } u0 = rtP .
-SurfaceMountPMController1_Ki * ha2dpbznfc * rtP . Gain1_Gain_nnzhsn1hyd +
-rtDW . oajcj2f1f5 ; if ( u0 > rtP . Saturation_UpperSat_phs0dpqpzg ) { rtB .
-gnyyc12ptg = rtP . Saturation_UpperSat_phs0dpqpzg ; } else if ( u0 < rtP .
-Saturation_LowerSat_gdduvb3oo2 ) { rtB . gnyyc12ptg = rtP .
-Saturation_LowerSat_gdduvb3oo2 ; } else { rtB . gnyyc12ptg = u0 ; }
-kapenr40ft = ( rtP . SurfaceMountPMController1_Kp_d * nycml4qlmt + rtDW .
-hbjtppjnxc ) - rtP . Proportional_Gain2_Gain * kapenr40ft * c5xy34bpvg ;
-enkodslmzh = ( rtP . Proportional_Gain3_Gain * enkodslmzh + rtP .
-SideA_lambda ) * c5xy34bpvg + ( rtP . SurfaceMountPMController1_Kp_q *
-ha2dpbznfc + rtDW . oajcj2f1f5 ) ; ha2dpbznfc = kapenr40ft * mcm3lpg1nv -
-enkodslmzh * bdhw0fpgj2 ; mcm3lpg1nv = kapenr40ft * bdhw0fpgj2 + enkodslmzh *
-mcm3lpg1nv ; bdhw0fpgj2 = rtP . Gain2_Gain_en3fcdxiec * ha2dpbznfc + rtP .
-Gain3_Gain_h5v1k1sppn * mcm3lpg1nv ; mcm3lpg1nv = rtP . Gain1_Gain_fvtzit2ppk
-* ha2dpbznfc + rtP . Gain4_Gain_ne1f41rvzn * mcm3lpg1nv ; rtB . bvlzron2lo =
-( rtP . Gain_Gain_a2pdrz3qwa * ha2dpbznfc + rtP . Gain1_Gain_p2f3paaf35 *
-bdhw0fpgj2 ) + rtP . Gain4_Gain_a3qhxjwm2o * mcm3lpg1nv ; rtB . bdpeazbcik =
-rtP . Gain2_Gain_f3g2yr2rkw * bdhw0fpgj2 + rtP . Gain3_Gain_kigulbfrzl *
-mcm3lpg1nv ; } rtB . ddcgg2bx0n = rtB . bvlzron2lo * e5n5p5jwen ; rtB .
-dbu1cph3qd = rtB . bdpeazbcik * jjcpw4yqmp ; rtB . gx1mbhkzzf = rtB .
-ddcgg2bx0n + rtB . dbu1cph3qd ; rtB . kkagvopgxv = rtB . gx1mbhkzzf / rtB .
-h1oufun4jj ; rtB . jtkb23rkw2 = rtB . lh5ejoytai * rtB . ocvt3xrn00 ; rtB .
-k2zpu1crq0 = rtB . jtkb23rkw2 * rtB . ary5hhvnmx / rtB . obnipod5vd ; rtB .
-ceua4sozts = rtB . nufjeirxpo * rtP . SideA_Rs / rtB . hcl3f2ypn0 ; rtB .
-enjx00pe1u = ( rtB . kkagvopgxv + rtB . k2zpu1crq0 ) - rtB . ceua4sozts ; rtB
-. lg5bmspaoy = rtB . bvlzron2lo * jjcpw4yqmp ; rtB . mi1n1xzbri = rtB .
-bdpeazbcik * e5n5p5jwen ; rtB . ph0oqajh3o = rtB . mi1n1xzbri - rtB .
-lg5bmspaoy ; rtB . feuebfqypv = rtB . ph0oqajh3o / rtB . ja5xj0z1cg ; rtB .
-foeysnqrik = rtB . nufjeirxpo * rtB . lh5ejoytai ; rtB . cgtnywjknf = rtB .
-foeysnqrik * rtB . kumjwk2t03 / rtB . g122wtg0el ; rtB . il1hhqxhtq = rtB .
-lh5ejoytai * rtP . SideA_lambda / rtB . fhuegjob4p ; rtB . gxy0dk5ecd = rtB .
-ocvt3xrn00 * rtP . SideA_Rs / rtB . avg1hsnek4 ; rtB . fkz44ny3ao = ( ( rtB .
-feuebfqypv - rtB . cgtnywjknf ) - rtB . il1hhqxhtq ) - rtB . gxy0dk5ecd ; if
-( ssIsSampleHit ( rtS , 1 , 0 ) ) { } UNUSED_PARAMETER ( tid ) ; } void
-MdlOutputsTID2 ( int_T tid ) { real_T lz4fhxmtfn ; if ( rtP .
-Constant_Value_in3f0w41r2 > rtP . Batt_Cap ) { rtB . max0cti2zd = rtP .
+rtP . SideA_N * rtB . i4tiig10qa ; rtB . ddcgg2bx0n = rtB . bvlzron2lo *
+e5n5p5jwen ; rtB . dbu1cph3qd = rtB . bdpeazbcik * jjcpw4yqmp ; rtB .
+gx1mbhkzzf = rtB . ddcgg2bx0n + rtB . dbu1cph3qd ; rtB . kkagvopgxv = rtB .
+gx1mbhkzzf / rtB . h1oufun4jj ; rtB . jtkb23rkw2 = rtB . lh5ejoytai * rtB .
+ocvt3xrn00 ; rtB . k2zpu1crq0 = rtB . jtkb23rkw2 * rtB . ary5hhvnmx / rtB .
+obnipod5vd ; rtB . ceua4sozts = rtB . nufjeirxpo * rtP . SideA_Rs / rtB .
+hcl3f2ypn0 ; rtB . enjx00pe1u = ( rtB . kkagvopgxv + rtB . k2zpu1crq0 ) - rtB
+. ceua4sozts ; rtB . lg5bmspaoy = rtB . bvlzron2lo * jjcpw4yqmp ; rtB .
+mi1n1xzbri = rtB . bdpeazbcik * e5n5p5jwen ; rtB . ph0oqajh3o = rtB .
+mi1n1xzbri - rtB . lg5bmspaoy ; rtB . feuebfqypv = rtB . ph0oqajh3o / rtB .
+ja5xj0z1cg ; rtB . foeysnqrik = rtB . nufjeirxpo * rtB . lh5ejoytai ; rtB .
+cgtnywjknf = rtB . foeysnqrik * rtB . kumjwk2t03 / rtB . g122wtg0el ; rtB .
+il1hhqxhtq = rtB . lh5ejoytai * rtP . SideA_lambda / rtB . fhuegjob4p ; rtB .
+gxy0dk5ecd = rtB . ocvt3xrn00 * rtP . SideA_Rs / rtB . avg1hsnek4 ; rtB .
+fkz44ny3ao = ( ( rtB . feuebfqypv - rtB . cgtnywjknf ) - rtB . il1hhqxhtq ) -
+rtB . gxy0dk5ecd ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { } UNUSED_PARAMETER
+( tid ) ; } void MdlOutputsTID2 ( int_T tid ) { real_T lz4fhxmtfn ; if ( rtP
+. Constant_Value_in3f0w41r2 > rtP . Batt_Cap ) { rtB . max0cti2zd = rtP .
 Batt_Cap ; } else { rtB . max0cti2zd = rtP . Constant_Value_in3f0w41r2 ; }
 rtB . h4fmwxdtzw = rtP . DatasheetBattery_Vinit * rtP . DatasheetBattery_Tc ;
 rtB . ct0fhunmet = rtP . SideA_Physical_Param [ ( int32_T ) rtP .
@@ -1386,13 +1389,13 @@ diagnosticManager ) ; tmp_i = ne_simulator_method ( ( NeslSimulator * ) rtDW
 . p2ezmuppnc , NESL_SIM_UPDATE , simulationData , diagnosticManager ) ; if (
 tmp_i != 0 ) { tmp = error_buffer_is_empty ( ssGetErrorStatus ( rtS ) ) ; if
 ( tmp ) { msg_e = rtw_diagnostics_msg ( diagnosticTree_e ) ; ssSetErrorStatus
-( rtS , msg_e ) ; } } rtDW . b2vnrg1jny = 0 ; rtDW . ewedjye3z0 = 0 ; rtDW .
-d24a3iy2yr = 0 ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { rtDW . e3d0a5oz4x +=
-rtP . DiscreteTimeIntegrator_gainval_p43vz5tnpd * rtB . gg2bbcdrrw ; rtDW .
+( rtS , msg_e ) ; } } rtDW . b2vnrg1jny = 0 ; rtDW . ewedjye3z0 = 0 ; if (
+ssIsSampleHit ( rtS , 1 , 0 ) ) { rtDW . e3d0a5oz4x += rtP .
+DiscreteTimeIntegrator_gainval_p43vz5tnpd * rtB . gg2bbcdrrw ; rtDW .
 pgf331hvhc = rtB . gssztf5fdg ; rtDW . bxrcqiwwif = rtB . m5zlrndttj ; rtDW .
-hbjtppjnxc = rtB . h2k2rk41bt ; rtDW . oajcj2f1f5 = rtB . gnyyc12ptg ; }
-UNUSED_PARAMETER ( tid ) ; } void MdlUpdateTID2 ( int_T tid ) {
-UNUSED_PARAMETER ( tid ) ; } void MdlDerivatives ( void ) {
+hbjtppjnxc = rtB . h2k2rk41bt ; rtDW . oajcj2f1f5 = rtB . gnyyc12ptg ; } rtDW
+. d24a3iy2yr = 0 ; UNUSED_PARAMETER ( tid ) ; } void MdlUpdateTID2 ( int_T
+tid ) { UNUSED_PARAMETER ( tid ) ; } void MdlDerivatives ( void ) {
 NeslSimulationData * simulationData ; NeuDiagnosticManager *
 diagnosticManager ; NeuDiagnosticTree * diagnosticTree ; NeuDiagnosticTree *
 diagnosticTree_e ; NeuDiagnosticTree * diagnosticTree_p ; XDot * _rtXdot ;
@@ -2281,14 +2284,14 @@ subs [ 0 ] ] ) ) ; subs [ 1 ] = 1 ; offset = mxCalcSingleSubscript ( data , 2
 [ 0 ] ] ) ) ; } } return data ; } void MdlInitializeSizes ( void ) {
 ssSetNumContStates ( rtS , 26 ) ; ssSetNumPeriodicContStates ( rtS , 2 ) ;
 ssSetNumY ( rtS , 0 ) ; ssSetNumU ( rtS , 0 ) ; ssSetDirectFeedThrough ( rtS
-, 0 ) ; ssSetNumSampleTimes ( rtS , 2 ) ; ssSetNumBlocks ( rtS , 489 ) ;
-ssSetNumBlockIO ( rtS , 142 ) ; ssSetNumBlockParams ( rtS , 1164 ) ; } void
+, 0 ) ; ssSetNumSampleTimes ( rtS , 2 ) ; ssSetNumBlocks ( rtS , 492 ) ;
+ssSetNumBlockIO ( rtS , 145 ) ; ssSetNumBlockParams ( rtS , 1171 ) ; } void
 MdlInitializeSampleTimes ( void ) { ssSetSampleTime ( rtS , 0 , 0.0 ) ;
 ssSetSampleTime ( rtS , 1 , 5.0E-5 ) ; ssSetOffsetTime ( rtS , 0 , 0.0 ) ;
 ssSetOffsetTime ( rtS , 1 , 0.0 ) ; } void raccel_set_checksum ( ) {
-ssSetChecksumVal ( rtS , 0 , 2006713274U ) ; ssSetChecksumVal ( rtS , 1 ,
-243113040U ) ; ssSetChecksumVal ( rtS , 2 , 2648925310U ) ; ssSetChecksumVal
-( rtS , 3 , 2781112266U ) ; }
+ssSetChecksumVal ( rtS , 0 , 3064774813U ) ; ssSetChecksumVal ( rtS , 1 ,
+227680994U ) ; ssSetChecksumVal ( rtS , 2 , 1504209091U ) ; ssSetChecksumVal
+( rtS , 3 , 2416809870U ) ; }
 #if defined(_MSC_VER)
 #pragma optimize( "", off )
 #endif
@@ -2340,7 +2343,7 @@ rtDataTypeInfoTable ; } ParallelTestBench_InitializeDataMapInfo ( ) ;
 ssSetIsRapidAcceleratorActive ( rtS , true ) ; ssSetRootSS ( rtS , rtS ) ;
 ssSetVersion ( rtS , SIMSTRUCT_VERSION_LEVEL2 ) ; ssSetModelName ( rtS ,
 "ParallelTestBench" ) ; ssSetPath ( rtS , "ParallelTestBench" ) ; ssSetTStart
-( rtS , 0.0 ) ; ssSetTFinal ( rtS , 300.0 ) ; ssSetStepSize ( rtS , 5.0E-5 )
+( rtS , 0.0 ) ; ssSetTFinal ( rtS , 100.0 ) ; ssSetStepSize ( rtS , 5.0E-5 )
 ; ssSetFixedStepSize ( rtS , 5.0E-5 ) ; ssSetSolverExtrapolationOrder ( rtS ,
 4 ) ; ssSetSolverNumberNewtonIterations ( rtS , 1 ) ; { static RTWLogInfo
 rt_DataLoggingInfo ; rt_DataLoggingInfo . loggingInterval = ( NULL ) ;
@@ -2596,9 +2599,9 @@ rtMassMatrix . pr ; ssSetMassMatrixIr ( rtS , ir ) ; ssSetMassMatrixJc ( rtS
 , jc ) ; ssSetMassMatrixPr ( rtS , pr ) ; ( void ) memset ( ( void * ) ir , 0
 , 26 * sizeof ( int_T ) ) ; ( void ) memset ( ( void * ) jc , 0 , ( 26 + 1 )
 * sizeof ( int_T ) ) ; ( void ) memset ( ( void * ) pr , 0 , 26 * sizeof (
-real_T ) ) ; } } ssSetChecksumVal ( rtS , 0 , 2006713274U ) ;
-ssSetChecksumVal ( rtS , 1 , 243113040U ) ; ssSetChecksumVal ( rtS , 2 ,
-2648925310U ) ; ssSetChecksumVal ( rtS , 3 , 2781112266U ) ; { static const
+real_T ) ) ; } } ssSetChecksumVal ( rtS , 0 , 3064774813U ) ;
+ssSetChecksumVal ( rtS , 1 , 227680994U ) ; ssSetChecksumVal ( rtS , 2 ,
+1504209091U ) ; ssSetChecksumVal ( rtS , 3 , 2416809870U ) ; { static const
 sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE ; static RTWExtModeInfo
 rt_ExtModeInfo ; static const sysRanDType * systemRan [ 32 ] ;
 gblRTWExtModeInfo = & rt_ExtModeInfo ; ssSetRTWExtModeInfo ( rtS , &
