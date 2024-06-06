@@ -10,10 +10,10 @@ SideA_lambda = 0.00388; % Motor permanent magnetic flux [Wb]
 SideA_N = 7; % Motor number of pole pairs
 SideA_MaxTrq = 5.53; % Motor max torque [Nm]
 SideA_RatedTrq = 0.77*SideA_MaxTrq; % Usabel torque [Nm]
-SideA_Physical_Param = [0.000398 0.000139 0.15]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
+SideA_Physical_Param = [0.002229 0.0007 0.2814];%[0.002229 0.0005 0.2173]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 SideA_Ke = 9.75609; % Motor back-emf constant [Vpp/kRPM]
 SideA_Kt = 0.04189; % Motor torque constant, Max Torque/Max Current [Nm/A]
-BLDC_Driveline_Param = [0.000838 0.00018]; % Inertia and damping of the A side driveline [kgm^2,Nm/rad/s]
+BLDC_Driveline_Param = [0.002229 0.0007 0.2814];%[0.002929 0.00197]; % Inertia and damping of the A side driveline [kgm^2,Nm/rad/s]
 
 %% Dynamometer motor parameters, the motor used for loading
 
@@ -45,7 +45,6 @@ A_eff = (pi/4)*(D_o^2-d_o^2); % Effective area [m^2]
 R_eff = (2/6)*((D_o^3-d_o^3)/((D_o^2-d_o^2))); % Effective radius [m]
 mew_s = 0.35; % Slip friction coefficient
 mew_k = 0.3; % Dynamic friction coefficient
-Clutch_Param = [0.00336 0.0017]; %[0.00336 0.0018]; % Clutch rotor inertia and damping [kgm^2,Nm/rad/s]
 
 F_clamp = KinFricTrq/(mew_k*R_eff); % Clutch clamp force [N]
 P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
