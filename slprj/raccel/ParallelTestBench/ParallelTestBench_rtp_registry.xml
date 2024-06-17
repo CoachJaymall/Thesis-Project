@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm_rtp_registry/R2023a">
+  <slsa.mm.rtpregistry.ModelMetadata type="slsa.mm.rtpregistry.ModelMetadata" uuid="71ba26f8-00e8-4d99-8d4e-0772fcf5404f">
+    <modelName>ParallelTestBench</modelName>
+  </slsa.mm.rtpregistry.ModelMetadata>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="0ef47d5e-1f0b-4787-9ca1-28bccd9b03c6">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="80d0dff2-efe3-4435-a96a-c4e6b2f1d95b"/>
+    <valueIndices>3</valueIndices>
+    <valueIndices>3</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="4e4603f2-122e-4415-b6c1-800e3e2ac212">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="a8cb561f-52e1-42ba-8f12-fc538c1ed27f"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="45f799ac-3196-4351-b630-99eaf6ad5b02"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="4e301845-7648-4587-b111-1aac8cd1636e">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="4aec08f8-8369-476b-80f0-345d40f24178"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="42c6fa72-5ab1-4754-aae0-5367b2b0caf8"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="42c6fa72-5ab1-4754-aae0-5367b2b0caf8">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="4e301845-7648-4587-b111-1aac8cd1636e"/>
+    <valueIndices>0</valueIndices>
+    <valueIndices>0</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="4aec08f8-8369-476b-80f0-345d40f24178">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Batt_Cap</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="4e301845-7648-4587-b111-1aac8cd1636e"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="a8cb561f-52e1-42ba-8f12-fc538c1ed27f">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Batt_Parr</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="4e4603f2-122e-4415-b6c1-800e3e2ac212"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="45547288-4ef5-4d12-accb-206147b838a7">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="58c795cf-bd8f-4fc0-86ce-9a7d0ed43adf"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="4120c7e1-5ef0-4156-8f47-b450c6ac198e"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="45f799ac-3196-4351-b630-99eaf6ad5b02">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="4e4603f2-122e-4415-b6c1-800e3e2ac212"/>
+    <valueIndices>1</valueIndices>
+    <valueIndices>1</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="34c27500-46cc-434d-a522-01e2c4df0502">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="99f4052c-c93b-4a81-9751-2ba6b5eaff61"/>
+    <valueIndices>330</valueIndices>
+    <valueIndices>330</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="b4a28881-053d-409b-99ad-5928ae79d4a6">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="c8448592-1c3b-4c39-932b-3ab47790d77e"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="ceba4894-65d6-484b-b1d3-c1b1b5c06ccc"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b4c677f7-fcc7-4125-9c22-789e5ef99d91">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="c8e4705c-8876-4ce1-ba93-ae298dcd59a5"/>
+    <valueIndices>329</valueIndices>
+    <valueIndices>329</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="742d63ec-fd5e-4208-8f0a-64bb1eabbbc6">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="cf9a4086-2980-4ea0-b155-8472d14440f8"/>
+    <valueIndices>763</valueIndices>
+    <valueIndices>768</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="74699233-9397-4cc4-95c2-f84a60e0a745">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="913558b0-0aaf-4a10-b374-25c7f818fe4f"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="800478a6-a50e-4def-96ea-8d247a8e6e53"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="11231dfe-a05b-4946-b533-19d965b46d4b">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Dyno_Ratio</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="a20936dd-6ff4-4915-a5d0-4e38b742a773"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="913558b0-0aaf-4a10-b374-25c7f818fe4f">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Batt_Series</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="74699233-9397-4cc4-95c2-f84a60e0a745"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="800478a6-a50e-4def-96ea-8d247a8e6e53">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="74699233-9397-4cc4-95c2-f84a60e0a745"/>
+    <valueIndices>2</valueIndices>
+    <valueIndices>2</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="80d0dff2-efe3-4435-a96a-c4e6b2f1d95b">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="7c3b14b6-7e74-422a-9245-4cf1b8ce3ea8"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="0ef47d5e-1f0b-4787-9ca1-28bccd9b03c6"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="bc54f148-3496-48ac-9f3b-2de2a5876b9a">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="982455ce-fa6f-4409-9b7b-cc043ad147d2"/>
+    <valueIndices>338</valueIndices>
+    <valueIndices>349</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="bc3356df-2abf-419d-bc60-b4b86bbfade9">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="e0307998-b4a7-4da5-b04e-35b214d0b67f"/>
+    <valueIndices>331</valueIndices>
+    <valueIndices>337</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="7c3b14b6-7e74-422a-9245-4cf1b8ce3ea8">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Dyno_Ke</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="80d0dff2-efe3-4435-a96a-c4e6b2f1d95b"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="bbce07b2-e15f-49fa-b5b1-a167fe27403d">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="16e026c8-4912-4147-b0f7-492bb5e8a35d"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="9a83451e-3d36-4e81-a24f-bc77bbeec276"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="16e026c8-4912-4147-b0f7-492bb5e8a35d">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Dyno_Kt</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="bbce07b2-e15f-49fa-b5b1-a167fe27403d"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="9ab4f3a9-c19e-4487-b140-ae9b683bade2">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="6c36a2e7-d771-4641-8fcf-44420c641d90"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="62c368e9-41af-4ab7-967a-96a407e4604a"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="9a83451e-3d36-4e81-a24f-bc77bbeec276">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="bbce07b2-e15f-49fa-b5b1-a167fe27403d"/>
+    <valueIndices>4</valueIndices>
+    <valueIndices>4</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="a2e4193a-6158-485e-b4d8-e97265b8b180">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="15871f78-60f1-464e-b45e-77fbef7fb980"/>
+    <valueIndices>645</valueIndices>
+    <valueIndices>645</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="62c368e9-41af-4ab7-967a-96a407e4604a">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="9ab4f3a9-c19e-4487-b140-ae9b683bade2"/>
+    <valueIndices>90</valueIndices>
+    <valueIndices>173</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="a20936dd-6ff4-4915-a5d0-4e38b742a773">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="11231dfe-a05b-4946-b533-19d965b46d4b"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="f9ab80fb-7633-4b58-81d2-e07bd0657948"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="f92c85a2-1ac3-4fee-a2e3-876ff7e3035c">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="44b2e29b-38f3-492a-b3bd-3114e08cb697"/>
+    <valueIndices>325</valueIndices>
+    <valueIndices>327</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="3935dedf-9c50-407c-9e49-6e4879f791a2">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Fuel_Map</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="83f78ef9-7031-474c-b2d9-fe6a32788c6e"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="f9ab80fb-7633-4b58-81d2-e07bd0657948">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="a20936dd-6ff4-4915-a5d0-4e38b742a773"/>
+    <valueIndices>5</valueIndices>
+    <valueIndices>5</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="039ccb4e-c4bc-45ed-a774-6dcce9426506">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="3d953580-8770-4034-8c3c-b449a1fe2cfb"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="581ccd8b-eef4-4eec-80ed-7cd9ba45f3fe"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="83f78ef9-7031-474c-b2d9-fe6a32788c6e">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="3935dedf-9c50-407c-9e49-6e4879f791a2"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="735c061e-44bd-45b3-92ea-3bfc58ffeabd"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="f320b5b2-8f0f-44af-97f1-b477d72964a7">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="6f257d8b-9ff1-442c-9596-be0f9e568c86"/>
+    <valueIndices>324</valueIndices>
+    <valueIndices>324</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="735c061e-44bd-45b3-92ea-3bfc58ffeabd">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="83f78ef9-7031-474c-b2d9-fe6a32788c6e"/>
+    <valueIndices>6</valueIndices>
+    <valueIndices>89</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="6c36a2e7-d771-4641-8fcf-44420c641d90">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Fuel_MapE</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="9ab4f3a9-c19e-4487-b140-ae9b683bade2"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="8ccef77d-9f42-4123-9079-b00ac39a32e1">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="3862fceb-2513-4bb9-aef1-60b9032d907f"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="4f454b63-0504-49cf-bcc6-e9e67c46375c"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="3862fceb-2513-4bb9-aef1-60b9032d907f">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Power_Map</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="8ccef77d-9f42-4123-9079-b00ac39a32e1"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="cf738875-9a50-4e11-905f-6658c4a1565c">
+    <workspaceName>global-workspace</workspaceName>
+    <name>SideA_Rs</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="c8e4705c-8876-4ce1-ba93-ae298dcd59a5"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="4f454b63-0504-49cf-bcc6-e9e67c46375c">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="8ccef77d-9f42-4123-9079-b00ac39a32e1"/>
+    <valueIndices>174</valueIndices>
+    <valueIndices>257</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="5379b64e-ba59-4f38-820e-d717234dd84a">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="6fd2f8cf-9d04-4788-9d2e-4a4fbeeaf811"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="869047d6-f946-4f31-ae12-0406c06e3d44"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="6f257d8b-9ff1-442c-9596-be0f9e568c86">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="2a39e55e-ef0c-4b03-89c4-f1dda398262b"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="f320b5b2-8f0f-44af-97f1-b477d72964a7"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="6fd2f8cf-9d04-4788-9d2e-4a4fbeeaf811">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Power_Thr_Map</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="5379b64e-ba59-4f38-820e-d717234dd84a"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="869047d6-f946-4f31-ae12-0406c06e3d44">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="5379b64e-ba59-4f38-820e-d717234dd84a"/>
+    <valueIndices>258</valueIndices>
+    <valueIndices>323</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="aa835d7f-ddd8-4578-8c4f-9c0b6152644f">
+    <workspaceName>global-workspace</workspaceName>
+    <name>SideA_lambda</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="99f4052c-c93b-4a81-9751-2ba6b5eaff61"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="2a39e55e-ef0c-4b03-89c4-f1dda398262b">
+    <workspaceName>global-workspace</workspaceName>
+    <name>SideA_N</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="6f257d8b-9ff1-442c-9596-be0f9e568c86"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="c4486031-275f-447a-9cdb-078525728e84">
+    <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Integrator/Gain1</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="d4fe0a04-e331-4af0-9de5-57f3b3dde4e0"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="44b2e29b-38f3-492a-b3bd-3114e08cb697">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="b701efc4-1c5e-42d4-9d8f-1a3da10f1221"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="f92c85a2-1ac3-4fee-a2e3-876ff7e3035c"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="b763ba07-17c2-4e54-834a-5075a9b6faa4">
+    <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/Dyno Loaded/Fuel Efficient/Switch1</blockPath>
+    <name>Threshold</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="9fa0c641-5121-4d1b-82e2-1b57499d6fe9"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="b701efc4-1c5e-42d4-9d8f-1a3da10f1221">
+    <workspaceName>global-workspace</workspaceName>
+    <name>SideA_Physical_Param</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="44b2e29b-38f3-492a-b3bd-3114e08cb697"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="3d953580-8770-4034-8c3c-b449a1fe2cfb">
+    <workspaceName>global-workspace</workspaceName>
+    <name>SideA_RatedTrq</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="039ccb4e-c4bc-45ed-a774-6dcce9426506"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="58c795cf-bd8f-4fc0-86ce-9a7d0ed43adf">
+    <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/Current_Generation/If Action Subsystem1/Salient Machine/Constant5</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="45547288-4ef5-4d12-accb-206147b838a7"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="982455ce-fa6f-4409-9b7b-cc043ad147d2">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="db5299c0-3fe5-4b2a-acc2-0783a0b770a1"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="bc54f148-3496-48ac-9f3b-2de2a5876b9a"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="581ccd8b-eef4-4eec-80ed-7cd9ba45f3fe">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="039ccb4e-c4bc-45ed-a774-6dcce9426506"/>
+    <valueIndices>328</valueIndices>
+    <valueIndices>328</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="c8448592-1c3b-4c39-932b-3ab47790d77e">
+    <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/Dyno Loaded/Fuel Efficient/Constant3</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="b4a28881-053d-409b-99ad-5928ae79d4a6"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="c8e4705c-8876-4ce1-ba93-ae298dcd59a5">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="cf738875-9a50-4e11-905f-6658c4a1565c"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b4c677f7-fcc7-4125-9c22-789e5ef99d91"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="99f4052c-c93b-4a81-9751-2ba6b5eaff61">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="aa835d7f-ddd8-4578-8c4f-9c0b6152644f"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="34c27500-46cc-434d-a522-01e2c4df0502"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="608543a1-1b8f-462c-b85f-9b38203fc3bd">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Spd_BP</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="e0307998-b4a7-4da5-b04e-35b214d0b67f"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="e0307998-b4a7-4da5-b04e-35b214d0b67f">
+    <id type="slsa.mm.rtpregistry.VariableId" uuid="608543a1-1b8f-462c-b85f-9b38203fc3bd"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="bc3356df-2abf-419d-bc60-b4b86bbfade9"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.VariableId type="slsa.mm.rtpregistry.VariableId" uuid="db5299c0-3fe5-4b2a-acc2-0783a0b770a1">
+    <workspaceName>global-workspace</workspaceName>
+    <name>Trq_BP</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="982455ce-fa6f-4409-9b7b-cc043ad147d2"/>
+  </slsa.mm.rtpregistry.VariableId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="4120c7e1-5ef0-4156-8f47-b450c6ac198e">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="45547288-4ef5-4d12-accb-206147b838a7"/>
+    <valueIndices>630</valueIndices>
+    <valueIndices>630</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="1d5dae2e-84eb-4fa8-9442-efee79470b97">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="a7b8b8f5-cf37-46ad-8d92-c006aae843f2"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="df709a52-4a57-4fd8-96cb-b3794372138f"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="a7b8b8f5-cf37-46ad-8d92-c006aae843f2">
+    <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Proportional_Gain3</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="1d5dae2e-84eb-4fa8-9442-efee79470b97"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="df53c33e-9260-48e4-86f3-852dbaf76120">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="4794abfc-5424-4a48-b733-a3f69137df4a"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b6be2163-2348-40bc-bb05-db86a08f9165"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="dfad9553-5e63-4c25-adb3-098a51b4ba77">
+    <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Integrator1/Gain1</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="15871f78-60f1-464e-b45e-77fbef7fb980"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="df709a52-4a57-4fd8-96cb-b3794372138f">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="1d5dae2e-84eb-4fa8-9442-efee79470b97"/>
+    <valueIndices>639</valueIndices>
+    <valueIndices>639</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="d4da51fb-4b3d-40f3-a630-5502e17cdd62">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="c576ada0-5545-4076-8a13-9eeea7981252"/>
+    <valueIndices>1133</valueIndices>
+    <valueIndices>1134</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="d4fe0a04-e331-4af0-9de5-57f3b3dde4e0">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="c4486031-275f-447a-9cdb-078525728e84"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="953f646a-2a42-4271-8109-c573d7d84294"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="15871f78-60f1-464e-b45e-77fbef7fb980">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="dfad9553-5e63-4c25-adb3-098a51b4ba77"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="a2e4193a-6158-485e-b4d8-e97265b8b180"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="953f646a-2a42-4271-8109-c573d7d84294">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="d4fe0a04-e331-4af0-9de5-57f3b3dde4e0"/>
+    <valueIndices>641</valueIndices>
+    <valueIndices>641</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="700048e1-b550-4ec0-a76f-25a2014c95ec">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="abf41a9d-3092-4e39-a83b-1146bd80fb2d"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="295f039d-3289-4a11-9f06-51a4c0910e2e"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="abf41a9d-3092-4e39-a83b-1146bd80fb2d">
+    <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/DQ Current Control and Decouple/Proportional_Gain2</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="700048e1-b550-4ec0-a76f-25a2014c95ec"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="295f039d-3289-4a11-9f06-51a4c0910e2e">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="700048e1-b550-4ec0-a76f-25a2014c95ec"/>
+    <valueIndices>648</valueIndices>
+    <valueIndices>648</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="4794abfc-5424-4a48-b733-a3f69137df4a">
+    <blockPath>ParallelTestBench/Surface Mount PM Controller1/Exterior PMSM Speed Control Drive CE/PMSM Speed Control Exterior/Current Controller External/Current_Generation/Base Speed/Gain1</blockPath>
+    <name>Gain</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="df53c33e-9260-48e4-86f3-852dbaf76120"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="b6b6c3a2-714a-484e-9322-cf96d8c33942">
+    <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/No Dyno Load/1-D Lookup Table2</blockPath>
+    <name>Table</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="a5d43ac5-ca03-4b4d-9549-8a2cc9517f46"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b6be2163-2348-40bc-bb05-db86a08f9165">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="df53c33e-9260-48e4-86f3-852dbaf76120"/>
+    <valueIndices>654</valueIndices>
+    <valueIndices>654</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="a5d43ac5-ca03-4b4d-9549-8a2cc9517f46">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="b6b6c3a2-714a-484e-9322-cf96d8c33942"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="3f87f3c6-ed59-43ea-9156-bcf634eced92"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="3f87f3c6-ed59-43ea-9156-bcf634eced92">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="a5d43ac5-ca03-4b4d-9549-8a2cc9517f46"/>
+    <valueIndices>693</valueIndices>
+    <valueIndices>752</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="695a04ee-b684-46be-9484-5af2c7fcffda">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="b170898b-9106-43d6-b611-20b89413de2a"/>
+    <valueIndices>1122</valueIndices>
+    <valueIndices>1123</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="69ec21bc-a195-4f31-bfaa-4236485c1c87">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="e8da6640-1a3c-4038-b08f-868da9aef29b"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="24598619-5b0c-45c2-9ecc-fec19f5ac10a"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="e8da6640-1a3c-4038-b08f-868da9aef29b">
+    <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/No Dyno Load/1-D Lookup Table2</blockPath>
+    <name>BreakpointsForDimension1</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="69ec21bc-a195-4f31-bfaa-4236485c1c87"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="24598619-5b0c-45c2-9ecc-fec19f5ac10a">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="69ec21bc-a195-4f31-bfaa-4236485c1c87"/>
+    <valueIndices>753</valueIndices>
+    <valueIndices>762</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="cf9a4086-2980-4ea0-b155-8472d14440f8">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="c13decc8-4b9a-47ef-8ab1-a5eaa3c88dcc"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="742d63ec-fd5e-4208-8f0a-64bb1eabbbc6"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="c13decc8-4b9a-47ef-8ab1-a5eaa3c88dcc">
+    <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/No Dyno Load/1-D Lookup Table2</blockPath>
+    <name>BreakpointsForDimension2</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="cf9a4086-2980-4ea0-b155-8472d14440f8"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="908ff6ba-7a76-4c16-bd8f-445c713fa283">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="f1f0c1f0-b5c2-4629-9651-8361b5c4f3cd"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b078a18a-6b16-484d-a160-941e1055a754"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="f1f0c1f0-b5c2-4629-9651-8361b5c4f3cd">
+    <blockPath>ParallelTestBench/Torque Split Logic/Both Spinning/Dyno Loaded/Fuel Efficient/Switch2</blockPath>
+    <name>Threshold</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="908ff6ba-7a76-4c16-bd8f-445c713fa283"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b078a18a-6b16-484d-a160-941e1055a754">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="908ff6ba-7a76-4c16-bd8f-445c713fa283"/>
+    <valueIndices>772</valueIndices>
+    <valueIndices>772</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="9fa0c641-5121-4d1b-82e2-1b57499d6fe9">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="b763ba07-17c2-4e54-834a-5075a9b6faa4"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b093ab04-25f3-4cb5-97a9-ef3154448003"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="b093ab04-25f3-4cb5-97a9-ef3154448003">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="9fa0c641-5121-4d1b-82e2-1b57499d6fe9"/>
+    <valueIndices>773</valueIndices>
+    <valueIndices>773</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="ceba4894-65d6-484b-b1d3-c1b1b5c06ccc">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="b4a28881-053d-409b-99ad-5928ae79d4a6"/>
+    <valueIndices>776</valueIndices>
+    <valueIndices>787</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="97514bb8-5f6c-4657-977c-0460122b69fd">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="64b60ef8-916b-453a-924b-6171115331b5"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="9237d9e4-2558-4ebf-9b45-93878494f4de"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="64b60ef8-916b-453a-924b-6171115331b5">
+    <blockPath>ParallelTestBench/Torque Split Logic/Either Spinning/Only ICE/Fuel Efficient/Switch2</blockPath>
+    <name>Threshold</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="97514bb8-5f6c-4657-977c-0460122b69fd"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="9237d9e4-2558-4ebf-9b45-93878494f4de">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="97514bb8-5f6c-4657-977c-0460122b69fd"/>
+    <valueIndices>791</valueIndices>
+    <valueIndices>791</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="dd8b10e3-4a07-4f3b-87aa-e41e2c00efe2">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="2ab4390c-6b37-41ec-a06c-34564463e1ec"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="19865535-fafc-41a2-8f8d-474c7d9bcac4"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="2ab4390c-6b37-41ec-a06c-34564463e1ec">
+    <blockPath>ParallelTestBench/Torque Split Logic/Either Spinning/Only ICE/Fuel Efficient/Switch1</blockPath>
+    <name>Threshold</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="dd8b10e3-4a07-4f3b-87aa-e41e2c00efe2"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="19865535-fafc-41a2-8f8d-474c7d9bcac4">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="dd8b10e3-4a07-4f3b-87aa-e41e2c00efe2"/>
+    <valueIndices>792</valueIndices>
+    <valueIndices>792</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="ac8bad8c-d3e9-442f-9364-54478b376571">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="c4f91346-cb04-44d7-82e9-ebecae9b5a7c"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="a931ef56-f0bd-41e9-bd67-7a5a15a9da46"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="c4f91346-cb04-44d7-82e9-ebecae9b5a7c">
+    <blockPath>ParallelTestBench/Torque Split Logic/Either Spinning/Only ICE/Fuel Efficient/Constant3</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="ac8bad8c-d3e9-442f-9364-54478b376571"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="a931ef56-f0bd-41e9-bd67-7a5a15a9da46">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="ac8bad8c-d3e9-442f-9364-54478b376571"/>
+    <valueIndices>795</valueIndices>
+    <valueIndices>806</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="ff39fa2a-2410-4cd9-adeb-d7717ddc5ee5">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="43154362-e5e3-4f96-8f42-053749707430"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="a1bb79c5-272f-49f4-b434-d2c791efd73a"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="43154362-e5e3-4f96-8f42-053749707430">
+    <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/Machine Torque/Subsystem/Constant</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="ff39fa2a-2410-4cd9-adeb-d7717ddc5ee5"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="a1bb79c5-272f-49f4-b434-d2c791efd73a">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="ff39fa2a-2410-4cd9-adeb-d7717ddc5ee5"/>
+    <valueIndices>1111</valueIndices>
+    <valueIndices>1112</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="006f324b-2d15-4e38-ab13-ee83fac190e5">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="40106f47-45df-45e1-a0c3-25a90e821ca7"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="950efc25-da7b-49d4-a506-7803a621ccb6"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="40106f47-45df-45e1-a0c3-25a90e821ca7">
+    <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Subsystem/Constant</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="006f324b-2d15-4e38-ab13-ee83fac190e5"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="950efc25-da7b-49d4-a506-7803a621ccb6">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="006f324b-2d15-4e38-ab13-ee83fac190e5"/>
+    <valueIndices>1115</valueIndices>
+    <valueIndices>1116</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="6b9c97d6-8565-4372-b9a2-3238a378dc4d">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="09564b7d-3e16-425d-a401-e3b64676f887"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="5444b586-29cd-42b6-8666-0b51e87a2be7"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="09564b7d-3e16-425d-a401-e3b64676f887">
+    <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Subsystem1/Constant</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="6b9c97d6-8565-4372-b9a2-3238a378dc4d"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="5444b586-29cd-42b6-8666-0b51e87a2be7">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="6b9c97d6-8565-4372-b9a2-3238a378dc4d"/>
+    <valueIndices>1118</valueIndices>
+    <valueIndices>1119</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="b170898b-9106-43d6-b611-20b89413de2a">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="2331883c-5c0b-44ac-ac51-95bdb33b0aa2"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="695a04ee-b684-46be-9484-5af2c7fcffda"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="236112c6-99ff-4a50-864b-b7725d46213f">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="35e109d4-cf34-4bd5-b369-d7cfc8ef7bd5"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="687c857f-d3db-4351-9577-67b7ff62790f"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="2331883c-5c0b-44ac-ac51-95bdb33b0aa2">
+    <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Subsystem2/Constant1</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="b170898b-9106-43d6-b611-20b89413de2a"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="c576ada0-5545-4076-8a13-9eeea7981252">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="b7ee7987-8aa4-4de7-abc4-b084e823386a"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="d4da51fb-4b3d-40f3-a630-5502e17cdd62"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="c5f07d81-1706-4ee9-ad08-111a119a31ec">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="1d2a888a-6eb3-4c32-8da8-de7b35959f20"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="88ac6485-3784-4e21-b8ec-9873c8502129"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="1d2a888a-6eb3-4c32-8da8-de7b35959f20">
+    <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem/Constant</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="c5f07d81-1706-4ee9-ad08-111a119a31ec"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="88ac6485-3784-4e21-b8ec-9873c8502129">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="c5f07d81-1706-4ee9-ad08-111a119a31ec"/>
+    <valueIndices>1126</valueIndices>
+    <valueIndices>1127</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="35e109d4-cf34-4bd5-b369-d7cfc8ef7bd5">
+    <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem1/Constant</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="236112c6-99ff-4a50-864b-b7725d46213f"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="687c857f-d3db-4351-9577-67b7ff62790f">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="236112c6-99ff-4a50-864b-b7725d46213f"/>
+    <valueIndices>1129</valueIndices>
+    <valueIndices>1130</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="b7ee7987-8aa4-4de7-abc4-b084e823386a">
+    <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem2/Constant1</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="c576ada0-5545-4076-8a13-9eeea7981252"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.Parameter type="slsa.mm.rtpregistry.Parameter" uuid="8fb22c35-9d89-4dcb-91a7-7009d6d617e2">
+    <id type="slsa.mm.rtpregistry.BlockParameterId" uuid="669e53b3-3460-4f2a-b4c0-ea031a02f9da"/>
+    <rtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="c8cf9284-b6d5-43a1-88ce-5e2c54bc3cbb"/>
+  </slsa.mm.rtpregistry.Parameter>
+  <slsa.mm.rtpregistry.BlockParameterId type="slsa.mm.rtpregistry.BlockParameterId" uuid="669e53b3-3460-4f2a-b4c0-ea031a02f9da">
+    <blockPath>ParallelTestBench/SKP 6485/PMSM Torque Input Exterior Continuous/PMSM Torque Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/Q Axis Stator Voltage/Subsystem3/Constant1</blockPath>
+    <name>Value</name>
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="8fb22c35-9d89-4dcb-91a7-7009d6d617e2"/>
+  </slsa.mm.rtpregistry.BlockParameterId>
+  <slsa.mm.rtpregistry.RtpLocation type="slsa.mm.rtpregistry.RtpLocation" uuid="c8cf9284-b6d5-43a1-88ce-5e2c54bc3cbb">
+    <parameter type="slsa.mm.rtpregistry.Parameter" uuid="8fb22c35-9d89-4dcb-91a7-7009d6d617e2"/>
+    <valueIndices>1136</valueIndices>
+    <valueIndices>1137</valueIndices>
+  </slsa.mm.rtpregistry.RtpLocation>
+</MF0>
