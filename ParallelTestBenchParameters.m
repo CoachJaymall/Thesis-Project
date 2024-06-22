@@ -52,8 +52,9 @@ P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
 
 %% ICE parameters
 
-Trq_BP = [0 0.4059 0.6089 0.8118 1.0148 1.2177 1.4207 1.6236 2.0295 2.4355 3.2473 4.0591];
-Spd_BP = [0 2000 3000 4000 5000 6000 7500];
+ICE_Idle_Spd = 157; % ICE idle speed [rad/s]
+Trq_BP = [0 0.4059 0.6089 0.8118 1.0148 1.2177 1.4207 1.6236 2.0295 2.4355 3.2473 4.0591]; % Break points for maps [Nm]
+Spd_BP = [0 2000 3000 4000 5000 6000 7500]; % Break points for maps [RPM]
 ICE_Param = [0.004 0.0017 0.7637]; % ICE inertia and damping (includes output shaft&rotor) [kgm^2,Nm/rad/s]
 
 Power_Map = [0 0 0 0 0 0 0;
@@ -228,3 +229,6 @@ Trq_Thr_Map = [0 0 0 0 0 0 0;
                0 2.597408674 2.740648123 2.972218566 3.262039717 3.660563695 4.059087673];
 
 Power_Thr_Map = Power_Map(2:12,2:7);
+
+%% System Parameters
+Max_Trq = SideA_RatedTrq + max(Trq_BP);

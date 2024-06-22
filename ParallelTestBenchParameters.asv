@@ -14,6 +14,7 @@ SideA_Physical_Param = [0.002229 0.0007 0.2814];%[0.002229 0.0005 0.2173]; % Mot
 SideA_Ke = 9.75609; % Motor back-emf constant [Vpp/kRPM]
 SideA_Kt = 0.04189; % Motor torque constant, Max Torque/Max Current [Nm/A]
 BLDC_Driveline_Param = [0.002229 0.0007 0.2814]; % Inertia and damping of the A side driveline [kgm^2,Nm/rad/s]
+BLDCICE_Driveline_Param = [0.002229 0.0004 0.4815]; % Inertia and damping of the A side driveline [kgm^2,Nm/rad/s]
 
 %% Dynamometer motor parameters, the motor used for loading
 
@@ -51,7 +52,8 @@ P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
 
 %% ICE parameters
 
-Trq_BP = [0 0.4059 0.6089 0.8118 1.0148 1.2177 1.4207 1.6236 2.0295 2.4355 3.2473 4.0591];
+ICE_Idle_Spd = 157; % ICE idle speed [rad/s]
+Trq_BP = [0 0.4059 0.6089 0.8118 1.0148 1.2177 1.4207 1.6236 2.0295 2.4355 3.2473 4.0591]; % Break points for maps
 Spd_BP = [0 2000 3000 4000 5000 6000 7500];
 ICE_Param = [0.004 0.0017 0.7637]; % ICE inertia and damping (includes output shaft&rotor) [kgm^2,Nm/rad/s]
 
@@ -196,14 +198,17 @@ Fuel_MapE(3,2) = Fuel_Map(3,2);
 Fuel_MapE(3,3) = Fuel_Map(3,3);
 Fuel_MapE(4,3) = Fuel_Map(4,3);
 Fuel_MapE(5,3) = Fuel_Map(5,3);
-
+Fuel_MapE(4,4) = Fuel_Map(4,4);
 Fuel_MapE(5,4) = Fuel_Map(5,4);
 Fuel_MapE(6,4) = Fuel_Map(6,4);
 Fuel_MapE(7,4) = Fuel_Map(7,4);
+Fuel_MapE(6,5) = Fuel_Map(6,5);
 Fuel_MapE(7,5) = Fuel_Map(7,5);
 Fuel_MapE(8,5) = Fuel_Map(8,5);
+Fuel_MapE(7,6) = Fuel_Map(7,6);
 Fuel_MapE(8,6) = Fuel_Map(8,6);
 Fuel_MapE(9,6) = Fuel_Map(9,6);
+Fuel_MapE(10,7) = Fuel_Map(10,7);
 Fuel_MapE(11,7) = Fuel_Map(11,7);
 Fuel_MapE(12,7) = Fuel_Map(12,7);
 
