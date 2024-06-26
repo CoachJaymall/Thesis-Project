@@ -25,7 +25,7 @@ Dyno_N = 21; % Motor number of pole pairs
 Dyno_MaxTrq = 17.8; % Motor max torque [Nm]
 Dyno_Physical_Param = [0.002611 0.000233 0.3];%[0.002611 0.000233 0.3]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 Dyno_Ke = 28.7935; % Motor back-emf constant [Vpp/kRPM]
-Dyno_Kt = 0.10409; % Motor torque constant, Max Torque/Max Current [Nm/A]
+Dyno_Kt = 0.0828; % Motor torque constant, Max Torque/Max Current [Nm/A]
 Dyno_Ratio = 0.44; % Pully ratio Side A divided by Dyno
 
 %% Battery parameters
@@ -55,7 +55,7 @@ P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
 ICE_Idle_Spd = 157; % ICE idle speed [rad/s]
 Trq_BP = [0 0.4059 0.6089 0.8118 1.0148 1.2177 1.4207 1.6236 2.0295 2.4355 3.2473 4.0591]; % Break points for maps [Nm]
 Spd_BP = [0 2000 3000 4000 5000 6000 7500]; % Break points for maps [RPM]
-ICE_Param = [0.004 0.0017 0.7637]; % ICE inertia and damping (includes output shaft&rotor) [kgm^2,Nm/rad/s]
+ICE_Param = [0.0026 0.0017 0.7637]; % ICE inertia and damping (includes output shaft&rotor) [kgm^2,Nm/rad/s]
 
 Power_Map = [0 0 0 0 0 0 0;
              0 0.13369 0.028648 0 0 0 0;
