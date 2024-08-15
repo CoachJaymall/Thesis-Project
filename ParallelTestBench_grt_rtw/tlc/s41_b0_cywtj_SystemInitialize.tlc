@@ -1,0 +1,129 @@
+%implements s41_b0_cywtj_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+int_T tmp_1;
+int_T tmp_2;
+int_T tmp_3;
+int_T tmp_4;
+int_T tmp_5;
+int_T tmp_6;
+boolean_T tmp;
+boolean_T tmp_0;
+%closefile localVarDecl
+%assign tlcSetupRuntimeResourcesFcnOfS9B2 = OpaqueTLCBlockFcn("SetupRuntimeResources", 9, 2, 4, 1, 0)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+/* {S!d98}InitializeConditions for Integrator: '<S46>/Integrator' */
+if (%<(LibIsFirstInitCond())>) {
+    ParallelTestBench_X.Integrator_CSTATE = 0.0;
+}
+ParallelTestBench_DW.Integrator_IWORK = 1;
+/* {E!d98}End of InitializeConditions for Integrator: '<S46>/Integrator' */
+
+/* {S!d100}InitializeConditions for SimscapeExecutionBlock: '<S62>/STATE_1' */
+tmp = %<(SLibCG_SE(SLibCGIRHasCompiledModelPropertyValue("ModelReferenceTargetType", "RTW")))>;
+tmp_0 = %<(SLibCG_SE(SLibCGIRHasCompiledModelPropertyValue("ModelReferenceTargetType", "SIM")))>;
+if (tmp_0 || tmp) {
+    tmp_1 = strcmp(%<(RTMSolverGet("SolverName"))>, "daessc");
+    tmp_2 = strcmp(%<(RTMSolverGet("SolverName"))>, "ode14x");
+    tmp_3 = strcmp(%<(RTMSolverGet("SolverName"))>, "ode15s");
+    tmp_4 = strcmp(%<(RTMSolverGet("SolverName"))>, "ode1be");
+    tmp_5 = strcmp(%<(RTMSolverGet("SolverName"))>, "ode23t");
+    tmp_6 = strcmp(%<(RTMSolverGet("SolverName"))>, "odeN");
+    if ((boolean_T)((tmp_1 != 0) & (tmp_2 != 0) & (tmp_3 != 0) & (tmp_4 != 0) & (tmp_5 != 0) & (tmp_6 != 0))) {
+        %<(LibSetRTModelErrorStatus("\"Detected inconsistent solvers in the model reference hierarchy. Model built with ode14x requires one of {daessc, ode14x, ode15s, ode1be, ode23t, odeN} solvers to run. Use one of the required solvers in the top model.\""))>;
+    }
+}
+/* {E!d100}End of InitializeConditions for SimscapeExecutionBlock: '<S62>/STATE_1' */
+
+/* {S!d102}InitializeConditions for Integrator: '<S65>/Int' */
+ParallelTestBench_X.Int_CSTATE = ParallelTestBench_P.SKP6485_omega_init;
+/* {S!d104}InitializeConditions for Integrator: '<Root>/Integrator' */
+ParallelTestBench_X.Integrator_CSTATE_h = ParallelTestBench_P.Integrator_IC;
+/* {S!d106}InitializeConditions for Integrator: '<S79>/Integrator' incorporates:
+ *  Integrator: '<S80>/Integrator'
+ */
+if (%<(LibIsFirstInitCond())>) {
+    ParallelTestBench_X.Integrator_CSTATE_a = 0.0;
+    ParallelTestBench_X.Integrator_CSTATE_j = 0.0;
+}
+ParallelTestBench_DW.Integrator_IWORK_o = 1;
+/* {E!d106}End of InitializeConditions for Integrator: '<S79>/Integrator' */
+
+/* {S!d108}InitializeConditions for Integrator: '<S65>/Int1' */
+ParallelTestBench_X.Int1_CSTATE = ParallelTestBench_P.SKP6485_theta_init;
+/* {S!d110}InitializeConditions for Integrator: '<S80>/Integrator' */
+ParallelTestBench_DW.Integrator_IWORK_n = 1;
+/* {S!d112}InitializeConditions for Integrator: '<S48>/Integrator Limited' */
+if (%<(LibIsFirstInitCond())>) {
+    ParallelTestBench_X.IntegratorLimited_CSTATE = 0.0;
+}
+ParallelTestBench_DW.IntegratorLimited_IWORK = 1;
+/* {E!d112}End of InitializeConditions for Integrator: '<S48>/Integrator Limited' */
+
+/* {S!d114}InitializeConditions for Integrator: '<S26>/Integrator' */
+ParallelTestBench_X.Integrator_CSTATE_o = ParallelTestBench_P.Integrator_IC_a;
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS9B2)
+/* {S!d83}SystemInitialize for IfAction SubSystem: '<S16>/Clutch Engaged' */
+/* {S!d116}SetupRuntimeResources for Scope: '<S89>/Scope' */
+%<tlcSetupRuntimeResourcesFcnOfS9B2>\
+%endif
+/* {S!d118}Start for If: '<S89>/If' */
+ParallelTestBench_DW.If_ActiveSubsystem_f = -1;
+/* {S!d84}SystemInitialize for IfAction SubSystem: '<S89>/Faster ICE' */
+/* {S!d120}Start for If: '<S92>/If' */
+ParallelTestBench_DW.If_ActiveSubsystem_a1 = -1;
+/* {E!d84}End of SystemInitialize for SubSystem: '<S89>/Faster ICE' */
+
+/* {S!d86}SystemInitialize for IfAction SubSystem: '<S89>/Faster BLDC' */
+/* {S!d122}Start for If: '<S91>/If' */
+ParallelTestBench_DW.If_ActiveSubsystem_c = -1;
+/* {E!d86}End of SystemInitialize for SubSystem: '<S89>/Faster BLDC' */
+
+/* {S!d124}SystemInitialize for Merge: '<S89>/Merge' */
+ParallelTestBench_B.Merge_l = ParallelTestBench_P.Merge_InitialOutput;
+/* {S!d126}SystemInitialize for Merge: '<S89>/Merge1' */
+ParallelTestBench_B.Merge1_l = ParallelTestBench_P.Merge1_InitialOutput;
+/* {E!d83}End of SystemInitialize for SubSystem: '<S16>/Clutch Engaged' */
+
+/* {S!d89}SystemInitialize for Atomic SubSystem: '<S97>/PMSM Speed Control Exterior' */
+/* {S!d90}SystemInitialize for Atomic SubSystem: '<S100>/State Filter' */
+/* {S!d128}InitializeConditions for DiscreteIntegrator: '<S108>/Discrete-Time Integrator' */
+ParallelTestBench_DW.DiscreteTimeIntegrator_DSTATE = ParallelTestBench_P.DiscreteTimeIntegrator_IC_n;
+/* {E!d90}End of SystemInitialize for SubSystem: '<S100>/State Filter' */
+
+/* {S!d92}SystemInitialize for Atomic SubSystem: '<S100>/Motion control' */
+/* {S!d130}InitializeConditions for DiscreteIntegrator: '<S107>/Discrete-Time Integrator' */
+ParallelTestBench_DW.DiscreteTimeIntegrator_DSTATE_f = ParallelTestBench_P.DiscreteTimeIntegrator_IC;
+/* {S!d132}InitializeConditions for DiscreteIntegrator: '<S107>/Discrete-Time Integrator1' */
+ParallelTestBench_DW.DiscreteTimeIntegrator1_DSTATE = ParallelTestBench_P.DiscreteTimeIntegrator1_IC;
+/* {E!d92}End of SystemInitialize for SubSystem: '<S100>/Motion control' */
+
+/* {S!d94}SystemInitialize for Atomic SubSystem: '<S100>/Current Controller External' */
+/* {S!d134}InitializeConditions for UnitDelay: '<S123>/Unit Delay' */
+ParallelTestBench_DW.UnitDelay_DSTATE = ParallelTestBench_P.UnitDelay_InitialCondition;
+/* {S!d136}InitializeConditions for UnitDelay: '<S124>/Unit Delay' */
+ParallelTestBench_DW.UnitDelay_DSTATE_n = ParallelTestBench_P.UnitDelay_InitialCondition_c;
+/* {S!d138}SystemInitialize for Merge: '<S110>/Merge1' */
+ParallelTestBench_B.Merge1_o = ParallelTestBench_P.Merge1_InitialOutput_j;
+/* {E!d94}End of SystemInitialize for SubSystem: '<S100>/Current Controller External' */
+/* {E!d89}End of SystemInitialize for SubSystem: '<S97>/PMSM Speed Control Exterior' */
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%<SLibInsertInitSystemMatricesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 1, fcnProtoType)>
+%endfunction

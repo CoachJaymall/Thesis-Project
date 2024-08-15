@@ -1,0 +1,1915 @@
+%implements s41_b0_cywtj_Outputs "C"
+
+%function Outputs(block, system) Output
+%<SLibCGIRAccessLocalVar(130, 0, "")> %% rtb_Gain_g4
+%<SLibCGIRAccessLocalVar(21, 0, "")> %% rtb_Gain_l
+%<SLibCGIRAccessLocalVar(55, 0, "")> %% rtb_MinMax1
+%<SLibCGIRAccessLocalVar(89, 0, "")> %% rtb_Divide1
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+NeslSimulationData *simulationData;
+NeuDiagnosticManager *diagnosticManager;
+NeuDiagnosticTree *diagnosticTree;
+NeuDiagnosticTree *diagnosticTree_0;
+char *msg;
+char *msg_0;
+real_T rtb_FindTrqOutput[12];
+real_T rtb_uDLookupTable_b[11];
+real_T tmp_3[8];
+real_T rtb_GetTrqValForThrtl[7];
+real_T rtb_Sort_o1[7];
+real_T tmp_0[4];
+real_T fractions[2];
+real_T fractions_0[2];
+real_T fractions_1[2];
+real_T fractions_2[2];
+real_T DiscreteTimeIntegrator;
+real_T DiscreteTimeIntegrator1;
+real_T DiscreteTimeIntegrator1_tmp;
+real_T rtb_Add;
+real_T rtb_DetermineSpd_i;
+real_T rtb_DiscreteTimeIntegrator;
+real_T rtb_Fix1;
+real_T rtb_Gain7;
+real_T rtb_Gain_g2;
+real_T rtb_Gain_h;
+real_T rtb_Gain_jl;
+real_T rtb_Sum;
+real_T time;
+real_T time_0;
+real_T time_1;
+real_T time_2;
+int32_T iU;
+int_T tmp_4[3];
+int_T tmp_1[2];
+uint32_T rtb_Sort_o2[7];
+uint32_T bpIndices[2];
+uint32_T bpIndices_0[2];
+uint32_T bpIndices_1[2];
+uint32_T bpIndices_2[2];
+int8_T rtAction;
+int8_T rtPrevAction;
+boolean_T first_output;
+boolean_T tmp;
+boolean_T tmp_2;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%assign tlcOutputsFcnOfS36B2 = OpaqueTLCBlockFcn("Outputs", 36, 2, 4, 2, 0)
+%assign tlcOutputsFcnOfS36B3 = OpaqueTLCBlockFcn("Outputs", 36, 3, 4, 2, 1)
+%assign tlcOutputsFcnOfS36B4 = OpaqueTLCBlockFcn("Outputs", 36, 4, 4, 2, 2)
+%assign tlcOutputsFcnOfS36B6 = OpaqueTLCBlockFcn("Outputs", 36, 6, 4, 2, 3)
+%assign tlcOutputsFcnOfS36B7 = OpaqueTLCBlockFcn("Outputs", 36, 7, 4, 2, 4)
+%assign tlcOutputsFcnOfS9B2 = OpaqueTLCBlockFcn("Outputs", 9, 2, 4, 2, 5)
+%assign tlcOutputsFcnOfS36B14 = OpaqueTLCBlockFcn("Outputs", 36, 14, 4, 2, 6)
+%assign tlcOutputsFcnOfS36B15 = OpaqueTLCBlockFcn("Outputs", 36, 15, 4, 2, 7)
+%assign tlcOutputsFcnOfS36B16 = OpaqueTLCBlockFcn("Outputs", 36, 16, 4, 2, 8)
+%assign tlcOutputsFcnOfS34B3 = OpaqueTLCBlockFcn("Outputs", 34, 3, 4, 2, 9)
+%assign tlcOutputsFcnOfS33B2 = OpaqueTLCBlockFcn("Outputs", 33, 2, 4, 2, 10)
+%assign tlcOutputsFcnOfS36B21 = OpaqueTLCBlockFcn("Outputs", 36, 21, 4, 2, 11)
+%assign tlcOutputsFcnOfS36B22 = OpaqueTLCBlockFcn("Outputs", 36, 22, 4, 2, 12)
+%assign tlcOutputsFcnOfS36B23 = OpaqueTLCBlockFcn("Outputs", 36, 23, 4, 2, 13)
+%assign tlcOutputsFcnOfS36B24 = OpaqueTLCBlockFcn("Outputs", 36, 24, 4, 2, 14)
+%assign tlcOutputsFcnOfS36B29 = OpaqueTLCBlockFcn("Outputs", 36, 29, 4, 2, 15)
+%assign tlcOutputsFcnOfS36B35 = OpaqueTLCBlockFcn("Outputs", 36, 35, 4, 2, 16)
+%assign tlcOutputsFcnOfS36B39 = OpaqueTLCBlockFcn("Outputs", 36, 39, 4, 2, 17)
+%assign tlcOutputsFcnOfS36B40 = OpaqueTLCBlockFcn("Outputs", 36, 40, 4, 2, 18)
+%assign tlcOutputsFcnOfS36B41 = OpaqueTLCBlockFcn("Outputs", 36, 41, 4, 2, 19)
+%assign tlcOutputsFcnOfS36B42 = OpaqueTLCBlockFcn("Outputs", 36, 42, 4, 2, 20)
+%assign tlcOutputsFcnOfS36B43 = OpaqueTLCBlockFcn("Outputs", 36, 43, 4, 2, 21)
+%assign tlcOutputsFcnOfS36B44 = OpaqueTLCBlockFcn("Outputs", 36, 44, 4, 2, 22)
+%assign tlcOutputsFcnOfS36B45 = OpaqueTLCBlockFcn("Outputs", 36, 45, 4, 2, 23)
+%assign tlcOutputsFcnOfS36B46 = OpaqueTLCBlockFcn("Outputs", 36, 46, 4, 2, 24)
+%assign tlcOutputsFcnOfS36B47 = OpaqueTLCBlockFcn("Outputs", 36, 47, 4, 2, 25)
+%assign tlcOutputsFcnOfS36B48 = OpaqueTLCBlockFcn("Outputs", 36, 48, 4, 2, 26)
+%assign tlcOutputsFcnOfS36B49 = OpaqueTLCBlockFcn("Outputs", 36, 49, 4, 2, 27)
+%assign tlcOutputsFcnOfS36B50 = OpaqueTLCBlockFcn("Outputs", 36, 50, 4, 2, 28)
+%assign tlcOutputsFcnOfS36B82 = OpaqueTLCBlockFcn("Outputs", 36, 82, 4, 2, 29)
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d222}Product: '<S46>/Product' incorporates:
+ *  Constant: '<S46>/Constant1'
+ *  Constant: '<S46>/Constant2'
+ */
+    ParallelTestBench_B.Product = ParallelTestBench_P.DatasheetBattery_Vinit * ParallelTestBench_P.DatasheetBattery_Tc;
+}
+/* {S!d224}Integrator: '<S46>/Integrator' */
+if (ParallelTestBench_DW.Integrator_IWORK != 0) {
+    ParallelTestBench_X.Integrator_CSTATE = ParallelTestBench_B.Product;
+}
+/* {S!d226}Integrator: '<S46>/Integrator' */
+ParallelTestBench_B.Integrator = ParallelTestBench_X.Integrator_CSTATE;
+/* {S!d228}Gain: '<S46>/Gain1' */
+ParallelTestBench_B.Gain1 = 1.0 / ParallelTestBench_P.DatasheetBattery_Tc * ParallelTestBench_B.Integrator;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B2)
+    /* {S!d230}Scope: '<Root>/Battery Voltage' */
+%<tlcOutputsFcnOfS36B2>\
+%endif
+}
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B3)
+/* {S!d232}FromWorkspace: '<S14>/fromWS_Signal 1' */
+%<tlcOutputsFcnOfS36B3>\
+%endif
+/* {S!d242}ManualSwitch: '<Root>/Manual Switch3' */
+if (ParallelTestBench_P.ManualSwitch3_CurrentSetting == 1) {
+    /* {S!d238}Step: '<Root>/Step' */
+    if (%<(SLibCG_SE(LibGetTaskTime(0)))> < ParallelTestBench_P.Step_Time) {
+        /* {S!d234}ManualSwitch: '<Root>/Manual Switch3' */
+        ParallelTestBench_B.ManualSwitch3 = ParallelTestBench_P.Step_Y0;
+    } else {
+        /* {S!d236}ManualSwitch: '<Root>/Manual Switch3' */
+        ParallelTestBench_B.ManualSwitch3 = ParallelTestBench_P.Step_YFinal;
+    }
+    /* {E!d238}End of Step: '<Root>/Step' */
+} else {
+    /* {S!d240}ManualSwitch: '<Root>/Manual Switch3' */
+    ParallelTestBench_B.ManualSwitch3 = rtb_Gain_g4;
+}
+/* {E!d242}End of ManualSwitch: '<Root>/Manual Switch3' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B4)
+
+/* {S!d244}FromWorkspace: '<S15>/fromWS_Signal 1' */
+%<tlcOutputsFcnOfS36B4>\
+%endif
+/* {S!d252}ManualSwitch: '<Root>/Manual Switch2' incorporates:
+ *  Step: '<Root>/Step1'
+ */
+if (ParallelTestBench_P.ManualSwitch2_CurrentSetting == 1) {
+    /* {S!d246}ManualSwitch: '<Root>/Manual Switch2' */
+    ParallelTestBench_B.ManualSwitch2 = rtb_Gain_g4;
+} else if (%<(SLibCG_SE(LibGetTaskTime(0)))> < ParallelTestBench_P.Step1_Time) {
+    /* {S!d248}Step: '<Root>/Step1' incorporates:
+ *  ManualSwitch: '<Root>/Manual Switch2'
+ */
+    ParallelTestBench_B.ManualSwitch2 = ParallelTestBench_P.Step1_Y0;
+} else {
+    /* {S!d250}ManualSwitch: '<Root>/Manual Switch2' incorporates:
+ *  Step: '<Root>/Step1'
+ */
+    ParallelTestBench_B.ManualSwitch2 = ParallelTestBench_P.Step1_YFinal;
+}
+/* {E!d252}End of ManualSwitch: '<Root>/Manual Switch2' */
+
+/* {S!d254}Gain: '<S19>/Gain1' */
+ParallelTestBench_B.Gain1_f = ParallelTestBench_P.Dyno_Kt * ParallelTestBench_B.ManualSwitch2;
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B6)
+/* {S!d256}FromWorkspace: '<S11>/fromWS_Signal 1' */
+%<tlcOutputsFcnOfS36B6>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B7)
+/* {S!d258}FromWorkspace: '<S6>/fromWS_Signal 1' */
+%<tlcOutputsFcnOfS36B7>\
+%endif
+/* {S!d332}If: '<S16>/If' */
+rtPrevAction = ParallelTestBench_DW.If_ActiveSubsystem;
+if (%<(RTMGetIsModeUpdateTimeStep())>) {
+    rtAction = (int8_T)!(ParallelTestBench_B.ManualSwitch3 > 0.0);
+    ParallelTestBench_DW.If_ActiveSubsystem = rtAction;
+} else {
+    rtAction = ParallelTestBench_DW.If_ActiveSubsystem;
+}
+if ((rtPrevAction != rtAction) && (rtPrevAction == 0)) {
+    /* {S!d260}Disable for If: '<S89>/If' */
+    ParallelTestBench_DW.If_ActiveSubsystem_f = -1;
+}
+if (rtAction == 0) {
+    /* {S!d139}Outputs for IfAction SubSystem: '<S16>/Clutch Engaged' incorporates:
+ *  ActionPort: '<S89>/Action Port'
+ */
+    /* {S!d320}If: '<S89>/If' incorporates:
+ *  RelationalOperator: '<S91>/Relational Operator'
+ *  Switch: '<S91>/Switch'
+ */
+    if (%<(RTMGetIsModeUpdateTimeStep())>) {
+        rtAction = (int8_T)!(ParallelTestBench_B.Signal > ParallelTestBench_B.Signal_a);
+        ParallelTestBench_DW.If_ActiveSubsystem_f = rtAction;
+    } else {
+        rtAction = ParallelTestBench_DW.If_ActiveSubsystem_f;
+    }
+    if (rtAction == 0) {
+        /* {S!d140}Outputs for IfAction SubSystem: '<S89>/Faster ICE' incorporates:
+ *  ActionPort: '<S92>/Action Port'
+ */
+        /* {S!d262}Lookup_n-D: '<S92>/1-D Lookup Table' incorporates:
+ *  Constant: '<S92>/Constant1'
+ *  FromWorkspace: '<S11>/fromWS_Signal 1'
+ */
+        bpIndices[1U] = plook_binca(ParallelTestBench_B.Signal, ParallelTestBench_P.uDLookupTable_bp02Data, 5U, &rtb_Fix1);
+        fractions[1U] = rtb_Fix1;
+        for (iU = 0; iU < 11; iU++) {
+            bpIndices[0U] = plook_binca(ParallelTestBench_P.Trq_BP[(int32_T)ParallelTestBench_ConstP.pooled1[iU] - 1], ParallelTestBench_P.uDLookupTable_bp01Data, 10U, &rtb_Fix1);
+            fractions[0U] = rtb_Fix1;
+            rtb_uDLookupTable_b[iU] = intrp2d_la_pw(bpIndices, fractions, ParallelTestBench_P.Power_Thr_Map, 11U, ParallelTestBench_P.uDLookupTable_maxIndex);
+        }
+        /* {E!d262}End of Lookup_n-D: '<S92>/1-D Lookup Table' */
+
+        /* {S!d264}MinMax: '<S92>/Max' */
+        rtb_Fix1 = rtb_uDLookupTable_b[0];
+        for (iU = 0; iU < 10; iU++) {
+            rtb_Fix1 = fmax(rtb_Fix1, rtb_uDLookupTable_b[iU + 1]);
+        }
+        /* {S!d266}MinMax: '<S92>/Max' */
+        ParallelTestBench_B.Max_g = rtb_Fix1;
+        /* {S!d268}Sum: '<S92>/Subtract1' incorporates:
+ *  Constant: '<S92>/Constant'
+ */
+        ParallelTestBench_B.Subtract1_f = ParallelTestBench_B.Gain1_f - ParallelTestBench_P.SideA_RatedTrq;
+        /* {S!d274}Switch: '<S92>/Switch' incorporates:
+ *  RelationalOperator: '<S92>/Relational Operator'
+ */
+        if (ParallelTestBench_B.Signal_a < ParallelTestBench_B.Signal) {
+            /* {S!d270}Switch: '<S92>/Switch' */
+            ParallelTestBench_B.Switch_n = ParallelTestBench_B.Signal_a;
+        } else {
+            /* {S!d272}Switch: '<S92>/Switch' */
+            ParallelTestBench_B.Switch_n = ParallelTestBench_B.Signal;
+        }
+        /* {E!d274}End of Switch: '<S92>/Switch' */
+
+        /* {S!d290}If: '<S92>/If' */
+        if (%<(RTMGetIsModeUpdateTimeStep())>) {
+            rtAction = (int8_T)!(ParallelTestBench_B.Subtract1_f < ParallelTestBench_B.Max_g);
+            ParallelTestBench_DW.If_ActiveSubsystem_a1 = rtAction;
+        } else {
+            rtAction = ParallelTestBench_DW.If_ActiveSubsystem_a1;
+        }
+        if (rtAction == 0) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "Output",0)
+            /* {S!d141}Outputs for IfAction SubSystem: '<S92>/If Action Subsystem' incorporates:
+ *  ActionPort: '<S95>/Action Port'
+ */
+%if SLibCG_SystemFcnArgAccessed("ParallelTestB_IfActionSubsystem",4,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ParallelTestB_IfActionSubsystem", ["%<_modelSS>", "ParallelTestBench_B.Signal", "ParallelTestBench_B.Switch_n", "&ParallelTestBench_B.Merge_l", "&ParallelTestBench_B.Merge1_l"], 4, 0, 6, 0, 6, 36)>\
+%assign ss = ::CompiledModel.System[4]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+            /* {E!d141}End of Outputs for SubSystem: '<S92>/If Action Subsystem' */
+%endif
+        } else {
+            /* {S!d143}Outputs for IfAction SubSystem: '<S92>/If Action Subsystem1' incorporates:
+ *  ActionPort: '<S96>/Action Port'
+ */
+            /* {S!d276}Product: '<S96>/Divide' */
+            ParallelTestBench_B.Divide_f = ParallelTestBench_B.Max_g / ParallelTestBench_B.Subtract1_f;
+            /* {S!d278}Product: '<S96>/Product' */
+            ParallelTestBench_B.Product_c1 = ParallelTestBench_B.Signal * ParallelTestBench_B.Divide_f;
+            /* {S!d284}Switch: '<S96>/Switch' */
+            if (ParallelTestBench_B.Product_c1 > ParallelTestBench_P.Switch_Threshold) {
+                /* {S!d280}Switch: '<S96>/Switch' */
+                ParallelTestBench_B.Switch_c = ParallelTestBench_B.Product_c1;
+            } else {
+                /* {S!d282}Switch: '<S96>/Switch' */
+                ParallelTestBench_B.Switch_c = ParallelTestBench_B.Signal;
+            }
+            /* {E!d284}End of Switch: '<S96>/Switch' */
+
+            /* {S!d286}Merge: '<S89>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S96>/BLDC Spd'
+ */
+            ParallelTestBench_B.Merge1_l = ParallelTestBench_B.Switch_c;
+            /* {S!d288}Merge: '<S89>/Merge' incorporates:
+ *  SignalConversion generated from: '<S96>/ICE Spd'
+ */
+            ParallelTestBench_B.Merge_l = ParallelTestBench_B.Switch_c;
+            /* {E!d143}End of Outputs for SubSystem: '<S92>/If Action Subsystem1' */
+        }
+        /* {E!d290}End of If: '<S92>/If' */
+        /* {E!d140}End of Outputs for SubSystem: '<S89>/Faster ICE' */
+    } else {
+        /* {S!d146}Outputs for IfAction SubSystem: '<S89>/Faster BLDC' incorporates:
+ *  ActionPort: '<S91>/Action Port'
+ */
+        if (ParallelTestBench_B.Signal < ParallelTestBench_B.Signal_a) {
+            /* {S!d292}Switch: '<S91>/Switch' */
+            ParallelTestBench_B.Switch_i = ParallelTestBench_B.Signal_a;
+        } else {
+            /* {S!d294}Switch: '<S91>/Switch' */
+            ParallelTestBench_B.Switch_i = ParallelTestBench_B.Signal;
+        }
+        /* {S!d296}Lookup_n-D: '<S91>/1-D Lookup Table' incorporates:
+ *  Constant: '<S91>/Constant1'
+ *  Switch: '<S91>/Switch'
+ */
+        bpIndices[1U] = plook_binca(ParallelTestBench_B.Switch_i, ParallelTestBench_P.uDLookupTable_bp02Data_o, 5U, &rtb_Fix1);
+        fractions[1U] = rtb_Fix1;
+        for (iU = 0; iU < 11; iU++) {
+            bpIndices[0U] = plook_binca(ParallelTestBench_P.Trq_BP[(int32_T)ParallelTestBench_ConstP.pooled1[iU] - 1], ParallelTestBench_P.uDLookupTable_bp01Data_l, 10U, &rtb_Fix1);
+            fractions[0U] = rtb_Fix1;
+            rtb_uDLookupTable_b[iU] = intrp2d_la_pw(bpIndices, fractions, ParallelTestBench_P.Power_Thr_Map, 11U, ParallelTestBench_P.uDLookupTable_maxIndex_k);
+        }
+        /* {E!d296}End of Lookup_n-D: '<S91>/1-D Lookup Table' */
+
+        /* {S!d298}MinMax: '<S91>/Max' */
+        rtb_Fix1 = rtb_uDLookupTable_b[0];
+        for (iU = 0; iU < 10; iU++) {
+            rtb_Fix1 = fmax(rtb_Fix1, rtb_uDLookupTable_b[iU + 1]);
+        }
+        /* {S!d300}MinMax: '<S91>/Max' */
+        ParallelTestBench_B.Max = rtb_Fix1;
+        /* {S!d302}Sum: '<S91>/Subtract1' incorporates:
+ *  Constant: '<S91>/Constant'
+ */
+        ParallelTestBench_B.Subtract1_b = ParallelTestBench_B.Gain1_f - ParallelTestBench_P.SideA_RatedTrq;
+        /* {S!d318}If: '<S91>/If' */
+        if (%<(RTMGetIsModeUpdateTimeStep())>) {
+            rtAction = (int8_T)!(ParallelTestBench_B.Subtract1_b < ParallelTestBench_B.Max);
+            ParallelTestBench_DW.If_ActiveSubsystem_c = rtAction;
+        } else {
+            rtAction = ParallelTestBench_DW.If_ActiveSubsystem_c;
+        }
+        if (rtAction == 0) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "Output",0)
+            /* {S!d147}Outputs for IfAction SubSystem: '<S91>/If Action Subsystem' incorporates:
+ *  ActionPort: '<S93>/Action Port'
+ */
+%if SLibCG_SystemFcnArgAccessed("ParallelTestB_IfActionSubsystem",4,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ParallelTestB_IfActionSubsystem", ["%<_modelSS>", "ParallelTestBench_B.Switch_i", "ParallelTestBench_B.Signal_a", "&ParallelTestBench_B.Merge_l", "&ParallelTestBench_B.Merge1_l"], 4, 1, 6, 0, 6, 36)>\
+%assign ss = ::CompiledModel.System[4]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+            /* {E!d147}End of Outputs for SubSystem: '<S91>/If Action Subsystem' */
+%endif
+        } else {
+            /* {S!d149}Outputs for IfAction SubSystem: '<S91>/If Action Subsystem1' incorporates:
+ *  ActionPort: '<S94>/Action Port'
+ */
+            /* {S!d304}Product: '<S94>/Divide' */
+            ParallelTestBench_B.Divide_m = ParallelTestBench_B.Max / ParallelTestBench_B.Subtract1_b;
+            /* {S!d306}Product: '<S94>/Product' */
+            ParallelTestBench_B.Product_ey = ParallelTestBench_B.Switch_i * ParallelTestBench_B.Divide_m;
+            /* {S!d312}Switch: '<S94>/Switch' */
+            if (ParallelTestBench_B.Product_ey > ParallelTestBench_P.Switch_Threshold_f) {
+                /* {S!d308}Switch: '<S94>/Switch' */
+                ParallelTestBench_B.Switch_m = ParallelTestBench_B.Product_ey;
+            } else {
+                /* {S!d310}Switch: '<S94>/Switch' */
+                ParallelTestBench_B.Switch_m = ParallelTestBench_B.Signal_a;
+            }
+            /* {E!d312}End of Switch: '<S94>/Switch' */
+
+            /* {S!d314}Merge: '<S89>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S94>/BLDC Spd'
+ */
+            ParallelTestBench_B.Merge1_l = ParallelTestBench_B.Switch_m;
+            /* {S!d316}Merge: '<S89>/Merge' incorporates:
+ *  SignalConversion generated from: '<S94>/ICE Spd'
+ */
+            ParallelTestBench_B.Merge_l = ParallelTestBench_B.Switch_m;
+            /* {E!d149}End of Outputs for SubSystem: '<S91>/If Action Subsystem1' */
+        }
+        /* {E!d318}End of If: '<S91>/If' */
+        /* {E!d146}End of Outputs for SubSystem: '<S89>/Faster BLDC' */
+    }
+    /* {E!d320}End of If: '<S89>/If' */
+    if (%<(SLibCGIRIsSampleHit(1, 9))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS9B2)
+        /* {S!d322}Scope: '<S89>/Scope' */
+%<tlcOutputsFcnOfS9B2>\
+%endif
+    }
+    /* {S!d324}Merge: '<S16>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S89>/BLDC Spd'
+ */
+    ParallelTestBench_B.Merge1_n = ParallelTestBench_B.Merge1_l;
+    /* {S!d326}Merge: '<S16>/Merge' incorporates:
+ *  SignalConversion generated from: '<S89>/ICE Spd'
+ */
+    ParallelTestBench_B.Merge = ParallelTestBench_B.Merge_l;
+    /* {E!d139}End of Outputs for SubSystem: '<S16>/Clutch Engaged' */
+
+    /* {S!d153}Outputs for IfAction SubSystem: '<S16>/Clutch Disengaged' incorporates:
+ *  ActionPort: '<S88>/Action Port'
+ */
+} else if (%<(SLibCGIRIsSampleHit(1, 11))>) {
+    /* {S!d328}Merge: '<S16>/Merge' incorporates:
+ *  SignalConversion generated from: '<S88>/ICE Spd'
+ */
+    ParallelTestBench_B.Merge = 0.0;
+    /* {S!d330}Merge: '<S16>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S88>/BLDC Spd'
+ */
+    ParallelTestBench_B.Merge1_n = 0.0;
+
+    /* {E!d153}End of Outputs for SubSystem: '<S16>/Clutch Disengaged' */
+}
+/* {E!d332}End of If: '<S16>/If' */
+
+/* {S!d338}ManualSwitch: '<Root>/Manual Switch' */
+if (ParallelTestBench_P.ManualSwitch_CurrentSetting == 1) {
+    /* {S!d334}ManualSwitch: '<Root>/Manual Switch' incorporates:
+ *  Constant: '<Root>/Constant1'
+ */
+    ParallelTestBench_B.ManualSwitch = ParallelTestBench_P.Constant1_Value_b;
+} else {
+    /* {S!d336}ManualSwitch: '<Root>/Manual Switch' */
+    ParallelTestBench_B.ManualSwitch = ParallelTestBench_B.Merge;
+}
+/* {E!d338}End of ManualSwitch: '<Root>/Manual Switch' */
+
+/* {S!d340}UnitConversion: '<S4>/Unit Conversion' */
+/* Unit Conversion - from: rpm to: rad/s
+ Expression: output = (0.10472*input) + (0) */
+ParallelTestBench_B.UnitConversion = 0.10471975511965977 * ParallelTestBench_B.ManualSwitch;
+/* {S!d342}SimscapeInputBlock: '<S62>/INPUT_1_1_1' */
+if (ParallelTestBench_DW.INPUT_1_1_1_FirstOutput == 0.0) {
+    ParallelTestBench_DW.INPUT_1_1_1_FirstOutput = 1.0;
+    ParallelTestBench_X.ParallelTestBenchICE_Side_Inert = ParallelTestBench_B.UnitConversion;
+}
+ParallelTestBench_B.INPUT_1_1_1[0] = ParallelTestBench_X.ParallelTestBenchICE_Side_Inert;
+ParallelTestBench_B.INPUT_1_1_1[1] = (ParallelTestBench_B.UnitConversion - ParallelTestBench_X.ParallelTestBenchICE_Side_Inert) * 1000.0;
+ParallelTestBench_B.INPUT_1_1_1[2] = 0.0;
+ParallelTestBench_B.INPUT_1_1_1[3] = 0.0;
+/* {E!d342}End of SimscapeInputBlock: '<S62>/INPUT_1_1_1' */
+
+/* {S!d344}SimscapeExecutionBlock: '<S62>/STATE_1' */
+simulationData = (NeslSimulationData *)ParallelTestBench_DW.STATE_1_SimData;
+/* {S!d155}Outputs for IfAction SubSystem: '<S7>/Clutch Engaged, Unrated Torque' incorporates:
+ *  ActionPort: '<S24>/Action Port'
+ */
+/* {S!d346}If: '<S7>/If' incorporates:
+ *  SignalGenerator: '<S24>/Sawtooth Generator'
+ *  SimscapeExecutionBlock: '<S62>/OUTPUT_1_0'
+ *  SimscapeExecutionBlock: '<S62>/STATE_1'
+ */
+rtb_Fix1 = %<(SLibCG_SE(LibGetT()))>;
+/* {E!d155}End of Outputs for SubSystem: '<S7>/Clutch Engaged, Unrated Torque' */
+
+/* {S!d348}SimscapeExecutionBlock: '<S62>/STATE_1' incorporates:
+ *  SimscapeExecutionBlock: '<S62>/OUTPUT_1_0'
+ */
+time = rtb_Fix1;
+simulationData->mData->mTime.mN = 1;
+simulationData->mData->mTime.mX = &time;
+simulationData->mData->mContStates.mN = 4;
+simulationData->mData->mContStates.mX = &ParallelTestBench_X.ParallelTestBenchICE_Side_Ine_n[0];
+simulationData->mData->mDiscStates.mN = 0;
+simulationData->mData->mDiscStates.mX = &ParallelTestBench_DW.STATE_1_Discrete;
+simulationData->mData->mModeVector.mN = 0;
+simulationData->mData->mModeVector.mX = &ParallelTestBench_DW.STATE_1_Modes;
+first_output = %<(SLibCG_SE(SLibCGIRGetSolverFoundZcEvents()))>;
+simulationData->mData->mFoundZcEvents = first_output;
+first_output = %<(SLibCG_SE(LibIsMajorTimeStep()))>;
+simulationData->mData->mIsMajorTimeStep = first_output;
+tmp = %<(SLibCG_SE(SLibCGIRGetSolverAssertCheck()))>;
+simulationData->mData->mIsSolverAssertCheck = tmp;
+simulationData->mData->mIsSolverCheckingCIC = false;
+tmp = %<(SLibCG_SE(RTMIsSolverComputingJacobian()))>;
+simulationData->mData->mIsComputingJacobian = tmp;
+simulationData->mData->mIsEvaluatingF0 = false;
+simulationData->mData->mIsSolverRequestingReset = false;
+tmp = %<(SLibCG_SE(RTMGetIsModeUpdateTimeStep()))>;
+simulationData->mData->mIsModeUpdateTimeStep = tmp;
+tmp_1[0] = 0;
+tmp_0[0] = ParallelTestBench_B.INPUT_1_1_1[0];
+tmp_0[1] = ParallelTestBench_B.INPUT_1_1_1[1];
+tmp_0[2] = ParallelTestBench_B.INPUT_1_1_1[2];
+tmp_0[3] = ParallelTestBench_B.INPUT_1_1_1[3];
+tmp_1[1] = 4;
+simulationData->mData->mInputValues.mN = 4;
+simulationData->mData->mInputValues.mX = &tmp_0[0];
+simulationData->mData->mInputOffsets.mN = 2;
+simulationData->mData->mInputOffsets.mX = &tmp_1[0];
+simulationData->mData->mOutputs.mN = 4;
+simulationData->mData->mOutputs.mX = &ParallelTestBench_B.STATE_1[0];
+simulationData->mData->mTolerances.mN = 0;
+simulationData->mData->mTolerances.mX = NULL;
+simulationData->mData->mCstateHasChanged = false;
+rtb_Gain_jl = %<(SLibCG_SE(LibGetTaskTime(0)))>;
+time_0 = rtb_Gain_jl;
+simulationData->mData->mTime.mN = 1;
+simulationData->mData->mTime.mX = &time_0;
+simulationData->mData->mSampleHits.mN = 0;
+simulationData->mData->mSampleHits.mX = NULL;
+simulationData->mData->mIsFundamentalSampleHit = false;
+diagnosticManager = (NeuDiagnosticManager *)ParallelTestBench_DW.STATE_1_DiagMgr;
+diagnosticTree = neu_diagnostic_manager_get_initial_tree(diagnosticManager);
+iU = ne_simulator_method((NeslSimulator *)ParallelTestBench_DW.STATE_1_Simulator, NESL_SIM_OUTPUTS, simulationData, diagnosticManager);
+if (iU != 0) {
+    tmp_2 = error_buffer_is_empty(%<(LibGetRTModelErrorStatus())>);
+    if (tmp_2) {
+        msg = rtw_diagnostics_msg(diagnosticTree);
+        %<(LibSetRTModelErrorStatus("msg"))>;
+    }
+}
+/* {S!d350}SimscapeExecutionBlock: '<S62>/OUTPUT_1_0' */
+simulationData = (NeslSimulationData *)ParallelTestBench_DW.OUTPUT_1_0_SimData;
+time_1 = rtb_Fix1;
+simulationData->mData->mTime.mN = 1;
+simulationData->mData->mTime.mX = &time_1;
+simulationData->mData->mContStates.mN = 0;
+simulationData->mData->mContStates.mX = NULL;
+simulationData->mData->mDiscStates.mN = 0;
+simulationData->mData->mDiscStates.mX = &ParallelTestBench_DW.OUTPUT_1_0_Discrete;
+simulationData->mData->mModeVector.mN = 0;
+simulationData->mData->mModeVector.mX = &ParallelTestBench_DW.OUTPUT_1_0_Modes;
+tmp_2 = %<(SLibCG_SE(SLibCGIRGetSolverFoundZcEvents()))>;
+simulationData->mData->mFoundZcEvents = tmp_2;
+simulationData->mData->mIsMajorTimeStep = first_output;
+first_output = %<(SLibCG_SE(SLibCGIRGetSolverAssertCheck()))>;
+simulationData->mData->mIsSolverAssertCheck = first_output;
+simulationData->mData->mIsSolverCheckingCIC = false;
+simulationData->mData->mIsComputingJacobian = false;
+simulationData->mData->mIsEvaluatingF0 = false;
+simulationData->mData->mIsSolverRequestingReset = false;
+simulationData->mData->mIsModeUpdateTimeStep = tmp;
+tmp_4[0] = 0;
+tmp_3[0] = ParallelTestBench_B.INPUT_1_1_1[0];
+tmp_3[1] = ParallelTestBench_B.INPUT_1_1_1[1];
+tmp_3[2] = ParallelTestBench_B.INPUT_1_1_1[2];
+tmp_3[3] = ParallelTestBench_B.INPUT_1_1_1[3];
+tmp_4[1] = 4;
+tmp_3[4] = ParallelTestBench_B.STATE_1[0];
+tmp_3[5] = ParallelTestBench_B.STATE_1[1];
+tmp_3[6] = ParallelTestBench_B.STATE_1[2];
+tmp_3[7] = ParallelTestBench_B.STATE_1[3];
+tmp_4[2] = 8;
+simulationData->mData->mInputValues.mN = 8;
+simulationData->mData->mInputValues.mX = &tmp_3[0];
+simulationData->mData->mInputOffsets.mN = 3;
+simulationData->mData->mInputOffsets.mX = &tmp_4[0];
+simulationData->mData->mOutputs.mN = 2;
+simulationData->mData->mOutputs.mX = &ParallelTestBench_B.OUTPUT_1_0[0];
+simulationData->mData->mTolerances.mN = 0;
+simulationData->mData->mTolerances.mX = NULL;
+simulationData->mData->mCstateHasChanged = false;
+time_2 = rtb_Gain_jl;
+simulationData->mData->mTime.mN = 1;
+simulationData->mData->mTime.mX = &time_2;
+simulationData->mData->mSampleHits.mN = 0;
+simulationData->mData->mSampleHits.mX = NULL;
+simulationData->mData->mIsFundamentalSampleHit = false;
+diagnosticManager = (NeuDiagnosticManager *)ParallelTestBench_DW.OUTPUT_1_0_DiagMgr;
+diagnosticTree_0 = neu_diagnostic_manager_get_initial_tree(diagnosticManager);
+iU = ne_simulator_method((NeslSimulator *)ParallelTestBench_DW.OUTPUT_1_0_Simulator, NESL_SIM_OUTPUTS, simulationData, diagnosticManager);
+if (iU != 0) {
+    first_output = error_buffer_is_empty(%<(LibGetRTModelErrorStatus())>);
+    if (first_output) {
+        msg_0 = rtw_diagnostics_msg(diagnosticTree_0);
+        %<(LibSetRTModelErrorStatus("msg_0"))>;
+    }
+}
+/* {S!d352}Integrator: '<S65>/Int' */
+/* Limited  Integrator  */
+if (ParallelTestBench_X.Int_CSTATE >= ParallelTestBench_P.Int_UpperSat) {
+    ParallelTestBench_X.Int_CSTATE = ParallelTestBench_P.Int_UpperSat;
+} else if (ParallelTestBench_X.Int_CSTATE <= ParallelTestBench_P.Int_LowerSat) {
+    ParallelTestBench_X.Int_CSTATE = ParallelTestBench_P.Int_LowerSat;
+}
+/* {S!d354}Integrator: '<S65>/Int' */
+ParallelTestBench_B.Int = ParallelTestBench_X.Int_CSTATE;
+/* {S!d386}If: '<S7>/If' */
+if (%<(RTMGetIsModeUpdateTimeStep())>) {
+    if ((ParallelTestBench_B.ManualSwitch3 == 1.0) && (ParallelTestBench_B.Gain1_f < 40.0)) {
+        rtAction = 0;
+    } else if ((ParallelTestBench_B.ManualSwitch3 == 1.0) && (ParallelTestBench_B.Gain1_f > 40.0)) {
+        rtAction = 1;
+    } else {
+        rtAction = 2;
+    }
+    ParallelTestBench_DW.If_ActiveSubsystem_a = rtAction;
+} else {
+    rtAction = ParallelTestBench_DW.If_ActiveSubsystem_a;
+}
+switch (rtAction) {
+  case 0:
+    /* {S!d159}Outputs for IfAction SubSystem: '<S7>/Clutch Engaged, Rated Torque' incorporates:
+ *  ActionPort: '<S23>/Action Port'
+ */
+    /* {S!d364}MinMax: '<S23>/MinMax' */
+    ParallelTestBench_B.MinMax_p = fmax(ParallelTestBench_B.OUTPUT_1_0[0], ParallelTestBench_B.Int);
+    /* {S!d366}Merge: '<S7>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S23>/PlateSpdOut'
+ */
+    ParallelTestBench_B.Merge1 = ParallelTestBench_B.MinMax_p;
+    /* {S!d368}Merge: '<S7>/Merge2' incorporates:
+ *  SignalConversion generated from: '<S23>/RotorSpdOut'
+ */
+    ParallelTestBench_B.Merge2 = ParallelTestBench_B.MinMax_p;
+    /* {S!d370}Merge: '<S7>/Merge3' incorporates:
+ *  SignalConversion generated from: '<S23>/Spd'
+ */
+    ParallelTestBench_B.Merge3 = ParallelTestBench_B.MinMax_p;
+    /* {S!d372}Merge: '<S7>/Merge' incorporates:
+ *  SignalConversion generated from: '<S23>/LdTrq'
+ */
+    ParallelTestBench_B.Merge_k = ParallelTestBench_B.Gain1_f;
+    /* {E!d159}End of Outputs for SubSystem: '<S7>/Clutch Engaged, Rated Torque' */
+    break;
+  case 1:
+    /* {S!d161}Outputs for IfAction SubSystem: '<S7>/Clutch Engaged, Unrated Torque' incorporates:
+ *  ActionPort: '<S24>/Action Port'
+ */
+    /* {S!d374}MinMax: '<S24>/MinMax' */
+    ParallelTestBench_B.MinMax = fmax(ParallelTestBench_B.OUTPUT_1_0[0], ParallelTestBench_B.Int);
+    /* {S!d376}Merge: '<S7>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S24>/PlateSpdOut'
+ */
+    ParallelTestBench_B.Merge1 = ParallelTestBench_B.MinMax;
+    /* {S!d378}Merge: '<S7>/Merge2' incorporates:
+ *  SignalConversion generated from: '<S24>/RotorSpdOut'
+ */
+    ParallelTestBench_B.Merge2 = ParallelTestBench_B.MinMax;
+    /* {S!d380}Merge: '<S7>/Merge3' incorporates:
+ *  SignalConversion generated from: '<S24>/Spd'
+ */
+    ParallelTestBench_B.Merge3 = ParallelTestBench_B.MinMax;
+    /* {S!d382}SignalGenerator: '<S24>/Sawtooth Generator' incorporates:
+ *  Bias: '<S24>/Bias'
+ */
+    rtb_Fix1 *= ParallelTestBench_P.SawtoothGenerator_Frequency;
+    rtb_Gain_jl = ParallelTestBench_P.F_clamp * ParallelTestBench_P.R_eff / 2.0;
+    /* {S!d384}Merge: '<S7>/Merge' incorporates:
+ *  Bias: '<S24>/Bias'
+ *  SignalGenerator: '<S24>/Sawtooth Generator'
+ */
+    ParallelTestBench_B.Merge_k = (1.0 - (rtb_Fix1 - floor(rtb_Fix1)) * 2.0) * ((ParallelTestBench_P.mew_k - ParallelTestBench_P.mew_s) * rtb_Gain_jl) + (ParallelTestBench_P.mew_s + ParallelTestBench_P.mew_k) * rtb_Gain_jl;
+    /* {E!d161}End of Outputs for SubSystem: '<S7>/Clutch Engaged, Unrated Torque' */
+    break;
+  default:
+    /* {S!d157}Outputs for IfAction SubSystem: '<S7>/Clutch Disengaged' incorporates:
+ *  ActionPort: '<S22>/Action Port'
+ */
+    /* {S!d356}Merge: '<S7>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S22>/PlateSpd'
+ */
+    ParallelTestBench_B.Merge1 = ParallelTestBench_B.OUTPUT_1_0[0];
+    /* {S!d358}Merge: '<S7>/Merge2' incorporates:
+ *  SignalConversion generated from: '<S22>/RotorSpd'
+ */
+    ParallelTestBench_B.Merge2 = ParallelTestBench_B.Int;
+    if (%<(SLibCGIRIsSampleHit(1, 2))>) {
+        /* {S!d360}Merge: '<S7>/Merge3' incorporates:
+ *  Constant: '<S22>/Constant'
+ *  SignalConversion generated from: '<S22>/Spd'
+ */
+        ParallelTestBench_B.Merge3 = ParallelTestBench_P.Constant_Value;
+    }
+    /* {S!d362}Merge: '<S7>/Merge' incorporates:
+ *  SignalConversion generated from: '<S22>/LdTrq'
+ */
+    ParallelTestBench_B.Merge_k = ParallelTestBench_B.Gain1_f;
+    /* {E!d157}End of Outputs for SubSystem: '<S7>/Clutch Disengaged' */
+    break;
+}
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B14)
+    /* {S!d388}Scope: '<Root>/Clutch Speeds' */
+%<tlcOutputsFcnOfS36B14>\
+%endif
+}
+/* {S!d390}Gain: '<S19>/Gain' */
+rtb_Gain_g4 = ParallelTestBench_P.Dyno_Ratio * ParallelTestBench_B.Int;
+/* {S!d392}Gain: '<S19>/Gain2' */
+ParallelTestBench_B.Gain2 = ParallelTestBench_P.Dyno_Ke * rtb_Gain_g4;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B15)
+    /* {S!d394}Scope: '<Root>/Dyno Voltage' */
+%<tlcOutputsFcnOfS36B15>\
+%endif
+}
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B16)
+/* {S!d396}FromWorkspace: '<S13>/fromWS_Signal 1' */
+%<tlcOutputsFcnOfS36B16>\
+%endif
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d472}If: '<S21>/If' incorporates:
+ *  Constant: '<Root>/Mode'
+ */
+    if (%<(RTMGetIsModeUpdateTimeStep())>) {
+        if (ParallelTestBench_P.Mode_Value == 0.0) {
+            rtAction = 0;
+        } else if (ParallelTestBench_P.Mode_Value == 1.0) {
+            rtAction = 1;
+        } else {
+            rtAction = 2;
+        }
+        ParallelTestBench_DW.If_ActiveSubsystem_o = rtAction;
+    } else {
+        rtAction = ParallelTestBench_DW.If_ActiveSubsystem_o;
+    }
+    switch (rtAction) {
+      case 0:
+        /* {S!d171}Outputs for IfAction SubSystem: '<S21>/Dual RPM Command' incorporates:
+ *  ActionPort: '<S127>/Action Port'
+ */
+        /* {S!d432}Rounding: '<S127>/Fix1' */
+        rtb_Fix1 = trunc(ParallelTestBench_B.ManualSwitch);
+        /* {S!d434}Gain: '<S127>/Gain' */
+        rtb_Gain_jl = ParallelTestBench_P.Dyno_Ratio * ParallelTestBench_B.Merge_k;
+        /* {S!d448}If: '<S127>/If' incorporates:
+ *  Rounding: '<S127>/Fix'
+ */
+        if ((ParallelTestBench_B.ManualSwitch3 == 1.0) && (rtb_Fix1 > 157.0)) {
+            /* {S!d172}Outputs for IfAction SubSystem: '<S127>/Clutch Engaged' incorporates:
+ *  ActionPort: '<S131>/Action Port'
+ */
+            /* {S!d436}Merge: '<S21>/Merge1' incorporates:
+ *  Bias: '<S131>/Bias1'
+ *  Bias: '<S131>/Bias2'
+ *  Gain: '<S131>/Gain1'
+ *  Gain: '<S131>/Gain2'
+ *  Sum: '<S131>/Subtract'
+ */
+            ParallelTestBench_B.Merge1_nv = ((ParallelTestBench_P.BLDCICE_Driveline_Param[1] * ParallelTestBench_B.Int + ParallelTestBench_P.BLDCICE_Driveline_Param[2]) - (ParallelTestBench_P.BLDC_Driveline_Param[1] * ParallelTestBench_B.Int + ParallelTestBench_P.BLDC_Driveline_Param[2])) + rtb_Gain_jl;
+            /* {S!d438}Lookup_n-D: '<S131>/1-D Lookup Table2' incorporates:
+ *  Constant: '<S131>/Constant'
+ *  ManualSwitch: '<Root>/Manual Switch'
+ */
+            bpIndices_0[1U] = plook_binca(ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Spd_BP, 6U, &rtb_Fix1);
+            fractions_0[1U] = rtb_Fix1;
+            for (iU = 0; iU < 12; iU++) {
+                bpIndices_0[0U] = plook_binca(ParallelTestBench_P.Throttle_BP[iU], ParallelTestBench_P.Throttle_BP, 11U, &rtb_Fix1);
+                fractions_0[0U] = rtb_Fix1;
+                rtb_FindTrqOutput[iU] = intrp2d_la_pw(bpIndices_0, fractions_0, ParallelTestBench_P.Torque_Map, 12U, ParallelTestBench_P.uDLookupTable2_maxIndex);
+            }
+            /* {E!d438}End of Lookup_n-D: '<S131>/1-D Lookup Table2' */
+
+            /* {S!d440}Merge: '<S21>/Merge' incorporates:
+ *  FromWorkspace: '<S13>/fromWS_Signal 1'
+ *  Lookup_n-D: '<S131>/1-D Lookup Table1'
+ *  Lookup_n-D: '<S131>/1-D Lookup Table3'
+ *  ManualSwitch: '<Root>/Manual Switch'
+ */
+            ParallelTestBench_B.Merge_p = look1_binlcapw(look2_binlcapw(ParallelTestBench_B.Signal_j, ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Throttle_BP, ParallelTestBench_P.Spd_BP, ParallelTestBench_P.Torque_Map, ParallelTestBench_P.uDLookupTable3_maxIndex, 12U), rtb_FindTrqOutput, ParallelTestBench_P.Trq_BP, 11U);
+            /* {E!d172}End of Outputs for SubSystem: '<S127>/Clutch Engaged' */
+        } else if ((trunc(ParallelTestBench_B.Int) == 0.0) && (rtb_Fix1 == 0.0)) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[24], "Output",0)
+            /* {S!d174}Outputs for IfAction SubSystem: '<S127>/System Stationary' incorporates:
+ *  ActionPort: '<S132>/Action Port'
+ */
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBe_SystemStationary",24,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ParallelTestBe_SystemStationary", ["%<_modelSS>", "&ParallelTestBench_B.Merge1_nv", "&ParallelTestBench_B.Merge_p", "&ParallelTestBench_P.SystemStationary"], 24, 0, 6, 0, 6, 36)>\
+%assign ss = ::CompiledModel.System[24]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+            /* {E!d174}End of Outputs for SubSystem: '<S127>/System Stationary' */
+%endif
+        } else {
+            /* {S!d176}Outputs for IfAction SubSystem: '<S127>/Clutch Disengaged' incorporates:
+ *  ActionPort: '<S130>/Action Port'
+ */
+            /* {S!d442}Merge: '<S21>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S130>/Ld Trq'
+ */
+            ParallelTestBench_B.Merge1_nv = rtb_Gain_jl;
+            /* {S!d444}Lookup_n-D: '<S130>/1-D Lookup Table2' incorporates:
+ *  Constant: '<S130>/Constant'
+ *  ManualSwitch: '<Root>/Manual Switch'
+ */
+            bpIndices_0[1U] = plook_binca(ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Spd_BP, 6U, &rtb_Fix1);
+            fractions_0[1U] = rtb_Fix1;
+            for (iU = 0; iU < 12; iU++) {
+                bpIndices_0[0U] = plook_binca(ParallelTestBench_P.Throttle_BP[iU], ParallelTestBench_P.Throttle_BP, 11U, &rtb_Fix1);
+                fractions_0[0U] = rtb_Fix1;
+                rtb_FindTrqOutput[iU] = intrp2d_la_pw(bpIndices_0, fractions_0, ParallelTestBench_P.Torque_Map, 12U, ParallelTestBench_P.uDLookupTable2_maxIndex_i);
+            }
+            /* {E!d444}End of Lookup_n-D: '<S130>/1-D Lookup Table2' */
+
+            /* {S!d446}Merge: '<S21>/Merge' incorporates:
+ *  FromWorkspace: '<S13>/fromWS_Signal 1'
+ *  Lookup_n-D: '<S130>/1-D Lookup Table1'
+ *  Lookup_n-D: '<S130>/1-D Lookup Table3'
+ *  ManualSwitch: '<Root>/Manual Switch'
+ */
+            ParallelTestBench_B.Merge_p = look1_binlcapw(look2_binlcapw(ParallelTestBench_B.Signal_j, ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Throttle_BP, ParallelTestBench_P.Spd_BP, ParallelTestBench_P.Torque_Map, ParallelTestBench_P.uDLookupTable3_maxIndex_j, 12U), rtb_FindTrqOutput, ParallelTestBench_P.Trq_BP, 11U);
+            /* {E!d176}End of Outputs for SubSystem: '<S127>/Clutch Disengaged' */
+        }
+        /* {E!d448}End of If: '<S127>/If' */
+        /* {E!d171}End of Outputs for SubSystem: '<S21>/Dual RPM Command' */
+        break;
+      case 1:
+        /* {S!d179}Outputs for IfAction SubSystem: '<S21>/ICE RPM Command  BLDC Current Command' incorporates:
+ *  ActionPort: '<S128>/Action Port'
+ */
+        /* {S!d450}Rounding: '<S128>/Fix' */
+        rtb_Fix1 = trunc(ParallelTestBench_B.Int);
+        /* {S!d452}Rounding: '<S128>/Fix1' */
+        rtb_Gain_jl = trunc(ParallelTestBench_B.ManualSwitch);
+        /* {S!d454}Gain: '<S128>/Gain' */
+        rtb_Gain_l = ParallelTestBench_P.Dyno_Ratio * ParallelTestBench_B.Merge_k;
+        /* {S!d470}If: '<S128>/If' incorporates:
+ *  If: '<S133>/If'
+ */
+        if ((ParallelTestBench_B.ManualSwitch3 == 1.0) && (rtb_Gain_jl > 157.0)) {
+            /* {S!d180}Outputs for IfAction SubSystem: '<S128>/Clutch Engaged' incorporates:
+ *  ActionPort: '<S134>/Action Port'
+ */
+            /* {S!d464}If: '<S134>/If' */
+            if (rtb_Fix1 > 0.0) {
+                /* {S!d181}Outputs for IfAction SubSystem: '<S134>/BLDC Spinning' incorporates:
+ *  ActionPort: '<S139>/Action Port'
+ */
+                /* {S!d456}Gain: '<S139>/Gain' incorporates:
+ *  Constant: '<Root>/Constant4'
+ */
+                rtb_Gain_jl = ParallelTestBench_P.SideA_Kt * ParallelTestBench_P.Constant4_Value_f;
+                /* {S!d458}Lookup_n-D: '<S139>/Find Trq Output' incorporates:
+ *  Constant: '<S139>/Constant4'
+ *  ManualSwitch: '<Root>/Manual Switch'
+ */
+                bpIndices_0[1U] = plook_binca(ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Spd_BP, 6U, &rtb_Fix1);
+                fractions_0[1U] = rtb_Fix1;
+                for (iU = 0; iU < 12; iU++) {
+                    bpIndices_0[0U] = plook_binca(ParallelTestBench_P.Throttle_BP[iU], ParallelTestBench_P.Throttle_BP, 11U, &rtb_Fix1);
+                    fractions_0[0U] = rtb_Fix1;
+                    rtb_FindTrqOutput[iU] = intrp2d_la_pw(bpIndices_0, fractions_0, ParallelTestBench_P.Torque_Map, 12U, ParallelTestBench_P.FindTrqOutput_maxIndex);
+                }
+                /* {E!d458}End of Lookup_n-D: '<S139>/Find Trq Output' */
+
+                /* {S!d460}Merge: '<S21>/Merge' incorporates:
+ *  Lookup_n-D: '<S139>/Find Trq Cmd'
+ *  Sum: '<S139>/Subtract'
+ */
+                ParallelTestBench_B.Merge_p = look1_binlcapw(rtb_Gain_l - rtb_Gain_jl, rtb_FindTrqOutput, ParallelTestBench_P.Trq_BP, 11U);
+                /* {S!d462}Merge: '<S21>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S139>/BLDC Trq Ld'
+ */
+                ParallelTestBench_B.Merge1_nv = rtb_Gain_jl;
+                /* {E!d181}End of Outputs for SubSystem: '<S134>/BLDC Spinning' */
+            } else {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[28], "Output",0)
+                /* {S!d183}Outputs for IfAction SubSystem: '<S134>/BLDC Off' incorporates:
+ *  ActionPort: '<S138>/Action Port'
+ */
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBench_BLDCOff",28,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBench_BLDCOff",28,1)
+%<SLibCGIRAccessLocalVar(21, 0, "")> %% rtb_Gain_l
+%endif
+
+%<SLibCGIRGenReusableSysCall("ParallelTestBench_BLDCOff", ["%<_modelSS>", "rtb_Gain_l", "ParallelTestBench_B.ManualSwitch", "&ParallelTestBench_B.Merge1_nv", "&ParallelTestBench_B.Merge_p", "&ParallelTestBench_P.BLDCOff"], 28, 0, 6, 0, 6, 36)>\
+%assign ss = ::CompiledModel.System[28]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+                /* {E!d183}End of Outputs for SubSystem: '<S134>/BLDC Off' */
+%endif
+            }
+            /* {E!d464}End of If: '<S134>/If' */
+            /* {E!d180}End of Outputs for SubSystem: '<S128>/Clutch Engaged' */
+        } else if ((rtb_Fix1 == 0.0) && (rtb_Gain_jl == 0.0)) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[24], "Output",0)
+            /* {S!d186}Outputs for IfAction SubSystem: '<S128>/System Stationary' incorporates:
+ *  ActionPort: '<S135>/Action Port'
+ */
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBe_SystemStationary",24,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ParallelTestBe_SystemStationary", ["%<_modelSS>", "&ParallelTestBench_B.Merge1_nv", "&ParallelTestBench_B.Merge_p", "&ParallelTestBench_P.SystemStationary_e"], 24, 1, 6, 0, 6, 36)>\
+%assign ss = ::CompiledModel.System[24]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+            /* {E!d186}End of Outputs for SubSystem: '<S128>/System Stationary' */
+%endif
+
+            /* {S!d188}Outputs for IfAction SubSystem: '<S128>/Clutch Disengaged' incorporates:
+ *  ActionPort: '<S133>/Action Port'
+ */
+        } else if (rtb_Fix1 > 0.0) {
+            /* {S!d189}Outputs for IfAction SubSystem: '<S133>/BLDC Spinning' incorporates:
+ *  ActionPort: '<S137>/Action Port'
+ */
+            /* {S!d466}If: '<S133>/If' incorporates:
+ *  Constant: '<Root>/Constant4'
+ *  Constant: '<S137>/Constant'
+ *  FromWorkspace: '<S13>/fromWS_Signal 1'
+ *  Gain: '<S137>/Gain'
+ *  Lookup_n-D: '<S137>/1-D Lookup Table1'
+ *  Lookup_n-D: '<S137>/1-D Lookup Table2'
+ *  Lookup_n-D: '<S137>/1-D Lookup Table3'
+ *  ManualSwitch: '<Root>/Manual Switch'
+ *  Merge: '<S21>/Merge'
+ *  Merge: '<S21>/Merge1'
+ *  Sum: '<S137>/Add'
+ */
+            ParallelTestBench_B.Merge1_nv = ParallelTestBench_P.SideA_Kt * ParallelTestBench_P.Constant4_Value_f + rtb_Gain_l;
+            bpIndices_0[1U] = plook_binca(ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Spd_BP, 6U, &rtb_Fix1);
+            fractions_0[1U] = rtb_Fix1;
+            for (iU = 0; iU < 12; iU++) {
+                bpIndices_0[0U] = plook_binca(ParallelTestBench_P.Throttle_BP[iU], ParallelTestBench_P.Throttle_BP, 11U, &rtb_Fix1);
+                fractions_0[0U] = rtb_Fix1;
+                rtb_FindTrqOutput[iU] = intrp2d_la_pw(bpIndices_0, fractions_0, ParallelTestBench_P.Torque_Map, 12U, ParallelTestBench_P.uDLookupTable2_maxIndex_m);
+            }
+            ParallelTestBench_B.Merge_p = look1_binlcapw(look2_binlcapw(ParallelTestBench_B.Signal_j, ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Throttle_BP, ParallelTestBench_P.Spd_BP, ParallelTestBench_P.Torque_Map, ParallelTestBench_P.uDLookupTable3_maxIndex_g, 12U), rtb_FindTrqOutput, ParallelTestBench_P.Trq_BP, 11U);
+            /* {E!d189}End of Outputs for SubSystem: '<S133>/BLDC Spinning' */
+        } else {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[28], "Output",0)
+            /* {S!d191}Outputs for IfAction SubSystem: '<S133>/BLDC Off' incorporates:
+ *  ActionPort: '<S136>/Action Port'
+ */
+            /* {S!d468}If: '<S133>/If' */
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBench_BLDCOff",28,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBench_BLDCOff",28,1)
+%<SLibCGIRAccessLocalVar(21, 0, "")> %% rtb_Gain_l
+%endif
+
+%<SLibCGIRGenReusableSysCall("ParallelTestBench_BLDCOff", ["%<_modelSS>", "rtb_Gain_l", "ParallelTestBench_B.ManualSwitch", "&ParallelTestBench_B.Merge1_nv", "&ParallelTestBench_B.Merge_p", "&ParallelTestBench_P.BLDCOff_a"], 28, 1, 6, 0, 6, 36)>\
+%assign ss = ::CompiledModel.System[28]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+            /* {E!d191}End of Outputs for SubSystem: '<S133>/BLDC Off' */
+%endif
+
+            /* {E!d188}End of Outputs for SubSystem: '<S128>/Clutch Disengaged' */
+        }
+        /* {E!d470}End of If: '<S128>/If' */
+        /* {E!d179}End of Outputs for SubSystem: '<S21>/ICE RPM Command  BLDC Current Command' */
+        break;
+      default:
+        /* {S!d163}Outputs for IfAction SubSystem: '<S21>/ICE Throttle Command  BLDC RPM Command' incorporates:
+ *  ActionPort: '<S129>/Action Port'
+ */
+        /* {S!d398}Rounding: '<S129>/Fix1' */
+        rtb_Fix1 = trunc(ParallelTestBench_B.ManualSwitch);
+        /* {S!d400}Gain: '<S129>/Gain' */
+        rtb_Gain_jl = ParallelTestBench_P.Dyno_Ratio * ParallelTestBench_B.Merge_k;
+        /* {S!d430}If: '<S129>/If' incorporates:
+ *  Rounding: '<S129>/Fix'
+ */
+        if ((ParallelTestBench_B.ManualSwitch3 == 1.0) && (rtb_Fix1 > 157.0)) {
+            /* {S!d164}Outputs for IfAction SubSystem: '<S129>/Clutch Engaged' incorporates:
+ *  ActionPort: '<S141>/Action Port'
+ */
+            /* {S!d402}Lookup_n-D: '<S141>/Get Trq Val For Thrtl' incorporates:
+ *  Constant: '<S141>/Constant'
+ *  FromWorkspace: '<S13>/fromWS_Signal 1'
+ */
+            bpIndices_0[1U] = plook_binca(ParallelTestBench_B.Signal_j, ParallelTestBench_P.Throttle_BP, 11U, &rtb_Fix1);
+            fractions_0[1U] = rtb_Fix1;
+            for (iU = 0; iU < 7; iU++) {
+                bpIndices_0[0U] = plook_binca(ParallelTestBench_P.Spd_BP[iU], ParallelTestBench_P.Spd_BP, 6U, &rtb_Fix1);
+                fractions_0[0U] = rtb_Fix1;
+                rtb_GetTrqValForThrtl[iU] = intrp2d_la_pw(bpIndices_0, fractions_0, ParallelTestBench_P.GetTrqValForThrtl_tableData, 7U, ParallelTestBench_P.GetTrqValForThrtl_maxIndex);
+            }
+            /* {E!d402}End of Lookup_n-D: '<S141>/Get Trq Val For Thrtl' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS33B2)
+
+            /* {S!d404}S-Function (sdspsrt2): '<S141>/Sort' */
+%<tlcOutputsFcnOfS33B2>\
+%endif
+            /* {S!d406}Lookup_n-D: '<S141>/Get Index of Spd' incorporates:
+ *  Gain: '<S129>/Gain'
+ */
+            rtb_DetermineSpd_i = look1_tu32DdId_binlcapw(rtb_Gain_jl, rtb_Sort_o1, rtb_Sort_o2, 6U);
+            /* {S!d408}Lookup_n-D: '<S141>/Determine Spd' */
+            rtb_DetermineSpd_i = look1_binlxpw(rtb_DetermineSpd_i, ParallelTestBench_P.DetermineSpd_bp01Data, ParallelTestBench_P.Spd_BP, 6U);
+            /* {S!d410}Lookup_n-D: '<S141>/Find Trq Output' incorporates:
+ *  Constant: '<S141>/Constant4'
+ *  Lookup_n-D: '<S141>/Determine Spd'
+ */
+            bpIndices_1[1U] = plook_binca(rtb_DetermineSpd_i, ParallelTestBench_P.Spd_BP, 6U, &rtb_Fix1);
+            fractions_1[1U] = rtb_Fix1;
+            for (iU = 0; iU < 12; iU++) {
+                bpIndices_1[0U] = plook_binca(ParallelTestBench_P.Throttle_BP[iU], ParallelTestBench_P.Throttle_BP, 11U, &rtb_Fix1);
+                fractions_1[0U] = rtb_Fix1;
+                rtb_FindTrqOutput[iU] = intrp2d_la_pw(bpIndices_1, fractions_1, ParallelTestBench_P.Torque_Map, 12U, ParallelTestBench_P.FindTrqOutput_maxIndex_k);
+            }
+            /* {E!d410}End of Lookup_n-D: '<S141>/Find Trq Output' */
+
+            /* {S!d412}Lookup_n-D: '<S141>/Find Trq Cmd' incorporates:
+ *  Gain: '<S129>/Gain'
+ */
+            rtb_Fix1 = look1_binlcapw(rtb_Gain_jl, rtb_FindTrqOutput, ParallelTestBench_P.Trq_BP, 11U);
+            /* {S!d414}Merge: '<S21>/Merge' incorporates:
+ *  SignalConversion generated from: '<S141>/ICE Trq Ld'
+ */
+            ParallelTestBench_B.Merge_p = rtb_Fix1;
+            /* {S!d416}Merge: '<S21>/Merge1' incorporates:
+ *  Lookup_n-D: '<S141>/Determine Spd'
+ *  Lookup_n-D: '<S141>/Find Trq Cmd'
+ *  Lookup_n-D: '<S141>/Get Trq Val For Thrtl1'
+ *  Sum: '<S141>/Subtract'
+ */
+            ParallelTestBench_B.Merge1_nv = rtb_Gain_jl - look2_binlcapw(rtb_Fix1, rtb_DetermineSpd_i, ParallelTestBench_P.Trq_BP, ParallelTestBench_P.Spd_BP, ParallelTestBench_P.Torque_Map, ParallelTestBench_P.GetTrqValForThrtl1_maxIndex, 12U);
+            /* {E!d164}End of Outputs for SubSystem: '<S129>/Clutch Engaged' */
+        } else if ((trunc(ParallelTestBench_B.Int) == 0.0) && (rtb_Fix1 == 0.0)) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[24], "Output",0)
+            /* {S!d166}Outputs for IfAction SubSystem: '<S129>/System Stationary' incorporates:
+ *  ActionPort: '<S142>/Action Port'
+ */
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBe_SystemStationary",24,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("ParallelTestBe_SystemStationary", ["%<_modelSS>", "&ParallelTestBench_B.Merge1_nv", "&ParallelTestBench_B.Merge_p", "&ParallelTestBench_P.SystemStationary_j"], 24, 2, 6, 0, 6, 36)>\
+%assign ss = ::CompiledModel.System[24]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+            /* {E!d166}End of Outputs for SubSystem: '<S129>/System Stationary' */
+%endif
+        } else {
+            /* {S!d168}Outputs for IfAction SubSystem: '<S129>/Clutch Disengaged' incorporates:
+ *  ActionPort: '<S140>/Action Port'
+ */
+            /* {S!d418}Merge: '<S21>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S140>/Ld Trq'
+ */
+            ParallelTestBench_B.Merge1_nv = rtb_Gain_jl;
+            /* {S!d420}Lookup_n-D: '<S140>/Get Trq Val For Thrtl' incorporates:
+ *  Constant: '<S140>/Constant'
+ *  FromWorkspace: '<S13>/fromWS_Signal 1'
+ */
+            bpIndices_0[1U] = plook_binca(ParallelTestBench_B.Signal_j, ParallelTestBench_P.Throttle_BP, 11U, &rtb_Fix1);
+            fractions_0[1U] = rtb_Fix1;
+            for (iU = 0; iU < 7; iU++) {
+                bpIndices_0[0U] = plook_binca(ParallelTestBench_P.Spd_BP[iU], ParallelTestBench_P.Spd_BP, 6U, &rtb_Fix1);
+                fractions_0[0U] = rtb_Fix1;
+                rtb_GetTrqValForThrtl[iU] = intrp2d_la_pw(bpIndices_0, fractions_0, ParallelTestBench_P.GetTrqValForThrtl_tableData_h, 7U, ParallelTestBench_P.GetTrqValForThrtl_maxIndex_i);
+            }
+            /* {E!d420}End of Lookup_n-D: '<S140>/Get Trq Val For Thrtl' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS34B3)
+
+            /* {S!d422}S-Function (sdspsrt2): '<S140>/Sort' */
+%<tlcOutputsFcnOfS34B3>\
+%endif
+            /* {S!d424}Lookup_n-D: '<S140>/Get Index of Spd' incorporates:
+ *  Constant: '<S140>/Determine Detached Torque'
+ */
+            rtb_Gain_jl = look1_tu32DdId_binlcapw(ParallelTestBench_P.DetermineDetachedTorque_Value, rtb_Sort_o1, rtb_Sort_o2, 6U);
+            /* {S!d426}Lookup_n-D: '<S140>/Find Trq Output' incorporates:
+ *  Constant: '<S140>/Constant4'
+ *  Lookup_n-D: '<S140>/Determine Spd'
+ */
+            bpIndices_1[1U] = plook_binca(look1_binlxpw(rtb_Gain_jl, ParallelTestBench_P.DetermineSpd_bp01Data_o, ParallelTestBench_P.Spd_BP, 6U), ParallelTestBench_P.Spd_BP, 6U, &rtb_Fix1);
+            fractions_1[1U] = rtb_Fix1;
+            for (iU = 0; iU < 12; iU++) {
+                bpIndices_1[0U] = plook_binca(ParallelTestBench_P.Throttle_BP[iU], ParallelTestBench_P.Throttle_BP, 11U, &rtb_Fix1);
+                fractions_1[0U] = rtb_Fix1;
+                rtb_FindTrqOutput[iU] = intrp2d_la_pw(bpIndices_1, fractions_1, ParallelTestBench_P.Torque_Map, 12U, ParallelTestBench_P.FindTrqOutput_maxIndex_e);
+            }
+            /* {E!d426}End of Lookup_n-D: '<S140>/Find Trq Output' */
+
+            /* {S!d428}Merge: '<S21>/Merge' incorporates:
+ *  Constant: '<S140>/Determine Detached Torque'
+ *  Lookup_n-D: '<S140>/Find Trq Cmd'
+ */
+            ParallelTestBench_B.Merge_p = look1_binlcapw(ParallelTestBench_P.DetermineDetachedTorque_Value, rtb_FindTrqOutput, ParallelTestBench_P.Trq_BP, 11U);
+            /* {E!d168}End of Outputs for SubSystem: '<S129>/Clutch Disengaged' */
+        }
+        /* {E!d430}End of If: '<S129>/If' */
+        /* {E!d163}End of Outputs for SubSystem: '<S21>/ICE Throttle Command  BLDC RPM Command' */
+        break;
+    }
+    /* {E!d472}End of If: '<S21>/If' */
+}
+/* {S!d474}Lookup_n-D: '<S39>/EngTrq Table' incorporates:
+ *  ManualSwitch: '<Root>/Manual Switch'
+ *  Merge: '<S21>/Merge'
+ */
+ParallelTestBench_B.EngTrq = look2_binlcpw(ParallelTestBench_B.Merge_p, ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Trq_BP, ParallelTestBench_P.Spd_BP, ParallelTestBench_P.Torque_Map, ParallelTestBench_P.EngTrqTable_maxIndex, 12U);
+/* {S!d476}Product: '<S30>/Product' incorporates:
+ *  Gain: '<S30>/rpm to rad//s'
+ */
+ParallelTestBench_B.Product_b = ParallelTestBench_P.rpmtorads_Gain * ParallelTestBench_B.ManualSwitch * ParallelTestBench_B.EngTrq;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B21)
+    /* {S!d478}Scope: '<Root>/Engine Power' */
+%<tlcOutputsFcnOfS36B21>\
+%endif
+}
+/* {S!d480}Integrator: '<Root>/Integrator' */
+ParallelTestBench_B.Integrator_i = ParallelTestBench_X.Integrator_CSTATE_h;
+/* {S!d482}Gain: '<Root>/kg to g' */
+ParallelTestBench_B.kgtog = ParallelTestBench_P.kgtog_Gain * ParallelTestBench_B.Integrator_i;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B22)
+    /* {S!d484}Scope: '<Root>/Fuel Consumption' */
+%<tlcOutputsFcnOfS36B22>\
+%endif
+}
+/* {S!d486}Lookup_n-D: '<S39>/FuelMassFlw Table' incorporates:
+ *  ManualSwitch: '<Root>/Manual Switch'
+ *  Merge: '<S21>/Merge'
+ */
+ParallelTestBench_B.FuelMassFlw = look2_binlcpw(ParallelTestBench_B.Merge_p, ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Trq_BP, ParallelTestBench_P.Spd_BP, ParallelTestBench_P.Fuel_Map, ParallelTestBench_P.FuelMassFlwTable_maxIndex, 12U);
+/* {S!d488}Gain: '<Root>/kg//s to g//min' */
+ParallelTestBench_B.kgstogmin = ParallelTestBench_P.kgstogmin_Gain * ParallelTestBench_B.FuelMassFlw;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B23)
+    /* {S!d490}Scope: '<Root>/Fuel Flow' */
+%<tlcOutputsFcnOfS36B23>\
+%endif
+}
+/* {S!d492}Lookup_n-D: '<Root>/DA50 Torque Map' incorporates:
+ *  FromWorkspace: '<S13>/fromWS_Signal 1'
+ *  ManualSwitch: '<Root>/Manual Switch'
+ */
+ParallelTestBench_B.DA50TorqueMap = look2_binlcapw(ParallelTestBench_B.Signal_j, ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.DA50TorqueMap_bp01Data, ParallelTestBench_P.DA50TorqueMap_bp02Data, ParallelTestBench_P.DA50TorqueMap_tableData, ParallelTestBench_P.DA50TorqueMap_maxIndex, 11U);
+/* {S!d494}Lookup_n-D: '<Root>/DA50 Power Map' incorporates:
+ *  FromWorkspace: '<S13>/fromWS_Signal 1'
+ *  ManualSwitch: '<Root>/Manual Switch'
+ */
+ParallelTestBench_B.DA50PowerMap = look2_binlcpw(ParallelTestBench_B.Signal_j, ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.Throttle_BP, ParallelTestBench_P.Spd_BP, ParallelTestBench_P.Power_Map, ParallelTestBench_P.DA50PowerMap_maxIndex, 12U);
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B24)
+    /* {S!d496}Scope: '<Root>/Map Values' */
+%<tlcOutputsFcnOfS36B24>\
+%endif
+    /* {S!d498}MultiPortSwitch: '<S79>/Index Vector' incorporates:
+ *  Constant: '<S79>/Constant'
+ *  Constant: '<S79>/Constant1'
+ */
+    ParallelTestBench_B.IndexVector = ParallelTestBench_P.SKP6485_idq0[(int32_T)ParallelTestBench_P.Constant1_Value_bg - 1];
+}
+/* {S!d500}Integrator: '<S79>/Integrator' */
+/* Limited  Integrator  */
+if (ParallelTestBench_DW.Integrator_IWORK_o != 0) {
+    ParallelTestBench_X.Integrator_CSTATE_a = ParallelTestBench_B.IndexVector;
+}
+if (ParallelTestBench_X.Integrator_CSTATE_a >= ParallelTestBench_P.Integrator_UpperSat) {
+    ParallelTestBench_X.Integrator_CSTATE_a = ParallelTestBench_P.Integrator_UpperSat;
+} else if (ParallelTestBench_X.Integrator_CSTATE_a <= ParallelTestBench_P.Integrator_LowerSat) {
+    ParallelTestBench_X.Integrator_CSTATE_a = ParallelTestBench_P.Integrator_LowerSat;
+}
+/* {S!d502}Integrator: '<S79>/Integrator' */
+ParallelTestBench_B.Integrator_n = ParallelTestBench_X.Integrator_CSTATE_a;
+/* {S!d504}Integrator: '<S65>/Int1' */
+ParallelTestBench_B.Int1 = ParallelTestBench_X.Int1_CSTATE;
+/* {S!d195}Outputs for Atomic SubSystem: '<S97>/PMSM Speed Control Exterior' */
+/* {S!d196}Outputs for Atomic SubSystem: '<S100>/Current Controller External' */
+/* {S!d506}Gain: '<S65>/Gain4' incorporates:
+ *  Gain: '<S106>/Gain1'
+ */
+rtb_Add = ParallelTestBench_P.SideA_N * ParallelTestBench_B.Int1;
+/* {E!d196}End of Outputs for SubSystem: '<S100>/Current Controller External' */
+/* {E!d195}End of Outputs for SubSystem: '<S97>/PMSM Speed Control Exterior' */
+
+/* {S!d508}Gain: '<S65>/Gain4' */
+ParallelTestBench_B.Gain4 = rtb_Add;
+/* {S!d510}Trigonometry: '<S67>/sine_cosine' */
+rtb_Fix1 = sin(ParallelTestBench_B.Gain4);
+rtb_Gain_jl = cos(ParallelTestBench_B.Gain4);
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d512}MultiPortSwitch: '<S80>/Index Vector' incorporates:
+ *  Constant: '<S80>/Constant'
+ *  Constant: '<S80>/Constant1'
+ */
+    ParallelTestBench_B.IndexVector_f = ParallelTestBench_P.SKP6485_idq0[(int32_T)ParallelTestBench_P.Constant1_Value_n - 1];
+}
+/* {S!d514}Integrator: '<S80>/Integrator' */
+/* Limited  Integrator  */
+if (ParallelTestBench_DW.Integrator_IWORK_n != 0) {
+    ParallelTestBench_X.Integrator_CSTATE_j = ParallelTestBench_B.IndexVector_f;
+}
+if (ParallelTestBench_X.Integrator_CSTATE_j >= ParallelTestBench_P.Integrator_UpperSat_d) {
+    ParallelTestBench_X.Integrator_CSTATE_j = ParallelTestBench_P.Integrator_UpperSat_d;
+} else if (ParallelTestBench_X.Integrator_CSTATE_j <= ParallelTestBench_P.Integrator_LowerSat_b) {
+    ParallelTestBench_X.Integrator_CSTATE_j = ParallelTestBench_P.Integrator_LowerSat_b;
+}
+/* {S!d516}Integrator: '<S80>/Integrator' */
+ParallelTestBench_B.Integrator_d = ParallelTestBench_X.Integrator_CSTATE_j;
+/* {S!d518}Sum: '<S74>/Add1' incorporates:
+ *  Product: '<S74>/Product2'
+ *  Product: '<S74>/Product3'
+ */
+ParallelTestBench_B.Add1 = ParallelTestBench_B.Integrator_n * rtb_Gain_jl - ParallelTestBench_B.Integrator_d * rtb_Fix1;
+/* {S!d520}SignalConversion generated from: '<S64>/Vector Concatenate' incorporates:
+ *  Concatenate: '<S64>/Vector Concatenate'
+ */
+ParallelTestBench_B.VectorConcatenate[0] = ParallelTestBench_B.Add1;
+/* {S!d522}Sum: '<S74>/Add' incorporates:
+ *  Product: '<S74>/Product'
+ *  Product: '<S74>/Product1'
+ */
+rtb_DetermineSpd_i = ParallelTestBench_B.Integrator_n * rtb_Fix1 + ParallelTestBench_B.Integrator_d * rtb_Gain_jl;
+/* {S!d524}Sum: '<S73>/Subtract1' incorporates:
+ *  Gain: '<S73>/Gain2'
+ *  Gain: '<S73>/Gain3'
+ */
+ParallelTestBench_B.Subtract1 = ParallelTestBench_P.Gain2_Gain_h * ParallelTestBench_B.Add1 + ParallelTestBench_P.Gain3_Gain_l * rtb_DetermineSpd_i;
+/* {S!d526}SignalConversion generated from: '<S64>/Vector Concatenate' incorporates:
+ *  Concatenate: '<S64>/Vector Concatenate'
+ */
+ParallelTestBench_B.VectorConcatenate[1] = ParallelTestBench_B.Subtract1;
+/* {S!d528}Sum: '<S73>/Subtract2' incorporates:
+ *  Gain: '<S73>/Gain1'
+ *  Gain: '<S73>/Gain4'
+ */
+rtb_DetermineSpd_i = ParallelTestBench_P.Gain1_Gain_he * ParallelTestBench_B.Add1 + ParallelTestBench_P.Gain4_Gain_c * rtb_DetermineSpd_i;
+/* {S!d530}SignalConversion generated from: '<S64>/Vector Concatenate' incorporates:
+ *  Concatenate: '<S64>/Vector Concatenate'
+ */
+ParallelTestBench_B.VectorConcatenate[2] = rtb_DetermineSpd_i;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B29)
+    /* {S!d532}Scope: '<Root>/Phase Current' */
+%<tlcOutputsFcnOfS36B29>\
+%endif
+    /* {S!d534}Sum: '<S78>/Add' incorporates:
+ *  Constant: '<S78>/Constant'
+ *  Constant: '<S78>/Constant1'
+ *  Constant: '<S78>/Constant2'
+ *  MultiPortSwitch: '<S78>/Index Vector'
+ *  MultiPortSwitch: '<S78>/Index Vector1'
+ */
+    ParallelTestBench_B.Add = ParallelTestBench_P.Constant_Value_c[(int32_T)ParallelTestBench_P.Constant1_Value_m - 1] - ParallelTestBench_P.Constant_Value_c[(int32_T)ParallelTestBench_P.Constant2_Value_m - 1];
+}
+/* {S!d536}Product: '<S75>/Product' */
+ParallelTestBench_B.Product_k = ParallelTestBench_B.Integrator_n * ParallelTestBench_B.Integrator_d;
+/* {S!d538}Product: '<S78>/Product' */
+ParallelTestBench_B.Product_i = ParallelTestBench_B.Product_k * ParallelTestBench_B.Add;
+/* {S!d540}Gain: '<S75>/Gain1' */
+ParallelTestBench_B.Gain1_l = ParallelTestBench_P.SKP6485_lambda_pm_calc * ParallelTestBench_B.Integrator_d;
+/* {S!d542}Sum: '<S75>/Add' */
+ParallelTestBench_B.Add_g = ParallelTestBench_B.Product_i + ParallelTestBench_B.Gain1_l;
+/* {S!d544}Gain: '<S75>/Gain2' */
+ParallelTestBench_B.Gain2_o = 1.5 * ParallelTestBench_P.SideA_N * ParallelTestBench_B.Add_g;
+/* {S!d546}ManualSwitch: '<Root>/Manual Switch1' incorporates:
+ *  Constant: '<Root>/Constant2'
+ */
+/* Unit Conversion - from: rpm to: rad/s
+ Expression: output = (0.10472*input) + (0) */
+if (ParallelTestBench_P.ManualSwitch1_CurrentSetting == 1) {
+    DiscreteTimeIntegrator1_tmp = ParallelTestBench_B.Merge1_n;
+} else {
+    DiscreteTimeIntegrator1_tmp = ParallelTestBench_P.Constant2_Value_i;
+}
+/* {S!d548}UnitConversion: '<S2>/Unit Conversion' incorporates:
+ *  ManualSwitch: '<Root>/Manual Switch1'
+ */
+ParallelTestBench_B.UnitConversion_k = 0.10471975511965977 * DiscreteTimeIntegrator1_tmp;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d199}Outputs for Atomic SubSystem: '<S97>/PMSM Speed Control Exterior' */
+    /* {S!d200}Outputs for Atomic SubSystem: '<S100>/State Filter' */
+    /* {S!d550}DiscreteIntegrator: '<S108>/Discrete-Time Integrator' */
+    rtb_DiscreteTimeIntegrator = ParallelTestBench_DW.DiscreteTimeIntegrator_DSTATE;
+    /* {S!d552}Gain: '<S108>/Gain7' incorporates:
+ *  DiscreteIntegrator: '<S108>/Discrete-Time Integrator'
+ *  Sum: '<S108>/Sum4'
+ */
+    rtb_Gain7 = (ParallelTestBench_B.UnitConversion_k - ParallelTestBench_DW.DiscreteTimeIntegrator_DSTATE) * ParallelTestBench_P.SurfaceMountPMController_Ksf;
+    /* {S!d554}Update for DiscreteIntegrator: '<S108>/Discrete-Time Integrator' */
+    ParallelTestBench_DW.DiscreteTimeIntegrator_DSTATE += ParallelTestBench_P.DiscreteTimeIntegrator_gainva_p * rtb_Gain7;
+    /* {E!d200}End of Outputs for SubSystem: '<S100>/State Filter' */
+
+    /* {S!d202}Outputs for Atomic SubSystem: '<S100>/Motion control' */
+    /* {S!d556}Sum: '<S107>/Sum' */
+    rtb_Sum = rtb_DiscreteTimeIntegrator - ParallelTestBench_B.Int;
+    /* {S!d558}DiscreteIntegrator: '<S107>/Discrete-Time Integrator' */
+    DiscreteTimeIntegrator = ParallelTestBench_P.DiscreteTimeIntegrator_gainval * rtb_Sum + ParallelTestBench_DW.DiscreteTimeIntegrator_DSTATE_f;
+    /* {S!d560}DiscreteIntegrator: '<S107>/Discrete-Time Integrator1' */
+    DiscreteTimeIntegrator1 = ParallelTestBench_P.DiscreteTimeIntegrator1_gainval * DiscreteTimeIntegrator + ParallelTestBench_DW.DiscreteTimeIntegrator1_DSTATE;
+    /* {S!d562}Signum: '<S107>/Sign' */
+    if (rtIsNaN(rtb_DiscreteTimeIntegrator)) {
+        DiscreteTimeIntegrator1_tmp = %<LibGetMathConstant(LibRealNonFinite("nan"), FcnGetDataTypeIdFromName("double"))>;
+    } else if (rtb_DiscreteTimeIntegrator < 0.0) {
+        DiscreteTimeIntegrator1_tmp = -1.0;
+    } else {
+        DiscreteTimeIntegrator1_tmp = (rtb_DiscreteTimeIntegrator > 0.0);
+    }
+    /* {S!d564}Sum: '<S107>/Sum5' incorporates:
+ *  Gain: '<S107>/Gain'
+ *  Gain: '<S107>/Gain1'
+ *  Gain: '<S107>/Gain2'
+ *  Gain: '<S107>/Position1'
+ *  Gain: '<S107>/Position2'
+ *  Gain: '<S107>/Position3'
+ *  Signum: '<S107>/Sign'
+ *  Sum: '<S107>/Sum1'
+ *  Sum: '<S107>/Sum7'
+ */
+    rtb_DiscreteTimeIntegrator = ((ParallelTestBench_P.SurfaceMountPMController_Jcomp * rtb_Gain7 + ParallelTestBench_P.SurfaceMountPMController_Fv * rtb_DiscreteTimeIntegrator) + ParallelTestBench_P.SurfaceMountPMController_Fs * DiscreteTimeIntegrator1_tmp) + ((ParallelTestBench_P.SurfaceMountPMController_Kisa * DiscreteTimeIntegrator1 + ParallelTestBench_P.SurfaceMountPMController_Ksa * DiscreteTimeIntegrator) + ParallelTestBench_P.SurfaceMountPMController_ba * rtb_Sum);
+    /* {S!d566}Update for DiscreteIntegrator: '<S107>/Discrete-Time Integrator' */
+    ParallelTestBench_DW.DiscreteTimeIntegrator_DSTATE_f = DiscreteTimeIntegrator;
+    /* {S!d568}Update for DiscreteIntegrator: '<S107>/Discrete-Time Integrator1' */
+    ParallelTestBench_DW.DiscreteTimeIntegrator1_DSTATE = DiscreteTimeIntegrator1;
+    /* {E!d202}End of Outputs for SubSystem: '<S100>/Motion control' */
+
+    /* {S!d204}Outputs for Atomic SubSystem: '<S100>/Current Controller External' */
+    /* {S!d570}Gain: '<S109>/Gain5' incorporates:
+ *  Sum: '<S109>/Add2'
+ */
+    rtb_Gain7 = (ParallelTestBench_B.Add1 + ParallelTestBench_B.Subtract1) * ParallelTestBench_P.Gain5_Gain;
+    /* {S!d572}Sum: '<S109>/Add' incorporates:
+ *  Gain: '<S109>/Gain'
+ *  Gain: '<S109>/Gain1'
+ *  Gain: '<S109>/Gain4'
+ */
+    DiscreteTimeIntegrator = (ParallelTestBench_P.Gain_Gain * ParallelTestBench_B.Add1 + ParallelTestBench_P.Gain1_Gain * ParallelTestBench_B.Subtract1) + ParallelTestBench_P.Gain4_Gain * rtb_Gain7;
+    /* {S!d574}Sum: '<S109>/Add1' incorporates:
+ *  Gain: '<S109>/Gain2'
+ *  Gain: '<S109>/Gain3'
+ */
+    rtb_Gain7 = ParallelTestBench_P.Gain2_Gain * ParallelTestBench_B.Subtract1 + ParallelTestBench_P.Gain3_Gain * rtb_Gain7;
+    /* {S!d576}Gain: '<S116>/Gain1' incorporates:
+ *  Constant: '<S116>/Constant3'
+ */
+    DiscreteTimeIntegrator1 = ParallelTestBench_P.Gain1_Gain_c * ParallelTestBench_P.SurfaceMountPMController_idq_li;
+    /* {S!d205}Outputs for IfAction SubSystem: '<S110>/If Action Subsystem1' incorporates:
+ *  ActionPort: '<S119>/Action Port'
+ */
+    /* {S!d578}If: '<S110>/If' incorporates:
+ *  Constant: '<S116>/Constant'
+ *  Math: '<S116>/Math Function'
+ *  Math: '<S122>/Math Function1'
+ */
+    DiscreteTimeIntegrator1_tmp = ParallelTestBench_P.SideA_lambda * ParallelTestBench_P.SideA_lambda;
+    /* {E!d205}End of Outputs for SubSystem: '<S110>/If Action Subsystem1' */
+
+    /* {S!d580}Sum: '<S116>/Add1' incorporates:
+ *  Math: '<S116>/Math Function'
+ *  Math: '<S116>/Math Function1'
+ */
+    DiscreteTimeIntegrator1 = DiscreteTimeIntegrator1 * DiscreteTimeIntegrator1 + DiscreteTimeIntegrator1_tmp;
+    /* {S!d582}Gain: '<S110>/Gain1' */
+    rtb_Sum = ParallelTestBench_P.Gain1_Gain_j * ParallelTestBench_B.Gain1;
+    /* {S!d584}MinMax: '<S117>/MinMax1' incorporates:
+ *  Abs: '<S110>/Abs'
+ *  Constant: '<S117>/Constant'
+ *  Constant: '<S117>/Constant2'
+ *  Gain: '<S117>/Gain1'
+ *  Product: '<S117>/Divide'
+ */
+    rtb_MinMax1 = fmin(fabs(rtb_DiscreteTimeIntegrator) / (1.5 * ParallelTestBench_P.SideA_N * ParallelTestBench_P.SideA_lambda), ParallelTestBench_P.SurfaceMountPMController_idq_li);
+    /* {S!d586}Gain: '<S110>/Gain' incorporates:
+ *  Abs: '<S110>/Abs1'
+ */
+    rtb_Gain_g2 = ParallelTestBench_P.SideA_N * fabs(ParallelTestBench_B.Int);
+    /* {S!d596}If: '<S110>/If' incorporates:
+ *  Constant: '<S116>/Constant1'
+ *  MinMax: '<S116>/MinMax'
+ *  Product: '<S116>/Divide'
+ *  Sqrt: '<S116>/Sqrt'
+ */
+    if (rtb_Gain_g2 <= rtb_Sum / fmax(sqrt(DiscreteTimeIntegrator1), ParallelTestBench_P.Constant1_Value)) {
+        /* {S!d207}Outputs for IfAction SubSystem: '<S110>/If Action Subsystem' incorporates:
+ *  ActionPort: '<S118>/Action Port'
+ */
+        /* {S!d588}Merge: '<S110>/Merge1' incorporates:
+ *  SignalConversion generated from: '<S118>/iq_tmp'
+ */
+        ParallelTestBench_B.Merge1_o = rtb_MinMax1;
+        /* {E!d207}End of Outputs for SubSystem: '<S110>/If Action Subsystem' */
+    } else {
+        /* {S!d209}Outputs for IfAction SubSystem: '<S110>/If Action Subsystem1' incorporates:
+ *  ActionPort: '<S119>/Action Port'
+ */
+        /* {S!d590}Product: '<S122>/Divide' incorporates:
+ *  Constant: '<S122>/Constant2'
+ *  MinMax: '<S122>/MinMax'
+ */
+        DiscreteTimeIntegrator1 = rtb_Sum / fmax(rtb_Gain_g2, ParallelTestBench_P.Constant2_Value);
+        /* {S!d592}Product: '<S122>/Divide1' incorporates:
+ *  Constant: '<S122>/Constant3'
+ *  Constant: '<S122>/Constant5'
+ *  Math: '<S122>/Math Function'
+ *  MinMax: '<S122>/MinMax1'
+ *  Sqrt: '<S122>/Sqrt'
+ *  Sum: '<S122>/Subtract'
+ */
+        rtb_Divide1 = sqrt(fmax(DiscreteTimeIntegrator1 * DiscreteTimeIntegrator1 - DiscreteTimeIntegrator1_tmp, ParallelTestBench_P.Constant3_Value)) / ParallelTestBench_P.Constant5_Value;
+        /* {S!d594}If: '<S119>/If2' */
+        if (rtb_MinMax1 < rtb_Divide1) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[14], "Output",0)
+            /* {S!d210}Outputs for IfAction SubSystem: '<S119>/FW Torque Lower' incorporates:
+ *  ActionPort: '<S121>/Action Port'
+ */
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBench_FWTorqueLower",14,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBench_FWTorqueLower",14,1)
+%<SLibCGIRAccessLocalVar(55, 0, "")> %% rtb_MinMax1
+%endif
+
+%<SLibCGIRGenReusableSysCall("ParallelTestBench_FWTorqueLower", ["%<_modelSS>", "rtb_MinMax1", "&ParallelTestBench_B.Merge1_o"], 14, 0, 6, 0, 6, 36)>\
+%assign ss = ::CompiledModel.System[14]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+            /* {E!d210}End of Outputs for SubSystem: '<S119>/FW Torque Lower' */
+%endif
+        } else {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[14], "Output",0)
+            /* {S!d212}Outputs for IfAction SubSystem: '<S119>/FW Torque Higher' incorporates:
+ *  ActionPort: '<S120>/Action Port'
+ */
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBench_FWTorqueLower",14,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("ParallelTestBench_FWTorqueLower",14,1)
+%<SLibCGIRAccessLocalVar(89, 0, "")> %% rtb_Divide1
+%endif
+
+%<SLibCGIRGenReusableSysCall("ParallelTestBench_FWTorqueLower", ["%<_modelSS>", "rtb_Divide1", "&ParallelTestBench_B.Merge1_o"], 14, 1, 6, 0, 6, 36)>\
+%assign ss = ::CompiledModel.System[14]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+            /* {E!d212}End of Outputs for SubSystem: '<S119>/FW Torque Higher' */
+%endif
+        }
+        /* {E!d594}End of If: '<S119>/If2' */
+        /* {E!d209}End of Outputs for SubSystem: '<S110>/If Action Subsystem1' */
+    }
+    /* {S!d598}Trigonometry: '<S106>/Sine_Cosine' */
+    DiscreteTimeIntegrator1 = sin(rtb_Add);
+    rtb_Sum = cos(rtb_Add);
+    /* {S!d600}Sum: '<S115>/Add1' incorporates:
+ *  Product: '<S115>/Product2'
+ *  Product: '<S115>/Product3'
+ */
+    rtb_Gain_g2 = DiscreteTimeIntegrator * rtb_Sum + rtb_Gain7 * DiscreteTimeIntegrator1;
+    /* {S!d602}Sum: '<S111>/Add' incorporates:
+ *  Constant: '<S111>/Constant'
+ *  Gain: '<S111>/Proportional_Gain3'
+ */
+    rtb_Add = ParallelTestBench_P.Proportional_Gain3_Gain * rtb_Gain_g2 + ParallelTestBench_P.SideA_lambda;
+    /* {S!d604}Gain: '<S111>/Gain' */
+    rtb_Gain_h = ParallelTestBench_P.SideA_N * ParallelTestBench_B.Int;
+    /* {S!d606}Sum: '<S115>/Add' incorporates:
+ *  Product: '<S115>/Product'
+ *  Product: '<S115>/Product1'
+ */
+    rtb_Gain7 = rtb_Gain7 * rtb_Sum - DiscreteTimeIntegrator * DiscreteTimeIntegrator1;
+    /* {S!d608}Signum: '<S110>/Sign' */
+    if (rtIsNaN(rtb_DiscreteTimeIntegrator)) {
+        DiscreteTimeIntegrator1_tmp = %<LibGetMathConstant(LibRealNonFinite("nan"), FcnGetDataTypeIdFromName("double"))>;
+    } else if (rtb_DiscreteTimeIntegrator < 0.0) {
+        DiscreteTimeIntegrator1_tmp = -1.0;
+    } else {
+        DiscreteTimeIntegrator1_tmp = (rtb_DiscreteTimeIntegrator > 0.0);
+    }
+    /* {S!d610}Sum: '<S111>/Sum8' incorporates:
+ *  Product: '<S110>/Product'
+ *  Signum: '<S110>/Sign'
+ */
+    DiscreteTimeIntegrator = ParallelTestBench_B.Merge1_o * DiscreteTimeIntegrator1_tmp - rtb_Gain7;
+    /* {S!d612}Sum: '<S111>/Sum3' incorporates:
+ *  Constant: '<S110>/Constant4'
+ */
+    rtb_Gain_g2 = ParallelTestBench_P.Constant4_Value - rtb_Gain_g2;
+    /* {S!d614}Sum: '<S111>/Sum4' incorporates:
+ *  Gain: '<S111>/Proportional_Gain'
+ *  Gain: '<S111>/Proportional_Gain2'
+ *  Product: '<S111>/Product'
+ *  UnitDelay: '<S123>/Unit Delay'
+ */
+    rtb_DiscreteTimeIntegrator = (ParallelTestBench_P.SurfaceMountPMController_Kp_d * rtb_Gain_g2 + ParallelTestBench_DW.UnitDelay_DSTATE) - ParallelTestBench_P.Proportional_Gain2_Gain * rtb_Gain7 * rtb_Gain_h;
+    /* {S!d616}Sum: '<S111>/Sum6' incorporates:
+ *  Gain: '<S111>/Proportional_Gain1'
+ *  Product: '<S111>/Product1'
+ *  Sum: '<S111>/Sum9'
+ *  UnitDelay: '<S124>/Unit Delay'
+ */
+    rtb_Gain7 = (ParallelTestBench_P.SurfaceMountPMController_Kp_q * DiscreteTimeIntegrator + ParallelTestBench_DW.UnitDelay_DSTATE_n) + rtb_Gain_h * rtb_Add;
+    /* {S!d618}Sum: '<S114>/Add1' incorporates:
+ *  Product: '<S114>/Product2'
+ *  Product: '<S114>/Product3'
+ */
+    ParallelTestBench_B.Add1_l = rtb_DiscreteTimeIntegrator * rtb_Sum - rtb_Gain7 * DiscreteTimeIntegrator1;
+    /* {S!d620}Sum: '<S114>/Add' incorporates:
+ *  Product: '<S114>/Product'
+ *  Product: '<S114>/Product1'
+ */
+    rtb_Gain7 = rtb_DiscreteTimeIntegrator * DiscreteTimeIntegrator1 + rtb_Gain7 * rtb_Sum;
+    /* {S!d622}Sum: '<S113>/Subtract1' incorporates:
+ *  Gain: '<S113>/Gain2'
+ *  Gain: '<S113>/Gain3'
+ */
+    ParallelTestBench_B.Subtract1_j = ParallelTestBench_P.Gain2_Gain_e * ParallelTestBench_B.Add1_l + ParallelTestBench_P.Gain3_Gain_h * rtb_Gain7;
+    /* {S!d624}Sum: '<S113>/Subtract2' incorporates:
+ *  Gain: '<S113>/Gain1'
+ *  Gain: '<S113>/Gain4'
+ */
+    ParallelTestBench_B.Subtract2 = ParallelTestBench_P.Gain1_Gain_f * ParallelTestBench_B.Add1_l + ParallelTestBench_P.Gain4_Gain_n * rtb_Gain7;
+    /* {S!d626}Sum: '<S123>/Add' incorporates:
+ *  Gain: '<S111>/Integral_Gain1'
+ *  Gain: '<S123>/Gain1'
+ *  UnitDelay: '<S123>/Unit Delay'
+ */
+    rtb_DiscreteTimeIntegrator = ParallelTestBench_P.SurfaceMountPMController_Ki * rtb_Gain_g2 * ParallelTestBench_P.Gain1_Gain_h + ParallelTestBench_DW.UnitDelay_DSTATE;
+    /* {S!d634}Saturate: '<S123>/Saturation' */
+    if (rtb_DiscreteTimeIntegrator > ParallelTestBench_P.Saturation_UpperSat) {
+        /* {S!d628}Update for UnitDelay: '<S123>/Unit Delay' */
+        ParallelTestBench_DW.UnitDelay_DSTATE = ParallelTestBench_P.Saturation_UpperSat;
+    } else if (rtb_DiscreteTimeIntegrator < ParallelTestBench_P.Saturation_LowerSat) {
+        /* {S!d630}Update for UnitDelay: '<S123>/Unit Delay' */
+        ParallelTestBench_DW.UnitDelay_DSTATE = ParallelTestBench_P.Saturation_LowerSat;
+    } else {
+        /* {S!d632}Update for UnitDelay: '<S123>/Unit Delay' */
+        ParallelTestBench_DW.UnitDelay_DSTATE = rtb_DiscreteTimeIntegrator;
+    }
+    /* {E!d634}End of Saturate: '<S123>/Saturation' */
+
+    /* {S!d636}Sum: '<S124>/Add' incorporates:
+ *  Gain: '<S111>/Integral_Gain'
+ *  Gain: '<S124>/Gain1'
+ *  UnitDelay: '<S124>/Unit Delay'
+ */
+    rtb_DiscreteTimeIntegrator = ParallelTestBench_P.SurfaceMountPMController_Ki * DiscreteTimeIntegrator * ParallelTestBench_P.Gain1_Gain_n + ParallelTestBench_DW.UnitDelay_DSTATE_n;
+    /* {S!d644}Saturate: '<S124>/Saturation' */
+    if (rtb_DiscreteTimeIntegrator > ParallelTestBench_P.Saturation_UpperSat_p) {
+        /* {S!d638}Update for UnitDelay: '<S124>/Unit Delay' */
+        ParallelTestBench_DW.UnitDelay_DSTATE_n = ParallelTestBench_P.Saturation_UpperSat_p;
+    } else if (rtb_DiscreteTimeIntegrator < ParallelTestBench_P.Saturation_LowerSat_g) {
+        /* {S!d640}Update for UnitDelay: '<S124>/Unit Delay' */
+        ParallelTestBench_DW.UnitDelay_DSTATE_n = ParallelTestBench_P.Saturation_LowerSat_g;
+    } else {
+        /* {S!d642}Update for UnitDelay: '<S124>/Unit Delay' */
+        ParallelTestBench_DW.UnitDelay_DSTATE_n = rtb_DiscreteTimeIntegrator;
+    }
+    /* {E!d644}End of Saturate: '<S124>/Saturation' */
+    /* {E!d204}End of Outputs for SubSystem: '<S100>/Current Controller External' */
+    /* {E!d199}End of Outputs for SubSystem: '<S97>/PMSM Speed Control Exterior' */
+}
+/* {S!d646}Sum: '<S66>/Add' incorporates:
+ *  Product: '<S66>/Product'
+ *  Product: '<S66>/Product1'
+ *  Product: '<S66>/Product2'
+ */
+ParallelTestBench_B.Add_m = (ParallelTestBench_B.Add1 * ParallelTestBench_B.Add1_l + ParallelTestBench_B.Subtract1 * ParallelTestBench_B.Subtract1_j) + rtb_DetermineSpd_i * ParallelTestBench_B.Subtract2;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B35)
+    /* {S!d648}Scope: '<Root>/SKP Torque Current Power' */
+%<tlcOutputsFcnOfS36B35>\
+%endif
+    /* {S!d654}Switch: '<S48>/Switch' incorporates:
+ *  Constant: '<Root>/Constant'
+ */
+    if (ParallelTestBench_P.Constant_Value_i > ParallelTestBench_P.Batt_Cap) {
+        /* {S!d650}Switch: '<S48>/Switch' incorporates:
+ *  Constant: '<S48>/Constant1'
+ */
+        ParallelTestBench_B.Switch = ParallelTestBench_P.Batt_Cap;
+    } else {
+        /* {S!d652}Switch: '<S48>/Switch' */
+        ParallelTestBench_B.Switch = ParallelTestBench_P.Constant_Value_i;
+    }
+    /* {E!d654}End of Switch: '<S48>/Switch' */
+}
+/* {S!d656}Integrator: '<S48>/Integrator Limited' */
+/* Limited  Integrator  */
+if (ParallelTestBench_DW.IntegratorLimited_IWORK != 0) {
+    ParallelTestBench_X.IntegratorLimited_CSTATE = ParallelTestBench_B.Switch;
+}
+if (ParallelTestBench_X.IntegratorLimited_CSTATE >= ParallelTestBench_P.Batt_Cap) {
+    ParallelTestBench_X.IntegratorLimited_CSTATE = ParallelTestBench_P.Batt_Cap;
+} else if (ParallelTestBench_X.IntegratorLimited_CSTATE <= ParallelTestBench_P.IntegratorLimited_LowerSat) {
+    ParallelTestBench_X.IntegratorLimited_CSTATE = ParallelTestBench_P.IntegratorLimited_LowerSat;
+}
+/* {S!d658}Integrator: '<S48>/Integrator Limited' */
+ParallelTestBench_B.IntegratorLimited = ParallelTestBench_X.IntegratorLimited_CSTATE;
+/* {S!d660}Product: '<S49>/Divide' incorporates:
+ *  Constant: '<S49>/Constant1'
+ */
+ParallelTestBench_B.Divide = ParallelTestBench_B.IntegratorLimited / ParallelTestBench_P.Batt_Cap;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B39)
+    /* {S!d662}Scope: '<Root>/SOC' */
+%<tlcOutputsFcnOfS36B39>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B40)
+    /* {S!d664}Scope: '<Root>/Scope' */
+%<tlcOutputsFcnOfS36B40>\
+%endif
+}
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B41)
+/* {S!d666}FromSpreadsheet: '<Root>/From Spreadsheet' */
+%<tlcOutputsFcnOfS36B41>\
+%endif
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B42)
+    /* {S!d668}Scope: '<Root>/Scope1' */
+%<tlcOutputsFcnOfS36B42>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B43)
+    /* {S!d670}Scope: '<Root>/Scope2' */
+%<tlcOutputsFcnOfS36B43>\
+%endif
+}
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B44)
+/* {S!d672}FromSpreadsheet: '<Root>/From Spreadsheet1' */
+%<tlcOutputsFcnOfS36B44>\
+%endif
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B45)
+    /* {S!d674}Scope: '<Root>/Scope3' */
+%<tlcOutputsFcnOfS36B45>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B46)
+    /* {S!d676}Scope: '<Root>/Scope4' */
+%<tlcOutputsFcnOfS36B46>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B47)
+    /* {S!d678}Scope: '<Root>/Scope7' */
+%<tlcOutputsFcnOfS36B47>\
+%endif
+}
+/* {S!d680}UnitConversion: '<S5>/Unit Conversion' */
+/* Unit Conversion - from: rad/s to: rpm
+ Expression: output = (9.5493*input) + (0) */
+ParallelTestBench_B.UnitConversion_f = 9.5492965855137211 * ParallelTestBench_B.OUTPUT_1_0[0];
+/* {S!d682}UnitConversion: '<S1>/Unit Conversion' */
+/* Unit Conversion - from: rad/s to: rpm
+ Expression: output = (9.5493*input) + (0) */
+ParallelTestBench_B.UnitConversion_c = 9.5492965855137211 * ParallelTestBench_B.Int;
+/* {S!d684}UnitConversion: '<S3>/Unit Conversion' */
+/* Unit Conversion - from: rad/s to: rpm
+ Expression: output = (9.5493*input) + (0) */
+ParallelTestBench_B.UnitConversion_h = 9.5492965855137211 * rtb_Gain_g4;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B48)
+    /* {S!d686}Scope: '<Root>/Speeds' */
+%<tlcOutputsFcnOfS36B48>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B49)
+    /* {S!d688}Scope: '<Root>/Torques' */
+%<tlcOutputsFcnOfS36B49>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B50)
+    /* {S!d690}Scope: '<Root>/Trq Lds' */
+%<tlcOutputsFcnOfS36B50>\
+%endif
+}
+/* {S!d696}Switch: '<S17>/Switch' */
+if (ParallelTestBench_B.OUTPUT_1_0[0] > ParallelTestBench_P.ICE_Idle_Spd) {
+    /* {S!d692}Switch: '<S17>/Switch' incorporates:
+ *  Constant: '<S17>/Constant5'
+ */
+    ParallelTestBench_B.Switch_e = ParallelTestBench_P.Constant5_Value_m;
+} else {
+    /* {S!d694}Switch: '<S17>/Switch' */
+    ParallelTestBench_B.Switch_e = ParallelTestBench_B.OUTPUT_1_0[1];
+}
+/* {E!d696}End of Switch: '<S17>/Switch' */
+
+/* {S!d698}Sum: '<Root>/Add' */
+ParallelTestBench_B.Add_p = ParallelTestBench_B.Switch_e + ParallelTestBench_B.Merge1_nv;
+/* {S!d700}Gain: '<S26>/RPM to deg//s' */
+ParallelTestBench_B.RPMtodegs = ParallelTestBench_P.RPMtodegs_Gain * ParallelTestBench_B.ManualSwitch;
+/* {S!d702}Gain: '<S48>/Gain1' */
+ParallelTestBench_B.Gain1_j = -1.0 / (ParallelTestBench_P.Batt_Parr * 3600.0) * ParallelTestBench_B.Integrator_d;
+/* {S!d704}Gain: '<S50>/Gain2' */
+ParallelTestBench_B.Gain2_og = 1.0 / ParallelTestBench_P.Batt_Parr * ParallelTestBench_B.Integrator_d;
+/* {S!d706}Product: '<S50>/Product' incorporates:
+ *  Constant: '<Root>/Constant3'
+ *  Lookup_n-D: '<S50>/R'
+ *  Product: '<S49>/Divide'
+ */
+ParallelTestBench_B.Product_k3 = look2_binlcapw(ParallelTestBench_P.Constant3_Value_c, ParallelTestBench_B.Divide, ParallelTestBench_P.DatasheetBattery_BattTempBp, ParallelTestBench_P.DatasheetBattery_CapSOCBp, ParallelTestBench_P.DatasheetBattery_RInt, ParallelTestBench_P.R_maxIndex, 7U) * ParallelTestBench_B.Gain2_og;
+/* {S!d708}Sum: '<S50>/Subtract' incorporates:
+ *  Lookup_n-D: '<S50>/Em'
+ *  Product: '<S49>/Divide'
+ */
+ParallelTestBench_B.Subtract = look1_binlcapw(ParallelTestBench_B.Divide, ParallelTestBench_P.DatasheetBattery_CapLUTBp, ParallelTestBench_P.DatasheetBattery_Em, 100U) - ParallelTestBench_B.Product_k3;
+/* {S!d710}Gain: '<S50>/Gain1' */
+ParallelTestBench_B.Gain1_b = ParallelTestBench_P.Batt_Series * ParallelTestBench_B.Subtract;
+/* {S!d712}Sum: '<S46>/Sum' */
+ParallelTestBench_B.Sum = ParallelTestBench_B.Gain1_b - ParallelTestBench_B.Gain1;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d714}MultiPortSwitch: '<S65>/Index Vector2' incorporates:
+ *  Constant: '<S65>/Constant4'
+ *  Constant: '<S65>/Constant5'
+ */
+    ParallelTestBench_B.IndexVector2 = ParallelTestBench_P.BLDC_Driveline_Param[(int32_T)ParallelTestBench_P.Constant5_Value_n - 1];
+    /* {S!d716}MultiPortSwitch: '<S65>/Index Vector1' incorporates:
+ *  Constant: '<S65>/Constant2'
+ *  Constant: '<S65>/Constant3'
+ */
+    ParallelTestBench_B.IndexVector1 = ParallelTestBench_P.BLDC_Driveline_Param[(int32_T)ParallelTestBench_P.Constant3_Value_o - 1];
+}
+/* {S!d718}Product: '<S65>/Divide2' */
+ParallelTestBench_B.Divide2 = ParallelTestBench_B.Int * ParallelTestBench_B.IndexVector2;
+/* {S!d720}Gain: '<S65>/Gain5' */
+ParallelTestBench_B.Gain5 = ParallelTestBench_P.Gain5_Gain_o * ParallelTestBench_B.Int;
+/* {S!d722}Product: '<S65>/Divide1' incorporates:
+ *  Trigonometry: '<S65>/Trigonometric Function'
+ */
+ParallelTestBench_B.Divide1 = ParallelTestBench_B.IndexVector1 * tanh(ParallelTestBench_B.Gain5);
+/* {S!d724}Sum: '<S65>/Sum1' */
+ParallelTestBench_B.Sum1 = ((ParallelTestBench_B.Gain2_o - ParallelTestBench_B.Add_p) - ParallelTestBench_B.Divide2) - ParallelTestBench_B.Divide1;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d726}MultiPortSwitch: '<S65>/Index Vector' incorporates:
+ *  Constant: '<S65>/Constant'
+ *  Constant: '<S65>/Constant1'
+ */
+    ParallelTestBench_B.IndexVector_a = ParallelTestBench_P.BLDC_Driveline_Param[(int32_T)ParallelTestBench_P.Constant1_Value_o - 1];
+    /* {S!d728}Sum: '<S72>/Add' incorporates:
+ *  Gain: '<S72>/Gain'
+ *  Gain: '<S72>/Gain1'
+ *  Gain: '<S72>/Gain4'
+ */
+    ParallelTestBench_B.Add_n = (ParallelTestBench_P.Gain_Gain_a * ParallelTestBench_B.Add1_l + ParallelTestBench_P.Gain1_Gain_p * ParallelTestBench_B.Subtract1_j) + ParallelTestBench_P.Gain4_Gain_a * ParallelTestBench_B.Subtract2;
+    /* {S!d730}Sum: '<S72>/Add1' incorporates:
+ *  Gain: '<S72>/Gain2'
+ *  Gain: '<S72>/Gain3'
+ */
+    ParallelTestBench_B.Add1_d = ParallelTestBench_P.Gain2_Gain_f * ParallelTestBench_B.Subtract1_j + ParallelTestBench_P.Gain3_Gain_k * ParallelTestBench_B.Subtract2;
+}
+/* {S!d732}Product: '<S65>/Divide' */
+ParallelTestBench_B.Divide_b = ParallelTestBench_B.Sum1 / ParallelTestBench_B.IndexVector_a;
+/* {S!d734}Gain: '<S65>/Gain' */
+ParallelTestBench_B.Gain = ParallelTestBench_P.SideA_N * ParallelTestBench_B.Int;
+/* {S!d736}Product: '<S77>/Product2' */
+ParallelTestBench_B.Product2 = ParallelTestBench_B.Add_n * rtb_Gain_jl;
+/* {S!d738}Product: '<S77>/Product3' */
+ParallelTestBench_B.Product3 = ParallelTestBench_B.Add1_d * rtb_Fix1;
+/* {S!d740}Sum: '<S77>/Add1' */
+ParallelTestBench_B.Add1_a = ParallelTestBench_B.Product2 + ParallelTestBench_B.Product3;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d742}MultiPortSwitch: '<S81>/Index Vector' incorporates:
+ *  Constant: '<S81>/Constant'
+ *  Constant: '<S81>/Constant1'
+ */
+    ParallelTestBench_B.IndexVector_fn = ParallelTestBench_P.Constant_Value_g[(int32_T)ParallelTestBench_P.Constant1_Value_k - 1];
+    /* {S!d744}MultiPortSwitch: '<S82>/Index Vector' incorporates:
+ *  Constant: '<S82>/Constant'
+ *  Constant: '<S82>/Constant1'
+ */
+    ParallelTestBench_B.IndexVector_m = ParallelTestBench_P.Constant_Value_d[(int32_T)ParallelTestBench_P.Constant1_Value_k5 - 1];
+    /* {S!d746}MultiPortSwitch: '<S82>/Index Vector2' incorporates:
+ *  Constant: '<S82>/Constant'
+ *  Constant: '<S82>/Constant2'
+ */
+    ParallelTestBench_B.IndexVector2_p = ParallelTestBench_P.Constant_Value_d[(int32_T)ParallelTestBench_P.Constant2_Value_f - 1];
+}
+/* {S!d748}Product: '<S81>/Product' */
+ParallelTestBench_B.Product_b2 = ParallelTestBench_B.Add1_a / ParallelTestBench_B.IndexVector_fn;
+/* {S!d750}Product: '<S79>/Product' */
+ParallelTestBench_B.Product_p = ParallelTestBench_B.Gain * ParallelTestBench_B.Integrator_d;
+/* {S!d752}Product: '<S82>/Product' */
+ParallelTestBench_B.Product_c = ParallelTestBench_B.Product_p * ParallelTestBench_B.IndexVector_m / ParallelTestBench_B.IndexVector2_p;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d754}MultiPortSwitch: '<S83>/Index Vector' incorporates:
+ *  Constant: '<S83>/Constant1'
+ *  Constant: '<S83>/Constant2'
+ */
+    ParallelTestBench_B.IndexVector_ma = ParallelTestBench_P.Constant1_Value_om[(int32_T)ParallelTestBench_P.Constant2_Value_k - 1];
+    /* {S!d756}MultiPortSwitch: '<S84>/Index Vector' incorporates:
+ *  Constant: '<S84>/Constant'
+ *  Constant: '<S84>/Constant1'
+ */
+    ParallelTestBench_B.IndexVector_b = ParallelTestBench_P.Constant_Value_a[(int32_T)ParallelTestBench_P.Constant1_Value_i - 1];
+}
+/* {S!d758}Product: '<S83>/Product' incorporates:
+ *  Constant: '<S83>/Constant'
+ */
+ParallelTestBench_B.Product_pw = ParallelTestBench_B.Integrator_n * ParallelTestBench_P.SideA_Rs / ParallelTestBench_B.IndexVector_ma;
+/* {S!d760}Sum: '<S79>/Add' */
+ParallelTestBench_B.Add_o = (ParallelTestBench_B.Product_b2 + ParallelTestBench_B.Product_c) - ParallelTestBench_B.Product_pw;
+/* {S!d762}Product: '<S77>/Product' */
+ParallelTestBench_B.Product_h = ParallelTestBench_B.Add_n * rtb_Fix1;
+/* {S!d764}Product: '<S77>/Product1' */
+ParallelTestBench_B.Product1 = ParallelTestBench_B.Add1_d * rtb_Gain_jl;
+/* {S!d766}Sum: '<S77>/Add' */
+ParallelTestBench_B.Add_l = ParallelTestBench_B.Product1 - ParallelTestBench_B.Product_h;
+/* {S!d768}Product: '<S84>/Product' */
+ParallelTestBench_B.Product_l = ParallelTestBench_B.Add_l / ParallelTestBench_B.IndexVector_b;
+/* {S!d770}Product: '<S80>/Product' */
+ParallelTestBench_B.Product_m = ParallelTestBench_B.Integrator_n * ParallelTestBench_B.Gain;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d772}MultiPortSwitch: '<S85>/Index Vector' incorporates:
+ *  Constant: '<S85>/Constant'
+ *  Constant: '<S85>/Constant1'
+ */
+    ParallelTestBench_B.IndexVector_n = ParallelTestBench_P.Constant_Value_p[(int32_T)ParallelTestBench_P.Constant1_Value_na - 1];
+    /* {S!d774}MultiPortSwitch: '<S85>/Index Vector1' incorporates:
+ *  Constant: '<S85>/Constant'
+ *  Constant: '<S85>/Constant2'
+ */
+    ParallelTestBench_B.IndexVector1_o = ParallelTestBench_P.Constant_Value_p[(int32_T)ParallelTestBench_P.Constant2_Value_nl - 1];
+    /* {S!d776}MultiPortSwitch: '<S86>/Index Vector' incorporates:
+ *  Constant: '<S86>/Constant1'
+ *  Constant: '<S86>/Constant2'
+ */
+    ParallelTestBench_B.IndexVector_d = ParallelTestBench_P.Constant1_Value_b2[(int32_T)ParallelTestBench_P.Constant2_Value_e - 1];
+}
+/* {S!d778}Product: '<S85>/Product' */
+ParallelTestBench_B.Product_hg = ParallelTestBench_B.Product_m * ParallelTestBench_B.IndexVector_n / ParallelTestBench_B.IndexVector1_o;
+/* {S!d780}Product: '<S86>/Product' incorporates:
+ *  Constant: '<S86>/Constant'
+ */
+ParallelTestBench_B.Product_o = ParallelTestBench_B.Gain * ParallelTestBench_P.SKP6485_lambda_pm_calc / ParallelTestBench_B.IndexVector_d;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+    /* {S!d782}MultiPortSwitch: '<S87>/Index Vector' incorporates:
+ *  Constant: '<S87>/Constant1'
+ *  Constant: '<S87>/Constant2'
+ */
+    ParallelTestBench_B.IndexVector_p = ParallelTestBench_P.Constant1_Value_ig[(int32_T)ParallelTestBench_P.Constant2_Value_h - 1];
+}
+/* {S!d784}Product: '<S87>/Product' incorporates:
+ *  Constant: '<S87>/Constant'
+ */
+ParallelTestBench_B.Product_e = ParallelTestBench_B.Integrator_d * ParallelTestBench_P.SideA_Rs / ParallelTestBench_B.IndexVector_p;
+/* {S!d786}Sum: '<S80>/Add' */
+ParallelTestBench_B.Add_lf = ((ParallelTestBench_B.Product_l - ParallelTestBench_B.Product_hg) - ParallelTestBench_B.Product_o) - ParallelTestBench_B.Product_e;
+if (%<(SLibCGIRIsSampleHit(1, 36))>) {
+%if !WHITE_SPACE(tlcOutputsFcnOfS36B82)
+    /* {S!d788}Scope: '<S16>/Scope1' */
+%<tlcOutputsFcnOfS36B82>\
+%endif
+}
+/* {S!d800}If: '<S20>/If' */
+if (%<(RTMGetIsModeUpdateTimeStep())>) {
+    rtAction = (int8_T)!(ParallelTestBench_B.ManualSwitch > 0.0);
+    ParallelTestBench_DW.If_ActiveSubsystem_p = rtAction;
+} else {
+    rtAction = ParallelTestBench_DW.If_ActiveSubsystem_p;
+}
+if (rtAction == 0) {
+    /* {S!d217}Outputs for IfAction SubSystem: '<S20>/If Action Subsystem' incorporates:
+ *  ActionPort: '<S125>/Action Port'
+ */
+    /* {S!d796}Switch: '<S125>/Switch' */
+    if (ParallelTestBench_B.ManualSwitch > ParallelTestBench_P.Switch_Threshold_j) {
+        /* {S!d790}Lookup_n-D: '<S125>/1-D Lookup Table' incorporates:
+ *  Constant: '<S125>/Constant1'
+ *  ManualSwitch: '<Root>/Manual Switch'
+ */
+        bpIndices_2[1U] = plook_binca(ParallelTestBench_B.ManualSwitch, ParallelTestBench_P.uDLookupTable_bp02Data_p, 5U, &rtb_Fix1);
+        fractions_2[1U] = rtb_Fix1;
+        for (iU = 0; iU < 11; iU++) {
+            bpIndices_2[0U] = plook_binca(ParallelTestBench_P.Trq_BP[(int32_T)ParallelTestBench_ConstP.pooled1[iU] - 1], ParallelTestBench_P.uDLookupTable_bp01Data_a, 10U, &rtb_Fix1);
+            fractions_2[0U] = rtb_Fix1;
+            rtb_uDLookupTable_b[iU] = intrp2d_la_pw(bpIndices_2, fractions_2, ParallelTestBench_P.Power_Thr_Map, 11U, ParallelTestBench_P.uDLookupTable_maxIndex_kc);
+        }
+        /* {E!d790}End of Lookup_n-D: '<S125>/1-D Lookup Table' */
+
+        /* {S!d792}Merge: '<S20>/Merge' incorporates:
+ *  Lookup_n-D: '<S125>/1-D Lookup Table1'
+ */
+        ParallelTestBench_B.Merge_pm = look1_binlcapw(0.0, rtb_uDLookupTable_b, ParallelTestBench_P.uDLookupTable1_tableData, 10U);
+    } else {
+        /* {S!d794}Merge: '<S20>/Merge' incorporates:
+ *  Constant: '<S125>/Constant2'
+ */
+        ParallelTestBench_B.Merge_pm = ParallelTestBench_P.Constant2_Value_n;
+    }
+    /* {E!d796}End of Switch: '<S125>/Switch' */
+    /* {E!d217}End of Outputs for SubSystem: '<S20>/If Action Subsystem' */
+
+    /* {S!d219}Outputs for IfAction SubSystem: '<S20>/If Action Subsystem1' incorporates:
+ *  ActionPort: '<S126>/Action Port'
+ */
+} else if (%<(SLibCGIRIsSampleHit(1, 22))>) {
+    /* {S!d798}Merge: '<S20>/Merge' incorporates:
+ *  Constant: '<S126>/Constant'
+ *  SignalConversion generated from: '<S126>/No Spd'
+ */
+    ParallelTestBench_B.Merge_pm = ParallelTestBench_P.Constant_Value_k;
+
+    /* {E!d219}End of Outputs for SubSystem: '<S20>/If Action Subsystem1' */
+}
+/* {E!d800}End of If: '<S20>/If' */
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 2, fcnProtoType)>
+%endfunction

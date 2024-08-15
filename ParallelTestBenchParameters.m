@@ -10,11 +10,11 @@ SideA_lambda = 0.00388; % Motor permanent magnetic flux [Wb]
 SideA_N = 7; % Motor number of pole pairs
 SideA_MaxTrq = 5.53; % Motor max torque [Nm]
 SideA_RatedTrq = 0.77*SideA_MaxTrq; % Usabel torque [Nm]
-SideA_Physical_Param = [0.002229 0.0007 0.2814];%[0.002229 0.0005 0.2173]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
+SideA_Physical_Param = [0.002229 0.0007 0.2814];% Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 SideA_Ke = 9.75609; % Motor back-emf constant [Vpp/kRPM]
 SideA_Kt = 0.04189; % Motor torque constant, Max Torque/Max Current [Nm/A]
-BLDC_Driveline_Param = [0.002229 0.0007 0.2814]; % Inertia and damping of the A side driveline [kgm^2,Nm/rad/s]
-BLDCICE_Driveline_Param = [0.002229 0.0004 0.4815]; % Inertia and damping of the A side driveline [kgm^2,Nm/rad/s]
+BLDC_Driveline_Param = [0.002229 0.0007 0.2814]; % Inertia,damping, static friction of BLDC clutch open [kgm^2,Nm/rad/s,Nm]
+BLDCICE_Driveline_Param = [0.002229 0.0004 0.4815]; % Inertia,damping, static friction of BLDC clutch closed [kgm^2,Nm/rad/s,Nm]
 
 %% Dynamometer motor parameters, the motor used for loading
 
@@ -25,7 +25,7 @@ Dyno_N = 21; % Motor number of pole pairs
 Dyno_MaxTrq = 17.8; % Motor max torque [Nm]
 Dyno_Physical_Param = [0.002611 0.000233 0.3];%[0.002611 0.000233 0.3]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 Dyno_Ke = 28.7935; % Motor back-emf constant [Vpp/kRPM]
-Dyno_Kt = 0.0828; % Motor torque constant, Max Torque/Max Current [Nm/A]
+Dyno_Kt = 0.1041; % Motor torque constant, Max Torque/Max Current [Nm/A]
 Dyno_Ratio = 0.44; % Pully ratio Side A divided by Dyno
 
 %% Battery parameters
@@ -33,6 +33,7 @@ Dyno_Ratio = 0.44; % Pully ratio Side A divided by Dyno
 Batt_Cap = 1; % Battery capacity [Ah]
 Batt_Series = 12; % Number of cells in series
 Batt_Parr = 6; % Number of cells in parallel
+Batt_Voltage = 50; % Nominal battery voltage
 
 
 %% Clutch parameters
@@ -53,6 +54,7 @@ P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
 %% ICE parameters
 
 ICE_Idle_Spd = 157; % ICE idle speed [rad/s]
+ICE_Idle_Trq = 0.26; % ICE idle torque [Nm]
 Trq_BP = [0 0.4059 0.6089 0.8118 1.0148 1.2177 1.4207 1.6236 2.0295 2.4355 3.2473 4.0591]; % Break points for maps [Nm]
 Spd_BP = [0 2000 3000 4000 5000 6000 7500]; % Break points for maps [RPM]
 Throttle_BP = [0 10 15 20 25 30 35 40 50 60 80 100];

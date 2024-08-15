@@ -1,0 +1,70 @@
+%implements s41_b0_cywtj_3_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T rtb_FindTrqOutput_n[12];
+real_T fractions[2];
+real_T frac;
+int32_T iU;
+uint32_T bpIndices[2];
+%closefile localVarDecl
+/* {S!d12}SignalConversion generated from: '<S138>/BLDC Trq Ld' incorporates:
+ *  Constant: '<S138>/Constant'
+ */
+*rty_BLDCTrqLd = localP->Constant_Value;
+/* {S!d14}Lookup_n-D: '<S138>/Find Trq Output' incorporates:
+ *  Constant: '<S138>/Constant4'
+ */
+bpIndices[1U] = plook_binca(rtu_ICESpd, ParallelTestBench_P.Spd_BP, 6U, &frac);
+fractions[1U] = frac;
+for (iU = 0; iU < 12; iU++) {
+    bpIndices[0U] = plook_binca(ParallelTestBench_P.Throttle_BP[iU], ParallelTestBench_P.Throttle_BP, 11U, &frac);
+    fractions[0U] = frac;
+    rtb_FindTrqOutput_n[iU] = intrp2d_la_pw(bpIndices, fractions, ParallelTestBench_P.Torque_Map, 12U, localP->FindTrqOutput_maxIndex);
+}
+/* {E!d14}End of Lookup_n-D: '<S138>/Find Trq Output' */
+
+/* {S!d16}Lookup_n-D: '<S138>/Find Trq Cmd' */
+*rty_ICETrqLd = look1_binlcapw(rtu_LdTrq, rtb_FindTrqOutput_n, ParallelTestBench_P.Trq_BP, 11U);
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[3].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(3, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(3, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(3, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ParallelTestBench_BLDCOff(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(3, 0, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("ParallelTestBench_BLDCOff", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>real_T rtu_LdTrq\
+%assign comma = ", "
+%<comma>real_T rtu_ICESpd\
+%assign comma = ", "
+%<comma>real_T *rty_BLDCTrqLd\
+%assign comma = ", "
+%<comma>real_T *rty_ICETrqLd\
+%assign comma = ", "
+%<comma>P_BLDCOff_ParallelTestBench_T *localP\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 0, fcnProtoType)>
+%endfunction

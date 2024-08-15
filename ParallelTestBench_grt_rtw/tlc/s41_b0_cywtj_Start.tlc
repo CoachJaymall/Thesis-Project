@@ -1,0 +1,268 @@
+%implements s41_b0_cywtj_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+NeModelParameters modelParameters;
+NeModelParameters modelParameters_0;
+NeslSimulationData *tmp_1;
+NeslSimulator *tmp;
+NeuDiagnosticManager *diagnosticManager;
+NeuDiagnosticTree *diagnosticTree;
+NeuDiagnosticTree *diagnosticTree_0;
+char *msg;
+char *msg_0;
+real_T tmp_2;
+int32_T tmp_3;
+boolean_T tmp_0;
+%closefile localVarDecl
+%assign tlcSetupRuntimeResourcesFcnOfS36B2 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 2, 4, 0, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS36B14 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 14, 4, 0, 1)
+%assign tlcSetupRuntimeResourcesFcnOfS36B15 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 15, 4, 0, 2)
+%assign tlcSetupRuntimeResourcesFcnOfS36B21 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 21, 4, 0, 3)
+%assign tlcSetupRuntimeResourcesFcnOfS36B22 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 22, 4, 0, 4)
+%assign tlcSetupRuntimeResourcesFcnOfS36B23 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 23, 4, 0, 5)
+%assign tlcSetupRuntimeResourcesFcnOfS36B24 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 24, 4, 0, 6)
+%assign tlcSetupRuntimeResourcesFcnOfS36B29 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 29, 4, 0, 7)
+%assign tlcSetupRuntimeResourcesFcnOfS36B35 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 35, 4, 0, 8)
+%assign tlcSetupRuntimeResourcesFcnOfS36B39 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 39, 4, 0, 9)
+%assign tlcSetupRuntimeResourcesFcnOfS36B40 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 40, 4, 0, 10)
+%assign tlcSetupRuntimeResourcesFcnOfS36B42 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 42, 4, 0, 11)
+%assign tlcSetupRuntimeResourcesFcnOfS36B43 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 43, 4, 0, 12)
+%assign tlcSetupRuntimeResourcesFcnOfS36B45 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 45, 4, 0, 13)
+%assign tlcSetupRuntimeResourcesFcnOfS36B46 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 46, 4, 0, 14)
+%assign tlcSetupRuntimeResourcesFcnOfS36B47 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 47, 4, 0, 15)
+%assign tlcSetupRuntimeResourcesFcnOfS36B48 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 48, 4, 0, 16)
+%assign tlcSetupRuntimeResourcesFcnOfS36B49 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 49, 4, 0, 17)
+%assign tlcSetupRuntimeResourcesFcnOfS36B50 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 50, 4, 0, 18)
+%assign tlcSetupRuntimeResourcesFcnOfS36B82 = OpaqueTLCBlockFcn("SetupRuntimeResources", 36, 82, 4, 0, 19)
+%assign tlcStartFcnOfS36B3 = OpaqueTLCBlockFcn("Start", 36, 3, 4, 0, 20)
+%assign tlcStartFcnOfS36B4 = OpaqueTLCBlockFcn("Start", 36, 4, 4, 0, 21)
+%assign tlcStartFcnOfS36B6 = OpaqueTLCBlockFcn("Start", 36, 6, 4, 0, 22)
+%assign tlcStartFcnOfS36B7 = OpaqueTLCBlockFcn("Start", 36, 7, 4, 0, 23)
+%assign tlcStartFcnOfS36B16 = OpaqueTLCBlockFcn("Start", 36, 16, 4, 0, 24)
+%assign tlcStartFcnOfS36B41 = OpaqueTLCBlockFcn("Start", 36, 41, 4, 0, 25)
+%assign tlcStartFcnOfS36B44 = OpaqueTLCBlockFcn("Start", 36, 44, 4, 0, 26)
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B2)
+/* {S!d18}SetupRuntimeResources for Scope: '<Root>/Battery Voltage' */
+%<tlcSetupRuntimeResourcesFcnOfS36B2>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B14)
+/* {S!d20}SetupRuntimeResources for Scope: '<Root>/Clutch Speeds' */
+%<tlcSetupRuntimeResourcesFcnOfS36B14>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B15)
+/* {S!d22}SetupRuntimeResources for Scope: '<Root>/Dyno Voltage' */
+%<tlcSetupRuntimeResourcesFcnOfS36B15>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B21)
+/* {S!d24}SetupRuntimeResources for Scope: '<Root>/Engine Power' */
+%<tlcSetupRuntimeResourcesFcnOfS36B21>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B22)
+/* {S!d26}SetupRuntimeResources for Scope: '<Root>/Fuel Consumption' */
+%<tlcSetupRuntimeResourcesFcnOfS36B22>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B23)
+/* {S!d28}SetupRuntimeResources for Scope: '<Root>/Fuel Flow' */
+%<tlcSetupRuntimeResourcesFcnOfS36B23>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B24)
+/* {S!d30}SetupRuntimeResources for Scope: '<Root>/Map Values' */
+%<tlcSetupRuntimeResourcesFcnOfS36B24>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B29)
+/* {S!d32}SetupRuntimeResources for Scope: '<Root>/Phase Current' */
+%<tlcSetupRuntimeResourcesFcnOfS36B29>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B35)
+/* {S!d34}SetupRuntimeResources for Scope: '<Root>/SKP Torque Current Power' */
+%<tlcSetupRuntimeResourcesFcnOfS36B35>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B39)
+/* {S!d36}SetupRuntimeResources for Scope: '<Root>/SOC' */
+%<tlcSetupRuntimeResourcesFcnOfS36B39>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B40)
+/* {S!d38}SetupRuntimeResources for Scope: '<Root>/Scope' */
+%<tlcSetupRuntimeResourcesFcnOfS36B40>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B42)
+/* {S!d40}SetupRuntimeResources for Scope: '<Root>/Scope1' */
+%<tlcSetupRuntimeResourcesFcnOfS36B42>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B43)
+/* {S!d42}SetupRuntimeResources for Scope: '<Root>/Scope2' */
+%<tlcSetupRuntimeResourcesFcnOfS36B43>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B45)
+/* {S!d44}SetupRuntimeResources for Scope: '<Root>/Scope3' */
+%<tlcSetupRuntimeResourcesFcnOfS36B45>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B46)
+/* {S!d46}SetupRuntimeResources for Scope: '<Root>/Scope4' */
+%<tlcSetupRuntimeResourcesFcnOfS36B46>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B47)
+/* {S!d48}SetupRuntimeResources for Scope: '<Root>/Scope7' */
+%<tlcSetupRuntimeResourcesFcnOfS36B47>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B48)
+/* {S!d50}SetupRuntimeResources for Scope: '<Root>/Speeds' */
+%<tlcSetupRuntimeResourcesFcnOfS36B48>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B49)
+/* {S!d52}SetupRuntimeResources for Scope: '<Root>/Torques' */
+%<tlcSetupRuntimeResourcesFcnOfS36B49>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B50)
+/* {S!d54}SetupRuntimeResources for Scope: '<Root>/Trq Lds' */
+%<tlcSetupRuntimeResourcesFcnOfS36B50>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS36B82)
+/* {S!d56}SetupRuntimeResources for Scope: '<S16>/Scope1' */
+%<tlcSetupRuntimeResourcesFcnOfS36B82>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS36B3)
+/* {S!d58}Start for FromWorkspace: '<S14>/fromWS_Signal 1' */
+%<tlcStartFcnOfS36B3>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS36B4)
+/* {S!d60}Start for FromWorkspace: '<S15>/fromWS_Signal 1' */
+%<tlcStartFcnOfS36B4>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS36B6)
+/* {S!d62}Start for FromWorkspace: '<S11>/fromWS_Signal 1' */
+%<tlcStartFcnOfS36B6>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS36B7)
+/* {S!d64}Start for FromWorkspace: '<S6>/fromWS_Signal 1' */
+%<tlcStartFcnOfS36B7>\
+%endif
+/* {S!d66}Start for If: '<S16>/If' */
+ParallelTestBench_DW.If_ActiveSubsystem = -1;
+/* {S!d68}Start for SimscapeExecutionBlock: '<S62>/STATE_1' */
+tmp = nesl_lease_simulator("ParallelTestBench/ICE Side Inertias/Solver Configuration_1", 0, 0);
+ParallelTestBench_DW.STATE_1_Simulator = (void *)tmp;
+tmp_0 = pointer_is_null(ParallelTestBench_DW.STATE_1_Simulator);
+if (tmp_0) {
+    ParallelTestBench_59b138b3_1_gateway();
+    tmp = nesl_lease_simulator("ParallelTestBench/ICE Side Inertias/Solver Configuration_1", 0, 0);
+    ParallelTestBench_DW.STATE_1_Simulator = (void *)tmp;
+}
+tmp_1 = nesl_create_simulation_data();
+ParallelTestBench_DW.STATE_1_SimData = (void *)tmp_1;
+diagnosticManager = rtw_create_diagnostics();
+ParallelTestBench_DW.STATE_1_DiagMgr = (void *)diagnosticManager;
+modelParameters.mSolverType = NE_SOLVER_TYPE_DAE;
+modelParameters.mSolverAbsTol = 0.001;
+modelParameters.mSolverRelTol = 0.001;
+modelParameters.mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO;
+modelParameters.mStartTime = 0.0;
+modelParameters.mLoadInitialState = false;
+modelParameters.mUseSimState = false;
+modelParameters.mLinTrimCompile = false;
+modelParameters.mLoggingMode = SSC_LOGGING_OFF;
+modelParameters.mRTWModifiedTimeStamp = 6.42023154E+8;
+modelParameters.mUseModelRefSolver = false;
+modelParameters.mTargetFPGAHIL = false;
+tmp_2 = %<(SLibCG_SE(SLibCGIRGetVarStepSolverPropertyValue("RelTol", "0.001")))>;
+modelParameters.mSolverTolerance = tmp_2;
+tmp_2 = %<(SLibCG_SE(SLibCGIRGetFixStepSolverPropertyValue("FixedStep", "0.0")))>;
+modelParameters.mFixedStepSize = tmp_2;
+tmp_0 = %<(SLibCG_SE(SLibCGIRHasCompiledModelPropertyValue("SolverType", "VariableStep")))>;
+modelParameters.mVariableStepSolver = tmp_0;
+tmp_0 = %<(SLibCG_SE(SLibCGIRHasCompiledModelPropertyValue("Solver", "odeN")))>;
+modelParameters.mIsUsingODEN = tmp_0;
+modelParameters.mZcDisabled = true;
+diagnosticManager = (NeuDiagnosticManager *)ParallelTestBench_DW.STATE_1_DiagMgr;
+diagnosticTree = neu_diagnostic_manager_get_initial_tree(diagnosticManager);
+tmp_3 = nesl_initialize_simulator((NeslSimulator *)ParallelTestBench_DW.STATE_1_Simulator, &modelParameters, diagnosticManager);
+if (tmp_3 != 0) {
+    tmp_0 = error_buffer_is_empty(%<(LibGetRTModelErrorStatus())>);
+    if (tmp_0) {
+        msg = rtw_diagnostics_msg(diagnosticTree);
+        %<(LibSetRTModelErrorStatus("msg"))>;
+    }
+}
+/* {E!d68}End of Start for SimscapeExecutionBlock: '<S62>/STATE_1' */
+
+/* {S!d70}Start for SimscapeExecutionBlock: '<S62>/OUTPUT_1_0' */
+tmp = nesl_lease_simulator("ParallelTestBench/ICE Side Inertias/Solver Configuration_1", 1, 0);
+ParallelTestBench_DW.OUTPUT_1_0_Simulator = (void *)tmp;
+tmp_0 = pointer_is_null(ParallelTestBench_DW.OUTPUT_1_0_Simulator);
+if (tmp_0) {
+    ParallelTestBench_59b138b3_1_gateway();
+    tmp = nesl_lease_simulator("ParallelTestBench/ICE Side Inertias/Solver Configuration_1", 1, 0);
+    ParallelTestBench_DW.OUTPUT_1_0_Simulator = (void *)tmp;
+}
+tmp_1 = nesl_create_simulation_data();
+ParallelTestBench_DW.OUTPUT_1_0_SimData = (void *)tmp_1;
+diagnosticManager = rtw_create_diagnostics();
+ParallelTestBench_DW.OUTPUT_1_0_DiagMgr = (void *)diagnosticManager;
+modelParameters_0.mSolverType = NE_SOLVER_TYPE_DAE;
+modelParameters_0.mSolverAbsTol = 0.001;
+modelParameters_0.mSolverRelTol = 0.001;
+modelParameters_0.mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO;
+modelParameters_0.mStartTime = 0.0;
+modelParameters_0.mLoadInitialState = false;
+modelParameters_0.mUseSimState = false;
+modelParameters_0.mLinTrimCompile = false;
+modelParameters_0.mLoggingMode = SSC_LOGGING_OFF;
+modelParameters_0.mRTWModifiedTimeStamp = 6.42023154E+8;
+modelParameters_0.mUseModelRefSolver = false;
+modelParameters_0.mTargetFPGAHIL = false;
+tmp_2 = %<(SLibCG_SE(SLibCGIRGetVarStepSolverPropertyValue("RelTol", "0.001")))>;
+modelParameters_0.mSolverTolerance = tmp_2;
+tmp_2 = %<(SLibCG_SE(SLibCGIRGetFixStepSolverPropertyValue("FixedStep", "0.0")))>;
+modelParameters_0.mFixedStepSize = tmp_2;
+tmp_0 = %<(SLibCG_SE(SLibCGIRHasCompiledModelPropertyValue("SolverType", "VariableStep")))>;
+modelParameters_0.mVariableStepSolver = tmp_0;
+tmp_0 = %<(SLibCG_SE(SLibCGIRHasCompiledModelPropertyValue("Solver", "odeN")))>;
+modelParameters_0.mIsUsingODEN = tmp_0;
+modelParameters_0.mZcDisabled = true;
+diagnosticManager = (NeuDiagnosticManager *)ParallelTestBench_DW.OUTPUT_1_0_DiagMgr;
+diagnosticTree_0 = neu_diagnostic_manager_get_initial_tree(diagnosticManager);
+tmp_3 = nesl_initialize_simulator((NeslSimulator *)ParallelTestBench_DW.OUTPUT_1_0_Simulator, &modelParameters_0, diagnosticManager);
+if (tmp_3 != 0) {
+    tmp_0 = error_buffer_is_empty(%<(LibGetRTModelErrorStatus())>);
+    if (tmp_0) {
+        msg_0 = rtw_diagnostics_msg(diagnosticTree_0);
+        %<(LibSetRTModelErrorStatus("msg_0"))>;
+    }
+}
+/* {E!d70}End of Start for SimscapeExecutionBlock: '<S62>/OUTPUT_1_0' */
+
+/* {S!d72}Start for If: '<S7>/If' */
+ParallelTestBench_DW.If_ActiveSubsystem_a = -1;
+%if !WHITE_SPACE(tlcStartFcnOfS36B16)
+/* {S!d74}Start for FromWorkspace: '<S13>/fromWS_Signal 1' */
+%<tlcStartFcnOfS36B16>\
+%endif
+/* {S!d76}Start for If: '<S21>/If' */
+ParallelTestBench_DW.If_ActiveSubsystem_o = -1;
+%if !WHITE_SPACE(tlcStartFcnOfS36B41)
+/* {S!d78}Start for FromSpreadsheet: '<Root>/From Spreadsheet' */
+%<tlcStartFcnOfS36B41>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS36B44)
+/* {S!d80}Start for FromSpreadsheet: '<Root>/From Spreadsheet1' */
+%<tlcStartFcnOfS36B44>\
+%endif
+/* {S!d82}Start for If: '<S20>/If' */
+ParallelTestBench_DW.If_ActiveSubsystem_p = -1;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedStartLocalVars", localVarDecl)>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 0, fcnProtoType)>
+%endfunction
