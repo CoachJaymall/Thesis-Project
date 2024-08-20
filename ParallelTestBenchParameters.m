@@ -13,7 +13,7 @@ SideA_RatedTrq = 0.77*SideA_MaxTrq; % Usabel torque [Nm]
 SideA_Physical_Param = [0.002229 0.0007 0.2814];% Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 SideA_Ke = 9.75609; % Motor back-emf constant [Vpp/kRPM]
 SideA_Kt = 0.04189; % Motor torque constant, Max Torque/Max Current [Nm/A]
-BLDC_Driveline_Param = [0.002229 0.0007 0.2814]; % Inertia,damping, static friction of BLDC clutch open [kgm^2,Nm/rad/s,Nm]
+BLDC_Driveline_Param = [0.002229 0.0006 0.2497]; % Inertia,damping, static friction of BLDC clutch open [kgm^2,Nm/rad/s,Nm]
 BLDCICE_Driveline_Param = [0.002229 0.0004 0.4815]; % Inertia,damping, static friction of BLDC clutch closed [kgm^2,Nm/rad/s,Nm]
 
 %% Dynamometer motor parameters, the motor used for loading
@@ -55,6 +55,7 @@ P_eng = F_clamp*A_eff; % Clutch clamp pressure [Pa]
 
 ICE_Idle_Spd = 157; % ICE idle speed [rad/s]
 ICE_Idle_Trq = 0.26; % ICE idle torque [Nm]
+Crank_Eff = 0.9; % Crank to output efficiency
 Trq_BP = [0 0.4059 0.6089 0.8118 1.0148 1.2177 1.4207 1.6236 2.0295 2.4355 3.2473 4.0591]; % Break points for maps [Nm]
 Spd_BP = [0 2000 3000 4000 5000 6000 7500]; % Break points for maps [RPM]
 Throttle_BP = [0 10 15 20 25 30 35 40 50 60 80 100];
