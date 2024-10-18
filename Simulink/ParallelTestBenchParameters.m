@@ -1,4 +1,4 @@
-clear
+%clear
 clc
 Simulink.sdi.setMarkersOn(false)
 
@@ -15,7 +15,7 @@ SideA_Ke = 9.75609; % Motor back-emf constant [Vpp/kRPM]
 SideA_Kt = 0.04189; % Motor torque constant, Max Torque/Max Current [Nm/A]
 BLDC_Driveline_Param = [0.0023 0.00061 0.2477]; % Inertia,damping, static friction of BLDC clutch open [kgm^2,Nm/rad/s,Nm]
 BLDCICE_Driveline_Param = [0.0023 0.000342 0.4270]; % Inertia,damping, static friction of BLDC clutch closed [kgm^2,Nm/rad/s,Nm]
-BLDC_Vib_Factor = 2.15; % Percent of current draw increase because of bad vibration, New mechanical mount to fix it
+BLDC_Vib_Factor = 2.2; % Percent of current draw increase because of bad vibration, New mechanical mount to fix it
 
 %% Dynamometer motor parameters, the motor used for loading
 
