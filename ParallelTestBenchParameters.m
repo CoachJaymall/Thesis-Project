@@ -23,9 +23,15 @@ Dyno_Ldq = 0.000254; % Motor dq-axis inductance [H]
 Dyno_lambda = 2.690e-05; % Motor permanent magnetic flux [Wb]
 Dyno_N = 21; % Motor number of pole pairs
 Dyno_MaxTrq = 17.8; % Motor max torque [Nm]
+<<<<<<< Updated upstream:ParallelTestBenchParameters.m
 Dyno_Physical_Param = [0.002611 0.000233 0.3];%[0.002611 0.000233 0.3]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
 Dyno_Ke = 28.7935; % Motor back-emf constant [Vpp/kRPM]
 Dyno_Kt = 0.10409; % Motor torque constant, Max Torque/Max Current [Nm/A]
+=======
+Dyno_Physical_Param = [0.002611 0.000233 0.3]; % Motor inertia,damping, static friction [kgm^2,Nm/rad/s,Nm]
+Dyno_Ke = 0.01; % Motor back-emf constant [VpLL/RPM] or 1/Kv
+Dyno_Kt = 0.1041; % Motor torque constant, Max Torque/Max Current [Nm/A]
+>>>>>>> Stashed changes:Simulink/ParallelTestBenchParameters.m
 Dyno_Ratio = 0.44; % Pully ratio Side A divided by Dyno
 
 %% Battery parameters
